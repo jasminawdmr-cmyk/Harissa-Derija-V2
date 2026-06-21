@@ -1,0 +1,39 @@
+{
+  "expo": {
+    "name": "Darija تونسي",
+    "slug": "darija-tunisien",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#F5ECD7"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.darija.tunisien"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#F5ECD7"
+      },
+      "package": "com.darija.tunisien"
+    },
+    "web": {
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router"
+    ],
+    "scheme": "darija-tunisien",
+    "extra": {
+      "router": {
+        "origin": false
+      }
+    }
+  }
+}
