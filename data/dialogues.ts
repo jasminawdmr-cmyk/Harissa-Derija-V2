@@ -279,6 +279,71 @@ const DIALOGUE_SALUT_ADIEU: Dialogue = {
   ],
 };
 
+// ─── VAGUE 2 — UNIVERS « AU MARCHÉ » (3 dialogues) · universe: 'marche' ────────────
+
+const DIALOGUE_MARCHE_NEGO: Dialogue = {
+  id: 'd_marche_01',
+  title: 'Négocier les légumes',
+  context: 'marche',
+  level: 'debutant',
+  universe: 'marche',
+  situationFrench: 'Un client négocie le prix des tomates avec le marchand.',
+  estimatedMinutes: 3,
+  keyWordIds: ['w_tmatem', 'w_marche_souma', 'w_marche_ghali'],
+  grammarRuleIds: ['g_cafe_interrogation', 'g_marche_comparaison'],
+  culturalNote:
+    "Marchander fait partie du jeu au marché tunisien. « Na99asli chwaya » " +
+    "(baisse un peu) et « akher souma » (dernier prix) sont incontournables.",
+  lines: [
+    { speaker: 'A', arabic: 'قدّاش الطماطم؟', arabizi: '9addech el tmatem?', french: "C'est combien les tomates ?", wordIds: ['w_9addech', 'w_tmatem'] },
+    { speaker: 'B', arabic: 'زوز دينار الكيلو', arabizi: 'Zouz dinar el kilo', french: 'Deux dinars le kilo', wordIds: ['w_zouz', 'w_kilo'] },
+    { speaker: 'A', arabic: 'غالي برشة، نقّصلي شوية', arabizi: 'Ghali barsha, na99asli chwaya', french: 'Trop cher, baisse-moi un peu', wordIds: ['w_marche_ghali', 'w_barsha', 'w_chwaya'] },
+    { speaker: 'B', arabic: 'دينار ونص، آخر سومة', arabizi: 'Dinar w nos, akher souma', french: 'Un dinar et demi, dernier prix', wordIds: ['w_nos', 'w_marche_souma'] },
+  ],
+};
+
+const DIALOGUE_MARCHE_7OUT: Dialogue = {
+  id: 'd_marche_02',
+  title: 'Chez le poissonnier',
+  context: 'marche',
+  level: 'debutant',
+  universe: 'marche',
+  situationFrench: "Un client achète du poisson frais.",
+  estimatedMinutes: 3,
+  keyWordIds: ['w_marche_7out', 'w_marche_tri'],
+  grammarRuleIds: ['g_cafe_interrogation'],
+  culturalNote:
+    "La fraîcheur (« tri ») est l'argument numéro un pour le poisson en Tunisie, " +
+    "pays méditerranéen où le « 7out » est très apprécié.",
+  lines: [
+    { speaker: 'A', arabic: 'الحوت طري اليوم؟', arabizi: 'El 7out tri elyoum?', french: 'Le poisson est frais aujourd\'hui ?', wordIds: ['w_marche_7out', 'w_marche_tri', 'w_elyoum'] },
+    { speaker: 'B', arabic: 'طري، جا توّا من البحر', arabizi: 'Tri, ja tawa men el b7ar', french: 'Frais, il vient juste d\'arriver de la mer', wordIds: ['w_marche_tri', 'w_tawa', 'w_b7ar'] },
+    { speaker: 'A', arabic: 'أعطيني كيلو', arabizi: 'A3tini kilo', french: 'Donne-moi un kilo', wordIds: ['w_kilo'] },
+    { speaker: 'B', arabic: 'نلفهولك، ربي يزيدك', arabizi: 'Nleffhoulek, rabbi yzidek', french: 'Je te l\'emballe, merci', wordIds: ['w_marche_kis'] },
+  ],
+};
+
+const DIALOGUE_MARCHE_GHELLA: Dialogue = {
+  id: 'd_marche_03',
+  title: 'Au stand de fruits',
+  context: 'marche',
+  level: 'debutant',
+  universe: 'marche',
+  situationFrench: "Un client choisit des fruits et demande les prix.",
+  estimatedMinutes: 3,
+  keyWordIds: ['w_ghella', 'w_tfe7', 'w_marche_souma'],
+  grammarRuleIds: ['g_marche_demonstratifs'],
+  culturalNote:
+    "Au stand de fruits, on montre du doigt : « hedha » (celui-ci) accompagne " +
+    "presque toujours le geste.",
+  lines: [
+    { speaker: 'A', arabic: 'هذا التفاح بقدّاش؟', arabizi: 'Hedha el tfe7 b9addech?', french: 'Ces pommes-là, c\'est combien ?', wordIds: ['w_hedha', 'w_tfe7', 'w_9addech'] },
+    { speaker: 'B', arabic: 'دينار ونص الكيلو', arabizi: 'Dinar w nos el kilo', french: 'Un dinar et demi le kilo', wordIds: ['w_nos', 'w_kilo'] },
+    { speaker: 'A', arabic: 'والعنب؟ أرخص؟', arabizi: 'W el 3neb? Arkhas?', french: 'Et le raisin ? Moins cher ?', wordIds: ['w_marche_3neb', 'w_marche_rkhis'] },
+    { speaker: 'B', arabic: 'إي، أرخص شوية', arabizi: 'Ey, arkhas chwaya', french: 'Oui, un peu moins cher', wordIds: ['w_ey', 'w_marche_rkhis', 'w_chwaya'] },
+  ],
+};
+
 export const dialogues: Readonly<Dialogue[]> = [
   DIALOGUE_FAMILLE_RETROUVAILLES,
   DIALOGUE_MARCHE_LEGUMES,
@@ -288,6 +353,9 @@ export const dialogues: Readonly<Dialogue[]> = [
   DIALOGUE_SALUT_RENCONTRE,
   DIALOGUE_SALUT_RETROUVAILLES,
   DIALOGUE_SALUT_ADIEU,
+  DIALOGUE_MARCHE_NEGO,
+  DIALOGUE_MARCHE_7OUT,
+  DIALOGUE_MARCHE_GHELLA,
 ] as const;
 
 export const dialoguesById: Readonly<Record<string, Dialogue>> =

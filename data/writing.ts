@@ -121,6 +121,44 @@ export const writingLessons: Readonly<WritingLesson[]> = [
       { latin: 'esmek', arabizi: 'esmek', arabic: 'اسمك', french: 'ton nom' },
     ],
   },
+
+  // ── VAGUE 2 — UNIVERS « AU MARCHÉ » (3 exercices) · universe: 'marche' ──────────
+  {
+    id: 'wr_marche_01', system: 'arabizi', title: 'La lettre غ (gh) — au marché',
+    objective: 'Reconnaître et écrire le son « gh » (غ) avec le vocabulaire du marché.',
+    level: 'debutant', estimatedMinutes: 4, order: 7, universe: 'marche', tags: ['marche', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 'gh', arabizi: 'gh', arabic: 'غ', soundDescription: 'Son « gh » proche du « r » grasseyé français, noté gh en arabizi.', difficulty: 3, isPriority: true, exampleWordIds: ['w_marche_ghali', 'w_ghella'] },
+    ],
+    bridges: [
+      { latin: 'ghali', arabizi: 'ghali', arabic: 'غالي', wordId: 'w_marche_ghali', french: 'cher' },
+      { latin: 'ghella', arabizi: 'ghella', arabic: 'غلة', wordId: 'w_ghella', french: 'fruits' },
+    ],
+  },
+  {
+    id: 'wr_marche_02', system: 'arabizi', title: 'La lettre ج (j) — au marché',
+    objective: 'Reconnaître et écrire le son « j » (ج) avec le vocabulaire du marché.',
+    level: 'debutant', estimatedMinutes: 4, order: 8, universe: 'marche', tags: ['marche', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 'j', arabizi: 'j', arabic: 'ج', soundDescription: 'Son « j » comme dans « jour », noté j en arabizi.', difficulty: 1, isPriority: true, exampleWordIds: ['w_marche_jben', 'w_djej'] },
+    ],
+    bridges: [
+      { latin: 'jben', arabizi: 'jben', arabic: 'جبن', wordId: 'w_marche_jben', french: 'fromage' },
+      { latin: 'djej', arabizi: 'djej', arabic: 'دجاج', wordId: 'w_djej', french: 'poulet' },
+    ],
+  },
+  {
+    id: 'wr_marche_03', system: 'arabizi', title: 'Écrire les quantités au marché',
+    objective: 'Écrire les quantités courantes : kilo, nos kilo, gram.',
+    level: 'debutant', estimatedMinutes: 4, order: 9, universe: 'marche', tags: ['marche', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 'k', arabizi: 'k', arabic: 'ك', soundDescription: 'La lettre « k » (ك), comme dans « kilo ».', difficulty: 1, isPriority: false, exampleWordIds: ['w_kilo'] },
+    ],
+    bridges: [
+      { latin: 'kilo', arabizi: 'kilo', arabic: 'كيلو', wordId: 'w_kilo', french: 'kilo' },
+      { latin: 'nos kilo', arabizi: 'nos kilo', arabic: 'نص كيلو', wordId: 'w_marche_nos_kilo', french: 'demi-kilo' },
+    ],
+  },
 ] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────

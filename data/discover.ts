@@ -156,6 +156,52 @@ export const discoverContents: Readonly<DiscoverContent[]> = [
     relatedExpressionIds: ['e_salut_rabbi_ykhalik'],
     tags: ['salutations', 'politesse'],
   },
+
+  // ── VAGUE 2 — UNIVERS « AU MARCHÉ » (5 articles) · universe: 'marche' ───────────
+  {
+    id: 'disc_marche_souk', section: 'culture', title: 'Le souk, cœur battant de la ville', subtitle: 'Couleurs, odeurs, voix', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🛒', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "Le souk (sou9) est un lieu vivant où l'on fait ses courses mais aussi où l'on discute. Chaque marchand interpelle les passants pour vanter sa marchandise." },
+      { type: 'reperes', items: ['sou9 = marché', 'bayya3 = vendeur', '9offa = couffin'] },
+    ],
+    relatedWordIds: ['w_sou9', 'w_marche_bayya3', 'w_marche_9offa'],
+    tags: ['marche', 'culture'],
+  },
+  {
+    id: 'disc_marche_negociation', section: 'culture', title: "L'art de marchander", subtitle: 'Zid w na99es', level: 'debutant', estimatedMinutes: 3, coverEmoji: '💬', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "Marchander n'est pas impoli : c'est un échange attendu. On annonce « ghali » (cher), on demande « na99asli » (baisse-moi) et on conclut sur « akher souma » (dernier prix)." },
+      { type: 'savoir', text: "Ne pas négocier peut même surprendre le vendeur : le marchandage fait partie du lien social." },
+    ],
+    relatedWordIds: ['w_marche_souma', 'w_marche_ghali', 'w_marche_rkhis'],
+    relatedExpressionIds: ['e_marche_akher_souma', 'e_marche_zid_w_na99es'],
+    tags: ['marche', 'negociation'],
+  },
+  {
+    id: 'disc_marche_frais', section: 'culture', title: 'Le goût du frais', subtitle: 'Produits de saison', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🥬', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "Les Tunisiens privilégient les produits « tri » (frais) et de saison : légumes, poisson de la Méditerranée, fruits gorgés de soleil." },
+    ],
+    relatedWordIds: ['w_marche_tri', 'w_marche_7out', 'w_khadhra'],
+    tags: ['marche', 'nourriture'],
+  },
+  {
+    id: 'disc_marche_metiers', section: 'culture', title: 'Les métiers du marché', subtitle: 'Khaddar, bayya3, 9ahwaji', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🧑‍🌾', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "Chaque stand a son spécialiste : le « khaddar » (marchand de légumes), le poissonnier, le boucher. On les reconnaît à leur voix et à leur étal." },
+      { type: 'reperes', items: ['khaddar = marchand de légumes', 'bayya3 = vendeur', 'chari = acheteur'] },
+    ],
+    relatedWordIds: ['w_marche_khaddar', 'w_marche_bayya3', 'w_marche_chari'],
+    tags: ['marche', 'metiers'],
+  },
+  {
+    id: 'disc_marche_9offa', section: 'culture', title: 'La 9offa, symbole des courses', subtitle: 'Le couffin tunisien', level: 'debutant', estimatedMinutes: 2, coverEmoji: '🧺', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "La « 9offa » (couffin en alfa tressé) est l'accessoire traditionnel des courses. Légère et solide, elle remplace avantageusement le sac plastique." },
+    ],
+    relatedWordIds: ['w_marche_9offa', 'w_marche_kis'],
+    tags: ['marche', 'objets', 'culture'],
+  },
 ] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────

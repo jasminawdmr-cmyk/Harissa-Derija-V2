@@ -429,11 +429,65 @@ const PACK_SALUT: Verb[] = [
   },
 ];
 
+// ─── VAGUE 2 — UNIVERS « AU MARCHÉ » (8 verbes) ──────────────────────────────────
+
+const PACK_MARCHE: Verb[] = [
+  {
+    id: 'v_nbi3', infinitiveFrench: 'je vends', rootArabic: 'نبيع', rootArabizi: 'nbi3',
+    isIrregular: false, level: 'debutant', tags: ['marche', 'commerce'], universe: 'marche', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نبيع', arabizi: 'nbi3' }] },
+    example: { arabic: 'نبيع الخضرة', arabizi: 'Nbi3 el khodhra', french: 'Je vends les légumes' },
+  },
+  {
+    id: 'v_nfasel', infinitiveFrench: 'je marchande / je négocie', rootArabic: 'نفاصل', rootArabizi: 'nfasel',
+    isIrregular: false, level: 'debutant', tags: ['marche', 'prix'], universe: 'marche', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نفاصل', arabizi: 'nfasel' }] },
+    example: { arabic: 'نفاصل في السومة', arabizi: 'Nfasel fel souma', french: 'Je négocie le prix' },
+  },
+  {
+    id: 'v_nzen', infinitiveFrench: 'je pèse', rootArabic: 'نزن', rootArabizi: 'nzen',
+    isIrregular: false, level: 'debutant', tags: ['marche', 'commerce'], universe: 'marche', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نزن', arabizi: 'nzen' }] },
+    example: { arabic: 'نزن كيلو طماطم', arabizi: 'Nzen kilo tmatem', french: 'Je pèse un kilo de tomates' },
+  },
+  {
+    id: 'v_n7seb', infinitiveFrench: 'je compte / je calcule', rootArabic: 'نحسب', rootArabizi: 'na7seb',
+    isIrregular: false, level: 'debutant', tags: ['marche', 'prix'], universe: 'marche', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نحسب', arabizi: 'na7seb' }] },
+    example: { arabic: 'نحسب الفلوس', arabizi: 'Na7seb el flous', french: "Je compte l'argent" },
+  },
+  {
+    id: 'v_nlef', infinitiveFrench: "j'emballe / j'enveloppe", rootArabic: 'نلف', rootArabizi: 'nlef',
+    isIrregular: false, level: 'debutant', tags: ['marche', 'commerce'], universe: 'marche', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نلف', arabizi: 'nlef' }] },
+    example: { arabic: 'نلف الخبز', arabizi: 'Nlef el khobz', french: "J'emballe le pain" },
+  },
+  {
+    id: 'v_nna99es', infinitiveFrench: 'je baisse (le prix) / je réduis', rootArabic: 'ننقّص', rootArabizi: 'nna99es',
+    isIrregular: false, level: 'debutant', tags: ['marche', 'prix'], universe: 'marche', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'ننقّص', arabizi: 'nna99es' }] },
+    example: { arabic: 'ننقّص في السومة', arabizi: 'Nna99es fel souma', french: 'Je baisse le prix' },
+  },
+  {
+    id: 'v_nwarri', infinitiveFrench: 'je montre', rootArabic: 'نورّي', rootArabizi: 'nwarri',
+    isIrregular: false, level: 'debutant', tags: ['marche', 'commerce'], universe: 'marche', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نورّي', arabizi: 'nwarri' }] },
+    example: { arabic: 'نورّيك الخضرة', arabizi: 'Nwarrik el khodhra', french: 'Je te montre les légumes' },
+  },
+  {
+    id: 'v_n9alleb', infinitiveFrench: 'je fouille / je cherche (parmi)', rootArabic: 'نقلّب', rootArabizi: 'n9alleb',
+    isIrregular: false, level: 'debutant', tags: ['marche', 'commerce'], universe: 'marche', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نقلّب', arabizi: 'n9alleb' }] },
+    example: { arabic: 'نقلّب في الغلة', arabizi: 'N9alleb fel ghella', french: 'Je fouille parmi les fruits' },
+  },
+];
+
 export const verbs: Readonly<Verb[]> = [
   ...PACK_01,
   ...PACK_02,
   ...PACK_CAFE,
   ...PACK_SALUT,
+  ...PACK_MARCHE,
 ] as const;
 
 export const verbsById: Readonly<Record<string, Verb>> = Object.fromEntries(

@@ -196,6 +196,53 @@ const RULE_SALUT_QUESTIONS: GrammarRule = {
   prerequisiteRuleIds: [],
 };
 
+// ─── VAGUE 2 — UNIVERS « AU MARCHÉ » (2 règles) · universe: 'marche' ──────────────
+
+/**
+ * RÈGLE — Les démonstratifs : hedha / hedhi / hadhouma
+ */
+const RULE_MARCHE_DEMONSTRATIFS: GrammarRule = {
+  id: "g_marche_demonstratifs",
+  title: "Montrer un produit : hedha / hedhi / hadhouma",
+  category: "autre",
+  level: "debutant",
+  universe: "marche",
+  explanation:
+    "Au marché, on montre du doigt : هذا (hedha = celui-ci, masculin), هذي " +
+    "(hedhi = celle-ci, féminin), هذوما (hadhouma = ceux-ci, pluriel). Ils se " +
+    "placent avant ou après le nom.",
+  pattern: "هذا / هذي / هذوما + [nom]",
+  examples: [
+    { arabic: 'هذا بقدّاش؟', arabizi: 'Hedha b9addech?', phonetic: '[hedha b9addech]', french: "Celui-ci, c'est combien ?" },
+    { arabic: 'هذي طرية', arabizi: 'Hedhi tri', phonetic: '[hedhi tri]', french: 'Celle-ci est fraîche' },
+    { arabic: 'هذوما غاليين', arabizi: 'Hadhouma ghaliyin', phonetic: '[hadhouma ghaliyin]', french: 'Ceux-ci sont chers' },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: [],
+};
+
+/**
+ * RÈGLE — Le comparatif : ghla / arkhas
+ */
+const RULE_MARCHE_COMPARAISON: GrammarRule = {
+  id: "g_marche_comparaison",
+  title: "Comparer les prix : ghla / arkhas",
+  category: "comparaison",
+  level: "debutant",
+  universe: "marche",
+  explanation:
+    "Pour comparer, le tunisien utilise une forme unique : أغلى ( aghla = plus " +
+    "cher), أرخص (arkhas = moins cher), suivie de من (men = que). Ex : « aghla " +
+    "men hedha » (plus cher que celui-ci).",
+  pattern: "[adjectif comparatif] + من + [nom]",
+  examples: [
+    { arabic: 'هذا أرخص', arabizi: 'Hedha arkhas', phonetic: '[hedha arkhas]', french: 'Celui-ci est moins cher' },
+    { arabic: 'أغلى من هذا', arabizi: 'Aghla men hedha', phonetic: '[aghla men hedha]', french: 'Plus cher que celui-ci' },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: ['g_marche_demonstratifs'],
+};
+
 export const grammarRules: Readonly<GrammarRule[]> = [
   RULE_NEGATION,
   RULE_ARTICLE_DEFINI,
@@ -203,6 +250,8 @@ export const grammarRules: Readonly<GrammarRule[]> = [
   RULE_CAFE_INTERROGATION,
   RULE_SALUT_POSSESSIF,
   RULE_SALUT_QUESTIONS,
+  RULE_MARCHE_DEMONSTRATIFS,
+  RULE_MARCHE_COMPARAISON,
 ] as const;
 
 export const grammarRulesById: Readonly<Record<string, GrammarRule>> =

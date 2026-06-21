@@ -251,6 +251,35 @@ export const vocabulary: Readonly<VocabularyItem[]> = [
   { id: 'w_salut_nharek_zin', arabic: 'نهارك زين', arabizi: 'Nharek zin', french: 'Bonne journée', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['salutations'], universe: 'salutations' },
   { id: 'w_salut_lila_sa3ida', arabic: 'ليلة سعيدة', arabizi: 'Lila sa3ida', french: 'Bonne nuit', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['salutations'], universe: 'salutations' },
   { id: 'w_salut_slemtek', arabic: 'سلامتك', arabizi: 'Slemtek', french: 'Porte-toi bien / remets-toi (à un malade)', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['salutations'], universe: 'salutations' },
+
+  // ════════════════════════════════════════════════════════════════════════════════
+  // VAGUE 2 — UNIVERS « AU MARCHÉ » (25 mots) · universe: 'marche'
+  // ════════════════════════════════════════════════════════════════════════════════
+  { id: 'w_marche_bayya3', arabic: 'بياع', arabizi: 'Bayya3', french: 'Vendeur / marchand', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['marche', 'commerce'], universe: 'marche' },
+  { id: 'w_marche_chari', arabic: 'شاري', arabizi: 'Chari', french: 'Acheteur', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'commerce'], universe: 'marche' },
+  { id: 'w_marche_souma', arabic: 'سومة', arabizi: 'Souma', french: 'Le prix (demandé)', category: 'shopping', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['marche', 'prix'], universe: 'marche' },
+  { id: 'w_marche_ghali', arabic: 'غالي', arabizi: 'Ghali', french: 'Cher', category: 'shopping', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['marche', 'prix'], universe: 'marche' },
+  { id: 'w_marche_rkhis', arabic: 'رخيص', arabizi: 'Rkhis', french: 'Pas cher / bon marché', category: 'shopping', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['marche', 'prix'], universe: 'marche' },
+  { id: 'w_marche_mizen', arabic: 'ميزان', arabizi: 'Mizen', french: 'Balance', category: 'shopping', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'commerce'], universe: 'marche' },
+  { id: 'w_marche_nos_kilo', arabic: 'نص كيلو', arabizi: 'Nos kilo', french: 'Un demi-kilo', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['marche', 'quantites'], universe: 'marche' },
+  { id: 'w_marche_gram', arabic: 'غرام', arabizi: 'Gram', french: 'Gramme', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'quantites'], universe: 'marche' },
+  { id: 'w_marche_kartouna', arabic: 'كرتونة', arabizi: 'Kartouna', french: 'Carton / caisse', category: 'shopping', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'commerce'], universe: 'marche' },
+  { id: 'w_marche_9offa', arabic: 'قفة', arabizi: '9offa', french: 'Couffin / panier', category: 'shopping', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['marche', 'objets'], universe: 'marche' },
+  { id: 'w_marche_kis', arabic: 'كيس', arabizi: 'Kis', french: 'Sac (plastique)', category: 'shopping', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['marche', 'objets'], universe: 'marche' },
+  { id: 'w_marche_l7am', arabic: 'لحم', arabizi: 'L7am', french: 'Viande', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['marche', 'nourriture'], universe: 'marche' },
+  { id: 'w_marche_7out', arabic: 'حوت', arabizi: '7out', french: 'Poisson', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['marche', 'nourriture'], universe: 'marche' },
+  { id: 'w_marche_bidh', arabic: 'بيض', arabizi: 'Bidh', french: 'Œufs', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['marche', 'nourriture'], universe: 'marche' },
+  { id: 'w_marche_jben', arabic: 'جبن', arabizi: 'Jben', french: 'Fromage', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'nourriture'], universe: 'marche' },
+  { id: 'w_marche_zebda', arabic: 'زبدة', arabizi: 'Zebda', french: 'Beurre', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'nourriture'], universe: 'marche' },
+  { id: 'w_marche_3sel', arabic: 'عسل', arabizi: '3sel', french: 'Miel', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'nourriture'], universe: 'marche' },
+  { id: 'w_marche_d9i9', arabic: 'دقيق', arabizi: 'D9i9', french: 'Farine', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'nourriture'], universe: 'marche' },
+  { id: 'w_marche_roz', arabic: 'روز', arabizi: 'Roz', french: 'Riz', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['marche', 'nourriture'], universe: 'marche' },
+  { id: 'w_marche_makarouna', arabic: 'مكرونة', arabizi: 'Makarouna', french: 'Pâtes', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['marche', 'nourriture'], universe: 'marche' },
+  { id: 'w_marche_frawla', arabic: 'فراولة', arabizi: 'Frawla', french: 'Fraises', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'nourriture', 'fruits'], universe: 'marche' },
+  { id: 'w_marche_3neb', arabic: 'عنب', arabizi: '3neb', french: 'Raisin', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'nourriture', 'fruits'], universe: 'marche' },
+  { id: 'w_marche_banan', arabic: 'بنان', arabizi: 'Banan', french: 'Bananes', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'nourriture', 'fruits'], universe: 'marche' },
+  { id: 'w_marche_tri', arabic: 'طري', arabizi: 'Tri', french: 'Frais / tendre', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'qualite'], universe: 'marche' },
+  { id: 'w_marche_khaddar', arabic: 'خضّار', arabizi: 'Khaddar', french: 'Marchand de légumes', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'commerce'], universe: 'marche' },
 ] as const;
 
 // ─── Accès ──────────────────────────────────────────────────────────────────────
