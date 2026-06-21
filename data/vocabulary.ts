@@ -338,6 +338,35 @@ export const vocabulary: Readonly<VocabularyItem[]> = [
   { id: 'w_famille_3ors', arabic: 'عرس', arabizi: '3ors', french: 'Mariage (la noce)', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille', 'mariage', 'fetes'], universe: 'famille' },
   { id: 'w_famille_kbir', arabic: 'كبير', arabizi: 'Kbir', french: 'Grand / aîné', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille'], universe: 'famille' },
   { id: 'w_famille_sghir', arabic: 'صغير', arabizi: 'Sghir', french: 'Petit / cadet', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille'], universe: 'famille' },
+
+  // ════════════════════════════════════════════════════════════════════════════════
+  // VAGUE 2 — UNIVERS « EN LOUAGE » (25 mots) · universe: 'louage'
+  // ════════════════════════════════════════════════════════════════════════════════
+  { id: 'w_louage_rakeb', arabic: 'راكب', arabizi: 'Rakeb', french: 'Passager', category: 'transport', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['louage', 'transport'], universe: 'louage' },
+  { id: 'w_louage_sewa9', arabic: 'سواق', arabizi: 'Sewa9', french: 'Chauffeur', category: 'transport', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['louage', 'transport'], universe: 'louage' },
+  { id: 'w_louage_ta3rifa', arabic: 'تعريفة', arabizi: 'Ta3rifa', french: 'Tarif', category: 'shopping', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['louage', 'prix'], universe: 'louage' },
+  { id: 'w_louage_kompli', arabic: 'كومبلي', arabizi: 'Kompli', french: 'Complet / plein', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['louage'], universe: 'louage', needsValidation: true, note: 'Emprunt au français — graphie arabe à confirmer.' },
+  { id: 'w_louage_otoroute', arabic: 'أوتوروت', arabizi: 'Otoroute', french: 'Autoroute', category: 'transport', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['louage', 'route'], universe: 'louage', needsValidation: true, note: 'Emprunt au français — graphie arabe à confirmer.' },
+  { id: 'w_louage_b3id', arabic: 'بعيد', arabizi: 'B3id', french: 'Loin', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['louage', 'distance'], universe: 'louage' },
+  { id: 'w_louage_9rib', arabic: 'قريب', arabizi: '9rib', french: 'Proche', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['louage', 'distance'], universe: 'louage' },
+  { id: 'w_louage_fisa3', arabic: 'فيسع', arabizi: 'Fisa3', french: 'Vite', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['louage'], universe: 'louage' },
+  { id: 'w_louage_bechwaya', arabic: 'بالشوية', arabizi: 'Bechwaya', french: 'Doucement', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['louage'], universe: 'louage' },
+  { id: 'w_louage_valiza', arabic: 'فاليزة', arabizi: 'Valiza', french: 'Valise', category: 'transport', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['louage', 'bagages'], universe: 'louage' },
+  { id: 'w_louage_wost', arabic: 'وسط', arabizi: 'Wost', french: 'Centre-ville / milieu', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['louage', 'ville'], universe: 'louage' },
+  { id: 'w_louage_khrouj', arabic: 'خروج', arabizi: 'Khrouj', french: 'Départ / sortie', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['louage'], universe: 'louage' },
+  { id: 'w_louage_doukhoul', arabic: 'دخول', arabizi: 'Doukhoul', french: 'Entrée', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['louage'], universe: 'louage' },
+  { id: 'w_louage_jiha', arabic: 'جهة', arabizi: 'Jiha', french: 'Côté / direction / région', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['louage', 'direction'], universe: 'louage' },
+  { id: 'w_louage_wlaya', arabic: 'ولاية', arabizi: 'Wlaya', french: 'Gouvernorat / région', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['louage', 'regions'], universe: 'louage' },
+  { id: 'w_louage_saf', arabic: 'صف', arabizi: 'Saf', french: 'File / rang', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['louage'], universe: 'louage' },
+  { id: 'w_louage_dawr', arabic: 'دور', arabizi: 'Dawr', french: 'Tour (de passage)', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['louage'], universe: 'louage' },
+  { id: 'w_louage_mochkla', arabic: 'مشكلة', arabizi: 'Mochkla', french: 'Problème', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['louage'], universe: 'louage' },
+  { id: 'w_louage_tool', arabic: 'طول', arabizi: 'Tool', french: 'Tout droit', category: 'transport', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['louage', 'direction'], universe: 'louage' },
+  { id: 'w_louage_ysar', arabic: 'يسار', arabizi: 'Ysar', french: 'Gauche', category: 'transport', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['louage', 'direction'], universe: 'louage' },
+  { id: 'w_louage_ymin', arabic: 'يمين', arabizi: 'Ymin', french: 'Droite', category: 'transport', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['louage', 'direction'], universe: 'louage' },
+  { id: 'w_louage_wa9fa', arabic: 'وقفة', arabizi: 'Wa9fa', french: 'Arrêt', category: 'transport', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['louage'], universe: 'louage' },
+  { id: 'w_louage_3ajla', arabic: 'عجلة', arabizi: '3ajla', french: 'Roue', category: 'transport', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['louage'], universe: 'louage' },
+  { id: 'w_louage_benzin', arabic: 'بنزين', arabizi: 'Benzin', french: 'Essence', category: 'transport', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['louage'], universe: 'louage' },
+  { id: 'w_louage_klakson', arabic: 'كلاكسون', arabizi: 'Klakson', french: 'Klaxon', category: 'transport', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['louage'], universe: 'louage', needsValidation: true, note: 'Emprunt — graphie arabe à confirmer.' },
 ] as const;
 
 // ─── Accès ──────────────────────────────────────────────────────────────────────

@@ -588,6 +588,59 @@ const PACK_FAMILLE: Verb[] = [
   },
 ];
 
+// ─── VAGUE 2 — UNIVERS « EN LOUAGE » (8 verbes) ──────────────────────────────────
+
+const PACK_LOUAGE: Verb[] = [
+  {
+    id: 'v_nsou9', infinitiveFrench: 'je conduis', rootArabic: 'نسوق', rootArabizi: 'nsou9',
+    isIrregular: false, level: 'debutant', tags: ['louage', 'transport'], universe: 'louage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نسوق', arabizi: 'nsou9' }] },
+    example: { arabic: 'نسوق بالشوية', arabizi: 'Nsou9 bechwaya', french: 'Je conduis doucement' },
+  },
+  {
+    id: 'v_nwasel', infinitiveFrench: "j'arrive", rootArabic: 'نوصل', rootArabizi: 'nwasel',
+    isIrregular: false, level: 'debutant', tags: ['louage', 'transport'], universe: 'louage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نوصل', arabizi: 'nwasel' }] },
+    example: { arabic: 'نوصل فيسع', arabizi: 'Nwasel fisa3', french: "J'arrive vite" },
+  },
+  {
+    id: 'v_n3addi', infinitiveFrench: 'je passe / je dépasse', rootArabic: 'نعدّي', rootArabizi: 'n3addi',
+    isIrregular: false, level: 'debutant', tags: ['louage', 'transport'], universe: 'louage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نعدّي', arabizi: 'n3addi' }] },
+    example: { arabic: 'نعدّي بالطوموبيل', arabizi: 'N3addi bel tomobil', french: 'Je dépasse en voiture' },
+  },
+  {
+    id: 'v_nwa99ef', infinitiveFrench: "j'arrête (un véhicule)", rootArabic: 'نوقّف', rootArabizi: 'nwa99ef',
+    isIrregular: false, level: 'debutant', tags: ['louage', 'transport'], universe: 'louage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نوقّف', arabizi: 'nwa99ef' }] },
+    example: { arabic: 'نوقّف اللواج', arabizi: 'Nwa99ef el louage', french: 'J\'arrête le louage' },
+  },
+  {
+    id: 'v_ndour', infinitiveFrench: 'je tourne', rootArabic: 'ندور', rootArabizi: 'ndour',
+    isIrregular: false, level: 'debutant', tags: ['louage', 'direction'], universe: 'louage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'ندور', arabizi: 'ndour' }] },
+    example: { arabic: 'ندور على اليمين', arabizi: 'Ndour 3la el ymin', french: 'Je tourne à droite' },
+  },
+  {
+    id: 'v_nlawwej', infinitiveFrench: 'je cherche', rootArabic: 'نلوّج', rootArabizi: 'nlawwej',
+    isIrregular: false, level: 'debutant', tags: ['louage'], universe: 'louage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نلوّج', arabizi: 'nlawwej' }] },
+    example: { arabic: 'نلوّج على المحطة', arabizi: 'Nlawwej 3la el ma7atta', french: 'Je cherche la station' },
+  },
+  {
+    id: 'v_nsefer', infinitiveFrench: 'je voyage', rootArabic: 'نسافر', rootArabizi: 'nsefer',
+    isIrregular: false, level: 'debutant', tags: ['louage', 'voyage'], universe: 'louage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نسافر', arabizi: 'nsefer' }] },
+    example: { arabic: 'نسافر لصفاقس', arabizi: 'Nsefer l Sfax', french: 'Je voyage à Sfax' },
+  },
+  {
+    id: 'v_nt2akhar', infinitiveFrench: 'je suis en retard / je tarde', rootArabic: 'نتأخّر', rootArabizi: 'nt2akhar',
+    isIrregular: false, level: 'debutant', tags: ['louage'], universe: 'louage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نتأخّر', arabizi: 'nt2akhar' }] },
+    example: { arabic: 'نتأخّر شوية', arabizi: 'Nt2akhar chwaya', french: 'Je tarde un peu' },
+  },
+];
+
 export const verbs: Readonly<Verb[]> = [
   ...PACK_01,
   ...PACK_02,
@@ -596,6 +649,7 @@ export const verbs: Readonly<Verb[]> = [
   ...PACK_MARCHE,
   ...PACK_MAISON,
   ...PACK_FAMILLE,
+  ...PACK_LOUAGE,
 ] as const;
 
 export const verbsById: Readonly<Record<string, Verb>> = Object.fromEntries(

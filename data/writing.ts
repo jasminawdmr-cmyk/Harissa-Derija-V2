@@ -235,6 +235,44 @@ export const writingLessons: Readonly<WritingLesson[]> = [
       { latin: 'mama', arabizi: 'mama', arabic: 'ماما', wordId: 'w_famille_mama', french: 'maman' },
     ],
   },
+
+  // ── VAGUE 2 — UNIVERS « EN LOUAGE » (3 exercices) · universe: 'louage' ──────────
+  {
+    id: 'wr_louage_01', system: 'arabizi', title: 'La lettre ق (9) — en louage',
+    objective: 'Reconnaître le son « 9 » (ق) avec le vocabulaire du louage.',
+    level: 'debutant', estimatedMinutes: 4, order: 16, universe: 'louage', tags: ['louage', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 'q', arabizi: '9', arabic: 'ق', soundDescription: 'Son « q » du fond de la gorge (ق), noté 9 en arabizi.', difficulty: 3, isPriority: true, exampleWordIds: ['w_louage_9rib'] },
+    ],
+    bridges: [
+      { latin: 'qrib', arabizi: '9rib', arabic: 'قريب', wordId: 'w_louage_9rib', french: 'proche' },
+      { latin: 'waqfa', arabizi: 'wa9fa', arabic: 'وقفة', wordId: 'w_louage_wa9fa', french: 'arrêt' },
+    ],
+  },
+  {
+    id: 'wr_louage_02', system: 'arabizi', title: 'Les directions en arabizi',
+    objective: 'Écrire les directions : tool, ysar, ymin.',
+    level: 'debutant', estimatedMinutes: 4, order: 17, universe: 'louage', tags: ['louage', 'ecriture', 'arabizi', 'direction'],
+    glyphs: [
+      { latin: 'y', arabizi: 'y', arabic: 'ي', soundDescription: 'La lettre « y » (ي), comme dans « ymin » (droite).', difficulty: 1, isPriority: false, exampleWordIds: ['w_louage_ymin'] },
+    ],
+    bridges: [
+      { latin: 'ymin', arabizi: 'ymin', arabic: 'يمين', wordId: 'w_louage_ymin', french: 'droite' },
+      { latin: 'ysar', arabizi: 'ysar', arabic: 'يسار', wordId: 'w_louage_ysar', french: 'gauche' },
+    ],
+  },
+  {
+    id: 'wr_louage_03', system: 'arabizi', title: 'La lettre س (s) — en louage',
+    objective: 'Reconnaître le son « s » (س) avec le vocabulaire du louage.',
+    level: 'debutant', estimatedMinutes: 4, order: 18, universe: 'louage', tags: ['louage', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 's', arabizi: 's', arabic: 'س', soundDescription: 'La lettre « s » (س), comme dans « sewa9 » (chauffeur).', difficulty: 1, isPriority: false, exampleWordIds: ['w_louage_sewa9'] },
+    ],
+    bridges: [
+      { latin: 'sewaq', arabizi: 'sewa9', arabic: 'سواق', wordId: 'w_louage_sewa9', french: 'chauffeur' },
+      { latin: 'safar', arabizi: 'nsefer', arabic: 'نسافر', wordId: 'w_louage_b3id', french: 'voyager / loin' },
+    ],
+  },
 ] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────

@@ -293,6 +293,52 @@ export const discoverContents: Readonly<DiscoverContent[]> = [
     relatedWordIds: ['w_3ayla', 'w_bled'],
     tags: ['famille', 'diaspora'],
   },
+
+  // ── VAGUE 2 — UNIVERS « EN LOUAGE » (5 articles) · universe: 'louage' ───────────
+  {
+    id: 'disc_louage_systeme', section: 'contemporain', title: 'Le louage, taxi collectif tunisien', subtitle: 'Voyager entre les villes', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🚐', universe: 'louage',
+    blocks: [
+      { type: 'paragraphe', text: "Le louage est un minibus (souvent 8 places) qui relie les villes. Il part de la station dès qu'il est « kompli » (plein), sans horaire fixe." },
+      { type: 'reperes', items: ['louage = taxi collectif', 'sewa9 = chauffeur', 'rakeb = passager'] },
+    ],
+    relatedWordIds: ['w_louage', 'w_louage_sewa9', 'w_louage_rakeb'],
+    tags: ['louage', 'transport'],
+  },
+  {
+    id: 'disc_louage_station', section: 'contemporain', title: 'À la station de louages', subtitle: 'Organisation et files', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🚏', universe: 'louage',
+    blocks: [
+      { type: 'paragraphe', text: "Chaque destination a sa file (saf). On attend son tour (dawr), on paie le tarif fixe (ta3rifa) et on monte. Tout est rapide et bon marché." },
+    ],
+    relatedWordIds: ['w_louage_saf', 'w_louage_dawr', 'w_louage_ta3rifa'],
+    tags: ['louage', 'transport'],
+  },
+  {
+    id: 'disc_louage_regions', section: 'regions', title: 'Relier les régions', subtitle: 'Du nord au sud', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🗺️', universe: 'louage',
+    blocks: [
+      { type: 'paragraphe', text: "Le louage dessert tous les gouvernorats (wlaya). C'est souvent le moyen le plus pratique pour rejoindre des villes mal desservies par le train." },
+    ],
+    relatedWordIds: ['w_louage_wlaya', 'w_louage_jiha', 'w_bled'],
+    tags: ['louage', 'regions'],
+  },
+  {
+    id: 'disc_louage_politesse', section: 'contemporain', title: 'Politesse en louage', subtitle: 'Ya 3ammi, 3la mahlek', level: 'debutant', estimatedMinutes: 2, coverEmoji: '🙋', universe: 'louage',
+    blocks: [
+      { type: 'paragraphe', text: "On interpelle le chauffeur par « ya 3ammi » (mon oncle) et on demande de ralentir par « 3la mahlek ». La courtoisie facilite le trajet." },
+    ],
+    relatedWordIds: ['w_louage_sewa9', 'w_louage_bechwaya'],
+    relatedExpressionIds: ['e_louage_ya_3ammi', 'e_louage_3la_mahlek'],
+    tags: ['louage', 'politesse'],
+  },
+  {
+    id: 'disc_louage_route', section: 'contemporain', title: 'Sur la route', subtitle: 'Directions et sécurité', level: 'debutant', estimatedMinutes: 2, coverEmoji: '🛣️', universe: 'louage',
+    blocks: [
+      { type: 'paragraphe', text: "Pour guider : « tool » (tout droit), « ysar » (gauche), « ymin » (droite). On se souhaite « tri9 essalama » (bonne route) au départ." },
+      { type: 'reperes', items: ['tool = tout droit', 'ysar = gauche', 'ymin = droite'] },
+    ],
+    relatedWordIds: ['w_louage_tool', 'w_louage_ysar', 'w_louage_ymin'],
+    relatedExpressionIds: ['e_louage_tri9_essalama'],
+    tags: ['louage', 'direction'],
+  },
 ] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────

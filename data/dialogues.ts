@@ -404,6 +404,66 @@ const DIALOGUE_MAISON_MENAGE: Dialogue = {
   ],
 };
 
+// ─── VAGUE 2 — UNIVERS « EN LOUAGE » (3 dialogues) · universe: 'louage' ────────────
+
+const DIALOGUE_LOUAGE_DEPART: Dialogue = {
+  id: 'd_louage_01',
+  title: 'Trouver son louage',
+  context: 'rue',
+  level: 'debutant',
+  universe: 'louage',
+  situationFrench: 'Un voyageur cherche le louage pour Tunis à la station.',
+  estimatedMinutes: 3,
+  keyWordIds: ['w_louage', 'w_louage_ta3rifa'],
+  grammarRuleIds: ['g_louage_direction', 'g_cafe_interrogation'],
+  culturalNote:
+    "Le louage part une fois « kompli » (plein). On attend donc parfois le dernier passager.",
+  lines: [
+    { speaker: 'A', arabic: 'اللواج لتونس وين؟', arabizi: 'El louage l Tounes win?', french: 'Où est le louage pour Tunis ?', wordIds: ['w_louage', 'w_win'] },
+    { speaker: 'B', arabic: 'هوني، يزيد واحد وننطلقو', arabizi: 'Houni, yzid wa7ed w nental9ou', french: 'Ici, encore un passager et on part', wordIds: ['w_louage_kompli'] },
+    { speaker: 'A', arabic: 'قدّاش التعريفة؟', arabizi: '9addech el ta3rifa?', french: 'C\'est combien le tarif ?', wordIds: ['w_louage_ta3rifa', 'w_9addech'] },
+    { speaker: 'B', arabic: 'سبعة دينار', arabizi: 'Sab3a dinar', french: 'Sept dinars', wordIds: ['w_sab3a'] },
+  ],
+};
+
+const DIALOGUE_LOUAGE_ROUTE: Dialogue = {
+  id: 'd_louage_02',
+  title: 'Sur la route',
+  context: 'rue',
+  level: 'debutant',
+  universe: 'louage',
+  situationFrench: 'Un passager demande au chauffeur de ralentir.',
+  estimatedMinutes: 2,
+  keyWordIds: ['w_louage_sewa9', 'w_louage_bechwaya'],
+  grammarRuleIds: ['g_louage_imperatif'],
+  culturalNote: "« 3la mahlek » (doucement) est une demande polie fréquente en louage.",
+  lines: [
+    { speaker: 'A', arabic: 'يا عمّي، سوق بالشوية', arabizi: 'Ya 3ammi, sou9 bechwaya', french: 'Monsieur, conduis doucement', wordIds: ['w_louage_bechwaya'] },
+    { speaker: 'B', arabic: 'ماو على مهلي', arabizi: 'Maw 3la mahli', french: 'Mais je vais doucement' },
+    { speaker: 'A', arabic: 'فمّا زنقة قدّام', arabizi: 'Famma zon9a 9oddem', french: 'Il y a un embouteillage devant', wordIds: ['w_louage_mochkla'] },
+    { speaker: 'B', arabic: 'ماعليش، نعدّيو', arabizi: 'Ma3lich, n3addiw', french: 'Pas grave, on passe' },
+  ],
+};
+
+const DIALOGUE_LOUAGE_ARRIVEE: Dialogue = {
+  id: 'd_louage_03',
+  title: 'Descendre du louage',
+  context: 'rue',
+  level: 'debutant',
+  universe: 'louage',
+  situationFrench: 'Le passager demande à descendre.',
+  estimatedMinutes: 2,
+  keyWordIds: ['w_louage_wa9fa', 'w_louage_rakeb'],
+  grammarRuleIds: ['g_louage_imperatif'],
+  culturalNote: "On indique l'arrêt avec « wa99efli houni » (dépose-moi ici).",
+  lines: [
+    { speaker: 'A', arabic: 'وقّفلي هوني عيشك', arabizi: 'Wa99efli houni 3aychek', french: 'Dépose-moi ici s\'il te plaît', wordIds: ['w_louage_wa9fa'] },
+    { speaker: 'B', arabic: 'باهي، هاو نوقّف', arabizi: 'Bahi, haw nwa99ef', french: 'D\'accord, je m\'arrête', wordIds: ['w_bahi'] },
+    { speaker: 'A', arabic: 'يعطيك الصحة', arabizi: 'Ya3tik essa77a', french: 'Merci' },
+    { speaker: 'B', arabic: 'طريق السلامة', arabizi: 'Tri9 essalama', french: 'Bonne route' },
+  ],
+};
+
 // ─── VAGUE 2 — UNIVERS « FAMILLE » (3 dialogues) · universe: 'famille' ─────────────
 
 const DIALOGUE_FAMILLE_PARLER: Dialogue = {
@@ -481,6 +541,9 @@ export const dialogues: Readonly<Dialogue[]> = [
   DIALOGUE_FAMILLE_PARLER,
   DIALOGUE_FAMILLE_MARIAGE,
   DIALOGUE_FAMILLE_VISITE,
+  DIALOGUE_LOUAGE_DEPART,
+  DIALOGUE_LOUAGE_ROUTE,
+  DIALOGUE_LOUAGE_ARRIVEE,
 ] as const;
 
 export const dialoguesById: Readonly<Record<string, Dialogue>> =

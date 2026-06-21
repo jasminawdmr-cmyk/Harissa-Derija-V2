@@ -333,6 +333,52 @@ const RULE_FAMILLE_ADJECTIF: GrammarRule = {
   prerequisiteRuleIds: [],
 };
 
+// ─── VAGUE 2 — UNIVERS « EN LOUAGE » (2 règles) · universe: 'louage' ──────────────
+
+/**
+ * RÈGLE — Aller vers : لـ (l-)
+ */
+const RULE_LOUAGE_DIRECTION: GrammarRule = {
+  id: "g_louage_direction",
+  title: "Aller vers : لـ (l-)",
+  category: "preposition",
+  level: "debutant",
+  universe: "louage",
+  explanation:
+    "Pour indiquer une destination, on colle لـ (l- = vers/à) devant le lieu. " +
+    "Ex : « l Tounes » (vers Tunis), « l Sousse » (à Sousse).",
+  pattern: "لـ (l-) + [lieu]",
+  examples: [
+    { arabic: 'نسافر لتونس', arabizi: 'Nsefer l Tounes', phonetic: '[nsefer l tounes]', french: 'Je voyage à Tunis' },
+    { arabic: 'اللواج لصفاقس', arabizi: 'El louage l Sfax', phonetic: '[el louage l sfax]', french: 'Le louage pour Sfax' },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: [],
+};
+
+/**
+ * RÈGLE — Donner un ordre : l'impératif
+ */
+const RULE_LOUAGE_IMPERATIF: GrammarRule = {
+  id: "g_louage_imperatif",
+  title: "Donner un ordre : l'impératif",
+  category: "autre",
+  level: "debutant",
+  universe: "louage",
+  explanation:
+    "L'impératif (donner un ordre) s'obtient souvent en retirant le préfixe du " +
+    "présent. Ex : « tsou9 » (tu conduis) → « sou9 ! » (conduis !), « twa99ef » → " +
+    "« wa99ef ! » (arrête !).",
+  pattern: "[verbe sans préfixe] !",
+  examples: [
+    { arabic: 'وقّف هوني', arabizi: 'Wa99ef houni', phonetic: '[wa99ef houni]', french: 'Arrête-toi ici' },
+    { arabic: 'دور على اليمين', arabizi: 'Dour 3la el ymin', phonetic: '[dour 3la el ymin]', french: 'Tourne à droite' },
+    { arabic: 'امشي طول', arabizi: 'Emchi tool', phonetic: '[emchi tool]', french: 'Va tout droit' },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: [],
+};
+
 export const grammarRules: Readonly<GrammarRule[]> = [
   RULE_NEGATION,
   RULE_ARTICLE_DEFINI,
@@ -346,6 +392,8 @@ export const grammarRules: Readonly<GrammarRule[]> = [
   RULE_MAISON_POSSESSION,
   RULE_FAMILLE_FUTUR,
   RULE_FAMILLE_ADJECTIF,
+  RULE_LOUAGE_DIRECTION,
+  RULE_LOUAGE_IMPERATIF,
 ] as const;
 
 export const grammarRulesById: Readonly<Record<string, GrammarRule>> =
