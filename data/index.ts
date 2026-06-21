@@ -98,3 +98,12 @@ export {
   getWritingLessonById,
   getWritingLessonsBySystem,
 } from './writing';
+
+export {
+  exercises,
+  exercisesById,
+  getExerciseById,
+  getExercisesByType,
+  getExercisesByUniverse,
+  getExercisesByLevel,
+} from './exercises';

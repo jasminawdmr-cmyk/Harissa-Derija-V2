@@ -125,6 +125,12 @@ export interface Word {
   exampleSentenceArabic?: string;
   exampleSentenceFrench?: string;
   audioFileName?: string;
+  /** Clé de fichier audio V3 (ex: "salutations/aaslema") */
+  audioKey?: string;
+  /** Texte pour la synthèse vocale (arabe ou arabizi selon le moteur TTS) */
+  ttsKey?: string;
+  /** Indice phonétique simplifié pour l'affichage (ex: "aas-LE-ma") */
+  pronunciationKey?: string;
   tags: string[];
   /** Univers thématique de rattachement (architecture V3+) */
   universe?: Universe;
@@ -490,6 +496,12 @@ export interface Phrase {
   usageNote?: string;
   tags: string[];
   audioFileName?: string;
+  /** Clé de fichier audio V3 */
+  audioKey?: string;
+  /** Texte pour TTS */
+  ttsKey?: string;
+  /** Indice phonétique simplifié */
+  pronunciationKey?: string;
   /** Univers thématique de rattachement (architecture V3+) */
   universe?: Universe;
   needsValidation?: boolean;
@@ -521,6 +533,12 @@ export interface Expression {
   typicalReply?: string;
   tags: string[];
   audioFileName?: string;
+  /** Clé de fichier audio V3 */
+  audioKey?: string;
+  /** Texte pour TTS */
+  ttsKey?: string;
+  /** Indice phonétique simplifié */
+  pronunciationKey?: string;
   /** Univers thématique de rattachement (architecture V3+) */
   universe?: Universe;
   needsValidation?: boolean;
@@ -633,4 +651,50 @@ export interface WritingLesson {
   tags: string[];
   /** Univers thématique de rattachement (architecture V3+) */
   universe?: Universe;
+}
+
+// ─── Exercices pédagogiques ───────────────────────────────────────────────────
+
+export type ExerciseType =
+  | 'conjugaison'
+  | 'grammaire'
+  | 'prononciation'
+  | 'ecoute'
+  | 'association'
+  | 'ordre_mots';
+
+export interface ExerciseChoice {
+  /** Texte arabizi ou français selon le contexte */
+  arabizi?: string;
+  arabic?: string;
+  french?: string;
+}
+
+export interface Exercise {
+  id: string;
+  type: ExerciseType;
+  level: Level;
+  /** Consigne / question en français */
+  prompt: string;
+  /** Cible en arabizi (mot ou phrase à reconnaître/produire) */
+  targetArabizi?: string;
+  /** Cible en arabe */
+  targetArabic?: string;
+  /** Choix multiples (association, QCM) */
+  choices?: ExerciseChoice[];
+  /** Tokens à remettre dans l'ordre (ordre_mots) — dans le désordre */
+  tokens?: string[];
+  /** Réponse(s) correcte(s) */
+  correctAnswer: string | string[];
+  /** Explication pédagogique affichée après réponse */
+  explanation?: string;
+  /** Références croisées — ne jamais dupliquer le contenu, pointer vers la source */
+  wordIds?: string[];
+  verbId?: string;
+  grammarRuleId?: string;
+  expressionId?: string;
+  /** Clé audio liée à l'exercice (écoute / prononciation) */
+  audioKey?: string;
+  universe?: Universe;
+  tags?: string[];
 }
