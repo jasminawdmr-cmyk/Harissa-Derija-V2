@@ -80,6 +80,15 @@ export default function DecouvrirScreen() {
       decorEmojis: ['🧳', '✉️'],
     },
     {
+      key: 'art',
+      emoji: '🎨',
+      title: 'Art & Artisanat',
+      subtitle: 'Poterie, tissu & créations',
+      count: getDiscoverBySection('art').length,
+      topColor: '#7E4FB0',
+      decorEmojis: ['🪬', '🧵'],
+    },
+    {
       key: 'contemporain',
       emoji: '✨',
       title: "Tunisie d'aujourd'hui",

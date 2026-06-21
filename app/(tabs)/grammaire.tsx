@@ -7,6 +7,7 @@ import { GrammarRuleCard } from '@/components/common/GrammarRuleCard';
 import { PronounGrid } from '@/components/common/PronounGrid';
 import { TensePatternCard } from '@/components/common/TensePatternCard';
 import { VisualLegend } from '@/components/common/VisualLegend';
+import { GrammarLegend } from '@/components/common/GrammarLegend';
 import { EmptyState } from '@/components/common/EmptyState';
 import { Theme, TenseColors } from '@/lib/Theme';
 import { TextStyles } from '@/lib/Typography';
@@ -61,11 +62,20 @@ export default function GrammaireScreen() {
         style={styles.search}
       />
 
-      {/* Légende des couleurs de temps (décodage visuel) */}
+      {/* Légende des couleurs de temps */}
       <VisualLegend
         title="Code couleur des temps"
         tokens={TenseColors}
         only={['present', 'passe', 'futur']}
+        defaultOpen={false}
+        style={styles.legend}
+      />
+
+      {/* Légende grammaticale visuelle complète V3 */}
+      <GrammarLegend
+        title="Notions grammaticales"
+        icon="🎨"
+        collapsible
         defaultOpen={false}
         style={styles.legend}
       />

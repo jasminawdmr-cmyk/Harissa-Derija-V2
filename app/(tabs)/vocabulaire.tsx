@@ -6,6 +6,7 @@ import { SearchBar } from '@/components/common/SearchBar';
 import { FilterPills, FilterOption } from '@/components/common/FilterPills';
 import { WordCard } from '@/components/common/WordCard';
 import { VisualLegend } from '@/components/common/VisualLegend';
+import { PronunciationPlayer } from '@/components/common/PronunciationPlayer';
 import { EmptyState } from '@/components/common/EmptyState';
 import { Theme, CategoryColors } from '@/lib/Theme';
 import { TextStyles } from '@/lib/Typography';
@@ -97,6 +98,26 @@ export default function VocabulaireScreen() {
         style={styles.legend}
       />
 
+      {/* Prononciation vedette — visible pour Salutations */}
+      {(category === 'tous' || category === 'salutations') && !search && (
+        <View style={styles.pronunciationSection}>
+          <Text style={styles.pronunciationTitle}>🔊 Salutations — prononciation</Text>
+          {vocabulary
+            .filter((w) => w.category === 'salutations')
+            .slice(0, 3)
+            .map((w) => (
+              <PronunciationPlayer
+                key={w.id}
+                arabic={w.arabic}
+                arabizi={w.arabizi}
+                pronunciationKey={w.pronunciationKey}
+                audioKey={w.audioKey}
+                ttsKey={w.ttsKey}
+              />
+            ))}
+        </View>
+      )}
+
       {/* En-tête de liste : compteur + bascule favoris */}
       <View style={styles.listHeader}>
         <Text style={styles.resultCount}>
@@ -181,5 +202,19 @@ const styles = StyleSheet.create({
   },
   list: {
     gap: Theme.spacing[3],
+  },
+  pronunciationSection: {
+    backgroundColor: Theme.colors.backgroundCard,
+    borderRadius: Theme.radii.lg,
+    padding: Theme.spacing[4],
+    marginBottom: Theme.spacing[4],
+    gap: Theme.spacing[2],
+    borderWidth: 1,
+    borderColor: Theme.colors.borderLight,
+  },
+  pronunciationTitle: {
+    ...TextStyles.label,
+    color: Theme.colors.textSecondary,
+    marginBottom: Theme.spacing[1],
   },
 });

@@ -12,6 +12,8 @@ import { verbs } from '@/data/verbs';
 import { grammarRules } from '@/data/grammar';
 import { lessons } from '@/data/lessons';
 import { dialogues } from '@/data/dialogues';
+import { exercises } from '@/data/exercises';
+import { UniverseIllustration } from '@/components/common/UniverseIllustration';
 
 /**
  * APPRENDRE — hub d'apprentissage Blablalouni.
@@ -65,6 +67,17 @@ export default function ApprendreScreen() {
       accent: '#8B1E1E',
       culturalRef: '🏛️',
     },
+    {
+      key: 'exercices',
+      route: '/exercices',
+      emoji: '🎯',
+      title: 'Exercices',
+      subtitle: 'Conjugaison, grammaire, écoute…',
+      count: exercises.length,
+      unit: 'exercice',
+      accent: '#C66B3D',
+      culturalRef: '✏️',
+    },
   ];
 
   return (
@@ -91,6 +104,24 @@ export default function ApprendreScreen() {
             culturalRef={s.culturalRef}
             onPress={() => router.push(s.route)}
             style={styles.card}
+          />
+        ))}
+      </View>
+
+      {/* Univers d'apprentissage */}
+      <Text style={styles.universesTitle}>Univers thématiques</Text>
+      <View style={styles.universesRow}>
+        {(['salutations', 'cafe', 'marche', 'maison'] as const).map((u) => (
+          <UniverseIllustration
+            key={u}
+            universe={u}
+            title={
+              u === 'salutations' ? 'Salutations' :
+              u === 'cafe'        ? 'Au café'     :
+              u === 'marche'      ? 'Au marché'   : 'À la maison'
+            }
+            variant="compact"
+            style={styles.universeCard}
           />
         ))}
       </View>
@@ -183,5 +214,18 @@ const styles = StyleSheet.create({
   writingChevron: {
     fontSize: 28,
     color: Theme.colors.textMuted,
+  },
+  universesTitle: {
+    ...TextStyles.label,
+    color: Theme.colors.textMuted,
+    marginBottom: Theme.spacing[2],
+    marginTop: Theme.spacing[2],
+  },
+  universesRow: {
+    gap: Theme.spacing[2],
+    marginBottom: Theme.spacing[4],
+  },
+  universeCard: {
+    flex: 1,
   },
 });
