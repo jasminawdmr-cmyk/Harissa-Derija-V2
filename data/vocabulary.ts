@@ -96,6 +96,103 @@ export const vocabulary: Readonly<VocabularyItem[]> = [
   { id: 'w_sou9', arabic: 'سوق', arabizi: 'Sou9', french: 'Marché', category: 'shopping', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack01', 'ville', 'culture'] },
   { id: 'w_7ouma', arabic: 'حومة', arabizi: '7ouma', french: 'Quartier', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack01', 'ville'] },
   { id: 'w_bled', arabic: 'بلاد', arabizi: 'Bled', french: 'Pays / village / chez soi (selon contexte)', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack01', 'ville'] },
+
+  // ════════════════════════════════════════════════════════════════════════════════
+  // PACK 02
+  // ════════════════════════════════════════════════════════════════════════════════
+
+  // ── Chiffres et quantités ─────────────────────────────────────────────────────
+  { id: 'w_wa7ed', arabic: 'واحد', arabizi: 'Wa7ed', french: 'Un', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'chiffres'] },
+  { id: 'w_zouz', arabic: 'زوز', arabizi: 'Zouz', french: 'Deux', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'chiffres'] },
+  { id: 'w_thletha', arabic: 'ثلاثة', arabizi: 'Thletha', french: 'Trois', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'chiffres'] },
+  { id: 'w_arb3a', arabic: 'أربعة', arabizi: 'Arb3a', french: 'Quatre', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'chiffres'] },
+  { id: 'w_khamsa', arabic: 'خمسة', arabizi: 'Khamsa', french: 'Cinq', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'chiffres'] },
+  { id: 'w_setta', arabic: 'ستّة', arabizi: 'Setta', french: 'Six', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'chiffres'] },
+  { id: 'w_sab3a', arabic: 'سبعة', arabizi: 'Sab3a', french: 'Sept', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'chiffres'] },
+  { id: 'w_thmenya', arabic: 'ثمانية', arabizi: 'Thmenya', french: 'Huit', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'chiffres'] },
+  { id: 'w_tes3a', arabic: 'تسعة', arabizi: 'Tes3a', french: 'Neuf', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'chiffres'] },
+  { id: 'w_3achra', arabic: 'عشرة', arabizi: '3achra', french: 'Dix', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'chiffres'] },
+  { id: 'w_barsha', arabic: 'برشة', arabizi: 'Barsha', french: 'Beaucoup', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'quantites'] },
+  { id: 'w_chwaya', arabic: 'شوية', arabizi: 'Chwaya', french: 'Un peu', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'quantites'] },
+  { id: 'w_el_kol', arabic: 'الكل', arabizi: 'El kol', french: 'Tout / tous', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'quantites'] },
+  { id: 'w_nos', arabic: 'نصّ', arabizi: 'Nos', french: 'Demi / moitié', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'quantites'] },
+  { id: 'w_kilo', arabic: 'كيلو', arabizi: 'Kilo', french: 'Kilo', category: 'chiffres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'quantites'] },
+
+  // ── Temps et moments ──────────────────────────────────────────────────────────
+  { id: 'w_sbe7', arabic: 'صباح', arabizi: 'Sbe7', french: 'Matin', category: 'temps', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'temps'] },
+  { id: 'w_3cheya', arabic: 'عشية', arabizi: '3cheya', french: 'Après-midi / fin de journée', category: 'temps', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'temps'] },
+  { id: 'w_lil', arabic: 'ليل', arabizi: 'Lil', french: 'Nuit', category: 'temps', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'temps'] },
+  { id: 'w_bekri', arabic: 'بكري', arabizi: 'Bekri', french: 'Tôt', category: 'temps', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'temps'] },
+  { id: 'w_met2akher', arabic: 'متأخر', arabizi: 'Met2akher', french: 'En retard / tard', category: 'temps', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'temps'] },
+  { id: 'w_dima', arabic: 'ديما', arabizi: 'Dima', french: 'Toujours', category: 'temps', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'temps'] },
+  { id: 'w_marra_marra', arabic: 'مرّة مرّة', arabizi: 'Marra marra', french: 'Parfois', category: 'temps', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'temps'] },
+  { id: 'w_ba3d', arabic: 'بعد', arabizi: 'Ba3d', french: 'Après', category: 'temps', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'temps'] },
+  { id: 'w_9bal', arabic: 'قبل', arabizi: '9bal', french: 'Avant', category: 'temps', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'temps'] },
+  { id: 'w_d9i9a', arabic: 'دقيقة', arabizi: 'D9i9a', french: 'Minute', category: 'temps', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'temps'] },
+
+  // ── Corps et santé ────────────────────────────────────────────────────────────
+  { id: 'w_ras', arabic: 'راس', arabizi: 'Ras', french: 'Tête', category: 'corps', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'corps'] },
+  { id: 'w_3in', arabic: 'عين', arabizi: '3in', french: 'Œil', category: 'corps', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'corps'] },
+  { id: 'w_yed', arabic: 'يد', arabizi: 'Yed', french: 'Main', category: 'corps', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'corps'] },
+  { id: 'w_se9', arabic: 'ساق', arabizi: 'Se9', french: 'Jambe', category: 'corps', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'corps'] },
+  { id: 'w_kresh', arabic: 'كرش', arabizi: 'Kresh', french: 'Ventre', category: 'corps', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'corps'] },
+  { id: 'w_9alb', arabic: 'قلب', arabizi: '9alb', french: 'Cœur', category: 'corps', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'corps'] },
+  { id: 'w_mridh', arabic: 'مريض', arabizi: 'Mridh', french: 'Malade', category: 'corps', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'sante'] },
+  { id: 'w_labes_sante', arabic: 'لاباس', arabizi: 'Labes', french: 'Ça va / en bonne santé', category: 'corps', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'sante'] },
+  { id: 'w_wji3a', arabic: 'وجيعة', arabizi: 'Wji3a', french: 'Douleur', category: 'corps', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'sante'] },
+  { id: 'w_skhana', arabic: 'سخانة', arabizi: 'Skhana', french: 'Fièvre / chaleur', category: 'corps', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'sante'] },
+
+  // ── Émotions et états ─────────────────────────────────────────────────────────
+  { id: 'w_far7an', arabic: 'فرحان', arabizi: 'Far7an', french: 'Content / heureux', category: 'emotions', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'emotions'] },
+  { id: 'w_7zin', arabic: 'حزين', arabizi: '7zin', french: 'Triste', category: 'emotions', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'emotions'] },
+  { id: 'w_te3eb', arabic: 'تاعب', arabizi: 'Te3eb', french: 'Fatigué', category: 'emotions', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'emotions'] },
+  { id: 'w_khayef', arabic: 'خايف', arabizi: 'Khayef', french: 'Apeuré', category: 'emotions', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'emotions'] },
+  { id: 'w_ghadhb', arabic: 'غاضب', arabizi: 'Ghadhb', french: 'Fâché / en colère', category: 'emotions', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'emotions'] },
+  { id: 'w_mestanes', arabic: 'مستانس', arabizi: 'Mestanes', french: "Content / à l'aise", category: 'emotions', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'emotions'] },
+  { id: 'w_m9alla9', arabic: 'مقلق', arabizi: 'M9alla9', french: 'Énervé / inquiet (selon contexte)', category: 'emotions', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'emotions'] },
+  { id: 'w_berdan', arabic: 'بردان', arabizi: 'Berdan', french: "J'ai froid / il a froid", category: 'emotions', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'etats'] },
+  { id: 'w_skhoun', arabic: 'سخون', arabizi: 'Skhoun', french: 'Chaud', category: 'emotions', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'etats'] },
+  { id: 'w_jou3an', arabic: 'جوعان', arabizi: 'Jou3an', french: 'Affamé', category: 'emotions', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'etats'] },
+
+  // ── Vêtements ─────────────────────────────────────────────────────────────────
+  { id: 'w_keswa', arabic: 'كسوة', arabizi: 'Keswa', french: 'Vêtement / robe (selon contexte)', category: 'vêtements', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'vetements'] },
+  { id: 'w_serwel', arabic: 'سروال', arabizi: 'Serwel', french: 'Pantalon', category: 'vêtements', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'vetements'] },
+  { id: 'w_maryoul', arabic: 'مريول', arabizi: 'Maryoul', french: 'T-shirt / haut', category: 'vêtements', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'vetements'] },
+  { id: 'w_sabbat', arabic: 'صبّاط', arabizi: 'Sabbat', french: 'Chaussures', category: 'vêtements', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'vetements'] },
+  { id: 'w_t9acher', arabic: 'تقاشر', arabizi: 'T9acher', french: 'Chaussettes', category: 'vêtements', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'vetements'] },
+  { id: 'w_jakit', arabic: 'جاكيت', arabizi: 'Jakit', french: 'Veste', category: 'vêtements', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'vetements'] },
+  { id: 'w_7zem', arabic: 'حزام', arabizi: '7zem', french: 'Ceinture', category: 'vêtements', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'vetements'] },
+  { id: 'w_chanta', arabic: 'شنطة', arabizi: 'Chanta', french: 'Sac', category: 'vêtements', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'vetements'] },
+  { id: 'w_nadharat', arabic: 'نظارات', arabizi: 'Nadharat', french: 'Lunettes', category: 'vêtements', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'vetements'] },
+  { id: 'w_khatem', arabic: 'خاتم', arabizi: 'Khatem', french: 'Bague', category: 'vêtements', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'vetements'] },
+
+  // ── Marché et courses ─────────────────────────────────────────────────────────
+  { id: 'w_dokken', arabic: 'دكان', arabizi: 'Dokken', french: 'Épicerie / petit magasin', category: 'shopping', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'marche'] },
+  { id: 'w_7anout', arabic: 'حانوت', arabizi: '7anout', french: 'Magasin / boutique', category: 'shopping', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'marche'] },
+  { id: 'w_khadhra', arabic: 'خضرة', arabizi: 'Khadhra', french: 'Légumes', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'marche', 'nourriture'] },
+  { id: 'w_ghella', arabic: 'غلة', arabizi: 'Ghella', french: 'Fruits', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'marche', 'nourriture'] },
+  { id: 'w_ma3dnous', arabic: 'معدنوس', arabizi: 'Ma3dnous', french: 'Persil', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'marche', 'nourriture'] },
+  { id: 'w_9ares', arabic: 'قارس', arabizi: '9ares', french: 'Citron', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'marche', 'nourriture'] },
+  { id: 'w_bourt9al', arabic: 'برتقال', arabizi: 'Bourt9al', french: 'Orange', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'marche', 'nourriture'] },
+  { id: 'w_tfe7', arabic: 'تفاح', arabizi: 'Tfe7', french: 'Pomme', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'marche', 'nourriture'] },
+  { id: 'w_delle3', arabic: 'دلاع', arabizi: 'Delle3', french: 'Pastèque', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'marche', 'nourriture'] },
+  { id: 'w_fa99ous', arabic: 'فقوس', arabizi: 'Fa99ous', french: 'Concombre', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'marche', 'nourriture'] },
+  { id: 'w_jelbena', arabic: 'جلبانة', arabizi: 'Jelbena', french: 'Petits pois', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'marche', 'nourriture'] },
+  { id: 'w_loubya', arabic: 'لوبيا', arabizi: 'Loubya', french: 'Haricots', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'marche', 'nourriture'] },
+  { id: 'w_3des', arabic: 'عدس', arabizi: '3des', french: 'Lentilles', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'marche', 'nourriture'] },
+  { id: 'w_7ommes', arabic: 'حمص', arabizi: '7ommes', french: 'Pois chiches', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'marche', 'nourriture'] },
+  { id: 'w_djej', arabic: 'دجاج', arabizi: 'Djej', french: 'Poulet', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'marche', 'nourriture'] },
+
+  // ── Ville et lieux ────────────────────────────────────────────────────────────
+  { id: 'w_chare3', arabic: 'شارع', arabizi: 'Chare3', french: 'Rue / avenue', category: 'transport', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'ville'] },
+  { id: 'w_nehj', arabic: 'نهج', arabizi: 'Nehj', french: 'Rue', category: 'transport', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'ville'] },
+  { id: 'w_mat3am', arabic: 'مطعم', arabizi: 'Mat3am', french: 'Restaurant', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'lieux'] },
+  { id: 'w_madrsa', arabic: 'مدرسة', arabizi: 'Madrsa', french: 'École', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'lieux'] },
+  { id: 'w_jam3a', arabic: 'جامعة', arabizi: 'Jam3a', french: 'Université', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'lieux'] },
+  { id: 'w_sbitar', arabic: 'سبيطار', arabizi: 'Sbitar', french: 'Hôpital', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'lieux'] },
+  { id: 'w_bousta', arabic: 'بوسطة', arabizi: 'Bousta', french: 'Poste', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'lieux'] },
+  { id: 'w_bank', arabic: 'بنك', arabizi: 'Bank', french: 'Banque', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'lieux'] },
+  { id: 'w_blasa', arabic: 'بلاصة', arabizi: 'Blasa', french: 'Place / endroit', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'lieux'] },
 ] as const;
 
 // ─── Accès ──────────────────────────────────────────────────────────────────────

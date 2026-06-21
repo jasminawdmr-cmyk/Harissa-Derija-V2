@@ -117,6 +117,8 @@ export interface Verb {
   };
   /** true si le contenu n'a pas encore été validé par un locuteur natif */
   needsValidation?: boolean;
+  /** Note de validation ou commentaire linguistique */
+  note?: string;
 }
 
 // ─── Leçons ───────────────────────────────────────────────────────────────────

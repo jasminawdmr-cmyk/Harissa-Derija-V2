@@ -245,7 +245,168 @@ const PACK_01: Verb[] = [
   },
 ];
 
-export const verbs: Readonly<Verb[]> = [VERB_MANGER, VERB_PARLER, ...PACK_01] as const;
+// ─── PACK 02 ────────────────────────────────────────────────────────────────────
+
+const PACK_02: Verb[] = [
+  {
+    id: 'v_nelbes', infinitiveFrench: "je porte / je m'habille", rootArabic: 'نلبس', rootArabizi: 'nelbes',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'vetements'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نلبس', arabizi: 'nelbes' }] },
+    example: { arabic: 'نلبس مريول', arabizi: 'Nelbes maryoul', french: 'Je porte un t-shirt' },
+  },
+  {
+    id: 'v_naghsel', infinitiveFrench: 'je lave', rootArabic: 'نغسل', rootArabizi: 'naghsel',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'maison'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نغسل', arabizi: 'naghsel' }] },
+    example: { arabic: 'نغسل يدي', arabizi: 'Naghsel yeddi', french: 'Je lave ma main / mes mains' },
+  },
+  {
+    id: 'v_ntayeb', infinitiveFrench: 'je cuisine / je fais cuire', rootArabic: 'نطيب', rootArabizi: 'ntayeb',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'nourriture'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نطيب', arabizi: 'ntayeb' }] },
+    example: { arabic: 'نطيب عجة', arabizi: 'Ntayeb ojja', french: 'Je cuisine une ojja' },
+  },
+  {
+    id: 'v_n9oss', infinitiveFrench: 'je coupe', rootArabic: 'نقص', rootArabizi: 'n9oss',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'nourriture'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نقص', arabizi: 'n9oss' }] },
+    example: { arabic: 'نقص الطماطم', arabizi: 'N9oss el tmatem', french: 'Je coupe les tomates' },
+  },
+  {
+    id: 'v_nzid', infinitiveFrench: "j'ajoute / je recommence", rootArabic: 'نزيد', rootArabizi: 'nzid',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'nourriture'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نزيد', arabizi: 'nzid' }] },
+    example: { arabic: 'نزيد شوية ملح', arabizi: 'Nzid chwaya mel7', french: "J'ajoute un peu de sel" },
+  },
+  {
+    id: 'v_n7ot', infinitiveFrench: 'je mets / je pose', rootArabic: 'نحط', rootArabizi: 'n7ot',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'quotidien'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نحط', arabizi: 'n7ot' }] },
+    example: { arabic: 'نحط القهوة على الطاولة', arabizi: 'N7ot el 9ahwa 3la el tawla', french: 'Je pose le café sur la table' },
+  },
+  {
+    id: 'v_nel9a', infinitiveFrench: 'je trouve', rootArabic: 'نلقى', rootArabizi: 'nel9a',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'quotidien'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نلقى', arabizi: 'nel9a' }] },
+    example: { arabic: 'نلقى التاكسي', arabizi: 'Nel9a el taxi', french: 'Je trouve le taxi' },
+  },
+  {
+    id: 'v_ndhi3', infinitiveFrench: 'je me perds / je perds', rootArabic: 'نضيع', rootArabizi: 'ndhi3',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'quotidien'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نضيع', arabizi: 'ndhi3' }] },
+    example: { arabic: 'نضيع في السوق', arabizi: 'Ndhi3 fel sou9', french: 'Je me perds au marché' },
+  },
+  {
+    id: 'v_n3awen', infinitiveFrench: "j'aide", rootArabic: 'نعاون', rootArabizi: 'n3awen',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'quotidien'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نعاون', arabizi: 'n3awen' }] },
+    example: { arabic: 'نعاون أمّي', arabizi: 'N3awen ommi', french: "J'aide ma mère" },
+  },
+  {
+    id: 'v_nes2el', infinitiveFrench: 'je demande', rootArabic: 'نسأل', rootArabizi: 'nes2el',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'communication'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نسأل', arabizi: 'nes2el' }] },
+    example: { arabic: 'نسأل على الطريق', arabizi: 'Nes2el 3la el tri9', french: 'Je demande le chemin' },
+  },
+  {
+    id: 'v_nebda', infinitiveFrench: 'je commence', rootArabic: 'نبدى', rootArabizi: 'nebda',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'quotidien'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نبدى', arabizi: 'nebda' }] },
+    example: { arabic: 'نبدى الدرس', arabizi: 'Nebda el dars', french: 'Je commence la leçon' },
+  },
+  {
+    id: 'v_nkammel', infinitiveFrench: 'je termine / je complète', rootArabic: 'نكمّل', rootArabizi: 'nkammel',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'quotidien'], needsValidation: true,
+    note: "Vérifier que l'arabizi est bien nkammel, correction probable de nkammes.",
+    conjugations: { present: [{ person: '1s', arabic: 'نكمّل', arabizi: 'nkammel' }] },
+    example: { arabic: 'نكمّل الخدمة', arabizi: 'Nkammel el khedma', french: 'Je termine le travail' },
+  },
+  {
+    id: 'v_nerta7', infinitiveFrench: 'je me repose', rootArabic: 'نرتاح', rootArabizi: 'nerta7',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'quotidien'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نرتاح', arabizi: 'nerta7' }] },
+    example: { arabic: 'نرتاح شوية', arabizi: 'Nerta7 chwaya', french: 'Je me repose un peu' },
+  },
+  {
+    id: 'v_nel3ab', infinitiveFrench: 'je joue', rootArabic: 'نلعب', rootArabizi: 'nel3ab',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'loisirs'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نلعب', arabizi: 'nel3ab' }] },
+    example: { arabic: 'نلعب مع خويا', arabizi: 'Nel3ab m3a khouya', french: 'Je joue avec mon frère' },
+  },
+  {
+    id: 'v_n7ebbes', infinitiveFrench: "j'arrête", rootArabic: 'نحبس', rootArabizi: 'n7ebbes',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'quotidien'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نحبس', arabizi: 'n7ebbes' }] },
+    example: { arabic: 'نحبس هنا', arabizi: 'N7ebbes houni', french: "Je m'arrête ici" },
+  },
+  {
+    id: 'v_nokhrej', infinitiveFrench: 'je sors', rootArabic: 'نخرج', rootArabizi: 'nokhrej',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'quotidien'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نخرج', arabizi: 'nokhrej' }] },
+    example: { arabic: 'نخرج مع صحابي', arabizi: 'Nokhrej m3a s7abi', french: 'Je sors avec mes amis' },
+  },
+  {
+    id: 'v_nodkhol', infinitiveFrench: "j'entre", rootArabic: 'ندخل', rootArabizi: 'nodkhol',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'quotidien'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'ندخل', arabizi: 'nodkhol' }] },
+    example: { arabic: 'ندخل للدار', arabizi: 'Nodkhol lel dar', french: "J'entre dans la maison" },
+  },
+  {
+    id: 'v_nbaddel', infinitiveFrench: 'je change', rootArabic: 'نبدّل', rootArabizi: 'nbaddel',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'quotidien'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نبدّل', arabizi: 'nbaddel' }] },
+    example: { arabic: 'نبدّل الصباط', arabizi: 'Nbaddel el sabbat', french: 'Je change les chaussures' },
+  },
+  {
+    id: 'v_n9abel', infinitiveFrench: 'je rencontre / je reçois', rootArabic: 'نقابل', rootArabizi: 'n9abel',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'communication'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نقابل', arabizi: 'n9abel' }] },
+    example: { arabic: 'نقابل صحابي', arabizi: 'N9abel s7abi', french: 'Je rencontre mes amis' },
+  },
+  {
+    id: 'v_n3ayet', infinitiveFrench: "j'appelle / je crie (selon contexte)", rootArabic: 'نعيط', rootArabizi: 'n3ayet',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'communication'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نعيط', arabizi: 'n3ayet' }] },
+    example: { arabic: 'نعيط لخالتي', arabizi: 'N3ayet l khalti', french: "J'appelle ma tante" },
+  },
+  {
+    id: 'v_nesta3mel', infinitiveFrench: "j'utilise", rootArabic: 'نستعمل', rootArabizi: 'nesta3mel',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'quotidien'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نستعمل', arabizi: 'nesta3mel' }] },
+    example: { arabic: 'نستعمل التليفون', arabizi: 'Nesta3mel el tilifoun', french: "J'utilise le téléphone" },
+  },
+  {
+    id: 'v_nsawwer', infinitiveFrench: 'je prends en photo / je filme', rootArabic: 'نصوّر', rootArabizi: 'nsawwer',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'loisirs'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نصوّر', arabizi: 'nsawwer' }] },
+    example: { arabic: 'نصوّر البحر', arabizi: 'Nsawwer el b7ar', french: 'Je prends la mer en photo' },
+  },
+  {
+    id: 'v_nefra7', infinitiveFrench: 'je suis content / je me réjouis', rootArabic: 'نفرح', rootArabizi: 'nefra7',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'emotions'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نفرح', arabizi: 'nefra7' }] },
+    example: { arabic: 'نفرح برشة', arabizi: 'Nefra7 barsha', french: 'Je suis très content' },
+  },
+  {
+    id: 'v_nebki', infinitiveFrench: 'je pleure', rootArabic: 'نبكي', rootArabizi: 'nebki',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'emotions'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نبكي', arabizi: 'nebki' }] },
+    example: { arabic: 'نبكي شوية', arabizi: 'Nebki chwaya', french: 'Je pleure un peu' },
+  },
+  {
+    id: 'v_nodh7ok', infinitiveFrench: 'je ris', rootArabic: 'نضحك', rootArabizi: 'nodh7ok',
+    isIrregular: false, level: 'debutant', tags: ['pack02', 'emotions'], needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نضحك', arabizi: 'nodh7ok' }] },
+    example: { arabic: 'نضحك معاك', arabizi: 'Nodh7ok m3ak', french: 'Je ris avec toi' },
+  },
+];
+
+export const verbs: Readonly<Verb[]> = [
+  VERB_MANGER,
+  VERB_PARLER,
+  ...PACK_01,
+  ...PACK_02,
+] as const;
 
 export const verbsById: Readonly<Record<string, Verb>> = Object.fromEntries(
   verbs.map((v) => [v.id, v])
