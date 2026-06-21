@@ -1,11 +1,11 @@
 import { Platform } from 'react-native';
 
 /**
- * Système typographique pour Darija Tunisien.
+ * Système typographique Blablalouni V3.
  *
- * Corpo : Inter (clarté, lisibilité sur mobile)
- * Arabe / Darija translittéré : sera géré par une police système
- * Display : poids bold d'Inter pour les titres d'écran
+ * Corps : police système (iOS SF Pro / Android Roboto) — lisible, moderne.
+ * Display / titres : extrabold système — style vintage bold proche Bazaar/Masaha.
+ * Darija translittéré : géré par la police système, poids fort.
  */
 
 // Familles de polices
@@ -67,12 +67,12 @@ export const LetterSpacings = {
 
 // Styles de texte composites — à utiliser directement dans StyleSheet
 export const TextStyles = {
-  // Titres d'écran
+  // Titres d'écran — extrabold pour l'identité Blablalouni
   screenTitle: {
     fontSize: FontSizes['2xl'],
-    fontWeight: FontWeights.bold,
+    fontWeight: FontWeights.extrabold,
     lineHeight: FontSizes['2xl'] * LineHeights.tight,
-    letterSpacing: LetterSpacings.tight,
+    letterSpacing: LetterSpacings.tighter,
   },
   // Titre de section
   sectionTitle: {

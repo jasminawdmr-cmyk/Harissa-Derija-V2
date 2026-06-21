@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { useRouter } from 'expo-router';
 import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/layout/ScreenHeader';
+import { CategoryCard } from '@/components/common/CategoryCard';
 import { Card } from '@/components/common/Card';
 import { Theme } from '@/lib/Theme';
 import { TextStyles } from '@/lib/Typography';
@@ -12,25 +13,23 @@ import { grammarRules } from '@/data/grammar';
 import { lessons } from '@/data/lessons';
 
 /**
- * 📚 APPRENDRE — pilier d'apprentissage de la langue.
- * Hub qui regroupe les écrans existants (Leçons, Vocabulaire, Verbes, Grammaire)
- * sans les supprimer : chaque carte ouvre l'écran correspondant déjà construit.
- * Réduit la navigation de 8 onglets à 5 piliers cohérents.
+ * APPRENDRE — hub d'apprentissage Blablalouni.
+ * 4 catégories + bandeau Écriture. Aucune fonctionnalité retirée.
  */
 export default function ApprendreScreen() {
   const router = useRouter();
 
-  // Compteurs réels pour donner vie aux cartes (évite l'impression de vide)
-  const sections: HubSection[] = [
+  const sections: SectionDef[] = [
     {
       key: 'lecon',
       route: '/lecon',
       emoji: '📖',
       title: 'Parcours',
-      subtitle: 'La leçon du jour, pas à pas',
+      subtitle: 'Les leçons du jour, pas à pas',
       count: lessons.length,
       unit: 'leçon',
-      accent: Theme.rawColors.olive[400],
+      accent: '#607A53',
+      culturalRef: '🫒',
     },
     {
       key: 'vocabulaire',
@@ -40,7 +39,8 @@ export default function ApprendreScreen() {
       subtitle: 'Le vocabulaire par thème',
       count: vocabulary.length,
       unit: 'mot',
-      accent: Theme.rawColors.olive[500],
+      accent: '#1F5F8B',
+      culturalRef: '🌊',
     },
     {
       key: 'verbes',
@@ -50,7 +50,8 @@ export default function ApprendreScreen() {
       subtitle: 'Conjugaisons visuelles',
       count: verbs.length,
       unit: 'verbe',
-      accent: Theme.rawColors.terracotta[400],
+      accent: '#C76543',
+      culturalRef: '☕',
     },
     {
       key: 'grammaire',
@@ -60,7 +61,8 @@ export default function ApprendreScreen() {
       subtitle: 'Les règles essentielles',
       count: grammarRules.length,
       unit: 'règle',
-      accent: Theme.rawColors.azure[400],
+      accent: '#8B1E1E',
+      culturalRef: '🏛️',
     },
   ];
 
@@ -69,34 +71,30 @@ export default function ApprendreScreen() {
       <ScreenHeader
         title="Apprendre"
         subtitle="Votre tunisien, pas à pas"
-        accentColor={Theme.colors.secondary}
+        accentColor="#607A53"
       />
 
       <View style={styles.grid}>
         {sections.map((s) => (
-          <Card
+          <CategoryCard
             key={s.key}
-            elevated
-            style={styles.card}
+            emoji={s.emoji}
+            title={s.title}
+            subtitle={s.subtitle}
+            countLabel={
+              s.count > 0
+                ? `${s.count} ${s.unit}${s.count > 1 ? 's' : ''}`
+                : 'Bientôt'
+            }
+            accentColor={s.accent}
+            culturalRef={s.culturalRef}
             onPress={() => router.push(s.route)}
-          >
-            <View style={[styles.iconBubble, { backgroundColor: s.accent + '22' }]}>
-              <Text style={styles.icon}>{s.emoji}</Text>
-            </View>
-            <Text style={styles.cardTitle}>{s.title}</Text>
-            <Text style={styles.cardSubtitle}>{s.subtitle}</Text>
-            <View style={[styles.countPill, { backgroundColor: s.accent + '18' }]}>
-              <Text style={[styles.countText, { color: s.accent }]}>
-                {s.count > 0
-                  ? `${s.count} ${s.unit}${s.count > 1 ? 's' : ''}`
-                  : 'Bientôt'}
-              </Text>
-            </View>
-          </Card>
+            style={styles.card}
+          />
         ))}
       </View>
 
-      {/* Bandeau écriture — préparé pour le futur parcours d'écriture */}
+      {/* Bandeau écriture */}
       <Card
         variant="subtle"
         style={styles.writingBanner}
@@ -115,7 +113,7 @@ export default function ApprendreScreen() {
   );
 }
 
-interface HubSection {
+interface SectionDef {
   key: string;
   route: string;
   emoji: string;
@@ -124,6 +122,7 @@ interface HubSection {
   count: number;
   unit: string;
   accent: string;
+  culturalRef?: string;
 }
 
 const styles = StyleSheet.create({
@@ -131,49 +130,16 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: Theme.spacing[3],
+    marginBottom: Theme.spacing[4],
   },
   card: {
     width: '47%',
     flexGrow: 1,
-    gap: Theme.spacing[1],
-    minHeight: 150,
-  },
-  iconBubble: {
-    width: 48,
-    height: 48,
-    borderRadius: 24,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: Theme.spacing[2],
-  },
-  icon: {
-    fontSize: 24,
-  },
-  cardTitle: {
-    ...TextStyles.cardTitle,
-    fontSize: 17,
-    color: Theme.colors.textPrimary,
-  },
-  cardSubtitle: {
-    ...TextStyles.bodySmall,
-    color: Theme.colors.textSecondary,
-  },
-  countPill: {
-    alignSelf: 'flex-start',
-    borderRadius: Theme.radii.full,
-    paddingHorizontal: Theme.spacing[2],
-    paddingVertical: 3,
-    marginTop: Theme.spacing[2],
-  },
-  countText: {
-    ...TextStyles.label,
-    fontSize: 11,
   },
   writingBanner: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: Theme.spacing[3],
-    marginTop: Theme.spacing[4],
   },
   writingEmoji: {
     fontSize: 28,

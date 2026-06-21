@@ -1,116 +1,119 @@
 /**
- * Palette de couleurs inspirée de la Tunisie :
- * sable du désert, terracotta des médinas, olive des oliveraies,
- * ivoire des mosaïques, azur de la Méditerranée.
+ * Palette de couleurs Blablalouni V3.
+ * Inspirée de la Tunisie : crème des médinas, orange brûlé des épices,
+ * olive des oliveraies, safran des marchés, bleu de Sidi Bou Saïd.
  */
 
 export const Colors = {
-  // Couleurs principales
+  // Fonds chauds — crème tunisienne
   sand: {
-    50: '#FDF8F0',
-    100: '#F9EDD8',
-    200: '#F5ECD7',   // Fond principal
-    300: '#EDD9B5',
-    400: '#E0C48A',
-    500: '#C9A55A',
+    50: '#FDFAF4',
+    100: '#F9F3E3',
+    200: '#F7F1E6',   // Fond principal — crème chaud
+    300: '#EDE0C4',
+    400: '#D6C89A',
+    500: '#D6A658',   // Jaune safran
   },
 
+  // Orange brûlé / rouge brique — accent principal
   terracotta: {
-    50: '#FDF0EC',
-    100: '#F9D5C8',
-    200: '#F0A882',
-    300: '#E07850',
-    400: '#C85A2E',   // Accent principal
-    500: '#A0421E',
-    600: '#7A2E10',
+    50: '#FAEEE9',
+    100: '#F2D0C4',
+    200: '#E8A888',
+    300: '#D97A5A',
+    400: '#C76543',   // Orange brûlé — accent principal
+    500: '#A04030',
+    600: '#8B1E1E',   // Rouge brique — accent fort
   },
 
+  // Olive — accent nature
   olive: {
-    50: '#F2F4EE',
-    100: '#DCE3D0',
-    200: '#B8C9A0',
-    300: '#8FA872',
-    400: '#6B8C4A',   // Vert accent
-    500: '#4E6B32',
-    600: '#364A20',
+    50: '#EDF2EA',
+    100: '#D5E2CE',
+    200: '#B0C6A4',
+    300: '#8AAA78',
+    400: '#607A53',   // Vert olive principal
+    500: '#475C3D',
+    600: '#32432B',
   },
 
+  // Crème clair — fonds secondaires
   ivory: {
     50: '#FDFCF8',
-    100: '#F8F5EC',   // Fond secondaire
-    200: '#EDE8D8',
+    100: '#F7F1E6',
+    200: '#EDE0C4',
     300: '#DDD5BF',
     400: '#C8BDA0',
   },
 
-  // Bleu méditerranéen — utilisé avec parcimonie
+  // Bleu Sidi Bou Saïd
   azure: {
-    100: '#D4E8F2',
-    200: '#A8D0E6',
-    300: '#6AAED4',
-    400: '#3B8EC0',
-    500: '#1E6E9E',
+    100: '#D0E2EF',
+    200: '#A0C4DF',
+    300: '#5F9AC4',
+    400: '#1F5F8B',   // Bleu Sidi Bou Saïd — accent froid
+    500: '#164872',
   },
 
-  // Neutres
+  // Neutres — du crème au brun noir
   neutral: {
     0: '#FFFFFF',
-    50: '#FAFAF8',
-    100: '#F0EDEA',
-    200: '#DDD9D4',
-    300: '#B8B2AA',
-    400: '#8C857C',
-    500: '#5E5650',
-    600: '#3D3830',
-    700: '#1E1A14',
+    50: '#FDFAF4',
+    100: '#F0EBE0',
+    200: '#DDD5C0',
+    300: '#B8AC98',
+    400: '#8C8070',
+    500: '#5E5248',
+    600: '#3D342A',
+    700: '#1F1712',   // Brun noir principal
     900: '#0A0806',
   },
 
   // États fonctionnels
-  success: '#5A8A5E',
-  warning: '#C8882E',
-  error: '#C84040',
-  info: '#3B8EC0',
+  success: '#607A53',
+  warning: '#D6A658',
+  error: '#8B1E1E',
+  info: '#1F5F8B',
 
-  // Transparences fréquentes
-  overlay: 'rgba(10, 8, 6, 0.4)',
-  overlayLight: 'rgba(245, 236, 215, 0.85)',
+  // Transparences
+  overlay: 'rgba(31, 23, 18, 0.45)',
+  overlayLight: 'rgba(247, 241, 230, 0.90)',
 } as const;
 
 // Alias sémantiques pour l'UI
 export const SemanticColors = {
   // Fonds
-  backgroundPrimary: Colors.sand[200],
-  backgroundSecondary: Colors.ivory[100],
-  backgroundCard: Colors.ivory[50],
-  backgroundAccent: Colors.terracotta[400],
+  backgroundPrimary: '#F7F1E6',
+  backgroundSecondary: '#F9F3E3',
+  backgroundCard: '#FDFCF8',
+  backgroundAccent: '#C76543',
 
   // Textes
-  textPrimary: Colors.neutral[700],
-  textSecondary: Colors.neutral[500],
-  textMuted: Colors.neutral[400],
-  textOnAccent: Colors.ivory[50],
-  textOnDark: Colors.ivory[100],
+  textPrimary: '#1F1712',
+  textSecondary: '#5E5248',
+  textMuted: '#8C8070',
+  textOnAccent: '#FDFCF8',
+  textOnDark: '#F7F1E6',
 
   // Bordures
-  borderLight: Colors.sand[300],
-  borderMedium: Colors.neutral[200],
+  borderLight: '#EDE0C4',
+  borderMedium: '#DDD5C0',
 
   // Interactif
-  primary: Colors.terracotta[400],
-  primaryHover: Colors.terracotta[500],
-  secondary: Colors.olive[400],
-  accent: Colors.azure[400],
+  primary: '#C76543',     // orange brûlé
+  primaryHover: '#A04030',
+  secondary: '#607A53',   // olive
+  accent: '#1F5F8B',      // bleu Sidi Bou Saïd
 
   // Navigation
-  tabActive: Colors.terracotta[400],
-  tabInactive: Colors.neutral[400],
-  tabBackground: Colors.ivory[50],
+  tabActive: '#C76543',
+  tabInactive: '#8C8070',
+  tabBackground: '#FDFCF8',
 
   // Progression / gamification
-  progressFill: Colors.olive[400],
-  progressTrack: Colors.sand[300],
-  streak: Colors.terracotta[300],
+  progressFill: '#607A53',
+  progressTrack: '#EDE0C4',
+  streak: '#D6A658',      // safran
 } as const;
 
 export type ColorKey = keyof typeof Colors;
@@ -140,65 +143,63 @@ export interface VisualToken {
 
 // ─── GRAMMAIRE : rôle morphologique ───────────────────────────────────────────
 export const GrammarColors = {
-  prefix:    { main: '#2F6FB0', soft: '#DCEAF7', label: 'Préfixe',   icon: '◀' },  // bleu
-  root:      { main: '#4E8C3A', soft: '#DEEFD3', label: 'Radical',   icon: '●' },  // vert
-  suffix:    { main: '#7E4FB0', soft: '#E8DCF5', label: 'Suffixe',   icon: '▶' },  // violet
-  conjugation:{ main: '#D6792A', soft: '#FAE6D2', label: 'Conjugaison', icon: '↻' }, // orange
-  exception: { main: '#C8403F', soft: '#F7DAD9', label: 'Exception', icon: '⚠' },  // rouge
-  particle:  { main: '#8C857C', soft: '#E8E5E1', label: 'Particule', icon: '○' },  // gris
+  prefix:    { main: '#2F6FB0', soft: '#DCEAF7', label: 'Préfixe',   icon: '◀' },
+  root:      { main: '#4E8C3A', soft: '#DEEFD3', label: 'Radical',   icon: '●' },
+  suffix:    { main: '#7E4FB0', soft: '#E8DCF5', label: 'Suffixe',   icon: '▶' },
+  conjugation:{ main: '#D6792A', soft: '#FAE6D2', label: 'Conjugaison', icon: '↻' },
+  exception: { main: '#C8403F', soft: '#F7DAD9', label: 'Exception', icon: '⚠' },
+  particle:  { main: '#8C857C', soft: '#E8E5E1', label: 'Particule', icon: '○' },
 } as const satisfies Record<string, VisualToken>;
 
 // ─── GENRE ─────────────────────────────────────────────────────────────────────
 export const GenderColors = {
-  masculine: { main: '#3B8EC0', soft: '#D6EAF6', label: 'Masculin',     icon: '♂' }, // bleu clair
-  feminine:  { main: '#D46A93', soft: '#F8DEE9', label: 'Féminin',      icon: '♀' }, // rose clair
-  neutral:   { main: '#8C857C', soft: '#F4F2EE', label: 'Neutre / mixte', icon: '◇' }, // blanc/neutre
+  masculine: { main: '#1F5F8B', soft: '#D0E2EF', label: 'Masculin',     icon: '♂' },
+  feminine:  { main: '#C76543', soft: '#FAEEE9', label: 'Féminin',      icon: '♀' },
+  neutral:   { main: '#8C8070', soft: '#F4F2EE', label: 'Neutre / mixte', icon: '◇' },
 } as const satisfies Record<string, VisualToken>;
 
 // ─── PERSONNES (pronoms) ───────────────────────────────────────────────────────
-// Clés alignées sur le type Person : 1s, 2s(m/f), 3sm, 3sf, 1p, 2p, 3p.
 export const PersonColors = {
-  '1s':  { main: '#4E8C3A', soft: '#DEEFD3', label: 'Je',        icon: '🟢' }, // vert
-  '2sm': { main: '#3B8EC0', soft: '#D6EAF6', label: 'Tu (m)',    icon: '🔵' }, // bleu clair
-  '2sf': { main: '#D46A93', soft: '#F8DEE9', label: 'Tu (f)',    icon: '🌸' }, // rose clair
-  '3sm': { main: '#1E5A8A', soft: '#CFE0EC', label: 'Il',        icon: '🔷' }, // bleu foncé
-  '3sf': { main: '#7E4FB0', soft: '#E8DCF5', label: 'Elle',      icon: '🟣' }, // violet
-  '1p':  { main: '#D8B22E', soft: '#F7EFC9', label: 'Nous',      icon: '🟡' }, // jaune
-  '2p':  { main: '#D6792A', soft: '#FAE6D2', label: 'Vous',      icon: '🟠' }, // orange
-  '3p':  { main: '#7A5230', soft: '#E8DBCC', label: 'Ils/Elles', icon: '🟤' }, // brun
+  '1s':  { main: '#607A53', soft: '#D5E2CE', label: 'Je',        icon: '🟢' },
+  '2sm': { main: '#1F5F8B', soft: '#D0E2EF', label: 'Tu (m)',    icon: '🔵' },
+  '2sf': { main: '#C76543', soft: '#FAEEE9', label: 'Tu (f)',    icon: '🌸' },
+  '3sm': { main: '#164872', soft: '#C5D8E8', label: 'Il',        icon: '🔷' },
+  '3sf': { main: '#7E4FB0', soft: '#E8DCF5', label: 'Elle',      icon: '🟣' },
+  '1p':  { main: '#D6A658', soft: '#F5EAC9', label: 'Nous',      icon: '🟡' },
+  '2p':  { main: '#C76543', soft: '#FAEEE9', label: 'Vous',      icon: '🟠' },
+  '3p':  { main: '#3D342A', soft: '#E0D8CC', label: 'Ils/Elles', icon: '🟤' },
 } as const satisfies Record<string, VisualToken>;
 
 // ─── TEMPS ─────────────────────────────────────────────────────────────────────
 export const TenseColors = {
-  present: { main: '#4E8C3A', soft: '#DEEFD3', label: 'Présent', icon: '⏺' }, // vert
-  passe:   { main: '#D8B22E', soft: '#F7EFC9', label: 'Passé',   icon: '⏪' }, // jaune
-  futur:   { main: '#7E4FB0', soft: '#E8DCF5', label: 'Futur',   icon: '⏩' }, // violet
-  imperatif:{ main: '#D6792A', soft: '#FAE6D2', label: 'Impératif', icon: '❗' }, // orange (proche conjugaison)
+  present: { main: '#607A53', soft: '#D5E2CE', label: 'Présent', icon: '⏺' },
+  passe:   { main: '#D6A658', soft: '#F5EAC9', label: 'Passé',   icon: '⏪' },
+  futur:   { main: '#1F5F8B', soft: '#D0E2EF', label: 'Futur',   icon: '⏩' },
+  imperatif:{ main: '#C76543', soft: '#FAEEE9', label: 'Impératif', icon: '❗' },
 } as const satisfies Record<string, VisualToken>;
 
 // ─── CATÉGORIES de vocabulaire ─────────────────────────────────────────────────
 export const CategoryColors = {
-  famille:       { main: '#7A5230', soft: '#E8DBCC', label: 'Famille',        icon: '👨‍👩‍👧' }, // brun
-  maison:        { main: '#6B7C3A', soft: '#E2E8CF', label: 'Maison',         icon: '🏠' }, // vert olive
-  verbes:        { main: '#C85A2E', soft: '#FAE0D2', label: 'Verbes',         icon: '🗣️' }, // terracotta
-  emotions:      { main: '#D46A93', soft: '#F8DEE9', label: 'Émotions',       icon: '❤️' }, // rose
-  deplacements:  { main: '#2BA89E', soft: '#CDEEEA', label: 'Déplacements',   icon: '🚌' }, // turquoise
-  grammaire:     { main: '#9B8AC4', soft: '#E7E1F2', label: 'Grammaire',      icon: '📜' }, // lavande
-  nourriture:    { main: '#D8B22E', soft: '#F7EFC9', label: 'Nourriture',     icon: '🍽️' }, // jaune
-  temps:         { main: '#8C857C', soft: '#E8E5E1', label: 'Temps',          icon: '🕐' }, // gris
-  sante:         { main: '#C8403F', soft: '#F7DAD9', label: 'Santé',          icon: '🩺' }, // rouge
-  travail:       { main: '#5A3A22', soft: '#DECEBF', label: 'Travail',        icon: '💼' }, // brun foncé
-  administration:{ main: '#B5611E', soft: '#F2DCC4', label: 'Administration', icon: '🏛️' }, // orange foncé
+  famille:       { main: '#3D342A', soft: '#E0D8CC', label: 'Famille',        icon: '👨‍👩‍👧' },
+  maison:        { main: '#607A53', soft: '#D5E2CE', label: 'Maison',         icon: '🏠' },
+  verbes:        { main: '#C76543', soft: '#FAEEE9', label: 'Verbes',         icon: '🗣️' },
+  emotions:      { main: '#8B1E1E', soft: '#F2D0C4', label: 'Émotions',       icon: '❤️' },
+  deplacements:  { main: '#1F5F8B', soft: '#D0E2EF', label: 'Déplacements',   icon: '🚐' },
+  grammaire:     { main: '#7E4FB0', soft: '#E8DCF5', label: 'Grammaire',      icon: '📜' },
+  nourriture:    { main: '#D6A658', soft: '#F5EAC9', label: 'Nourriture',     icon: '🍽️' },
+  temps:         { main: '#8C8070', soft: '#E8E5E1', label: 'Temps',          icon: '🕐' },
+  sante:         { main: '#8B1E1E', soft: '#F2D0C4', label: 'Santé',          icon: '🩺' },
+  travail:       { main: '#3D342A', soft: '#E0D8CC', label: 'Travail',        icon: '💼' },
+  administration:{ main: '#A04030', soft: '#F2DCC4', label: 'Administration', icon: '🏛️' },
 } as const satisfies Record<string, VisualToken>;
 
 // ─── MAÎTRISE (niveau d'acquisition) ───────────────────────────────────────────
-// Aligné sur MasteryScore 0–5 via le helper getMasteryToken() ci-dessous.
 export const MasteryColors = {
-  notAcquired: { main: '#C8403F', soft: '#F7DAD9', label: 'Non acquis',    icon: '🔴' }, // rouge
-  fragile:     { main: '#D6792A', soft: '#FAE6D2', label: 'Fragile',       icon: '🟠' }, // orange
-  progressing: { main: '#D8B22E', soft: '#F7EFC9', label: 'En progression', icon: '🟡' }, // jaune
-  mastered:    { main: '#4E8C3A', soft: '#DEEFD3', label: 'Maîtrisé',      icon: '🟢' }, // vert
-  automated:   { main: '#C9A55A', soft: '#F5ECD7', label: 'Automatisé',    icon: '⭐' }, // étoile
+  notAcquired: { main: '#8B1E1E', soft: '#F2D0C4', label: 'Non acquis',    icon: '🔴' },
+  fragile:     { main: '#C76543', soft: '#FAEEE9', label: 'Fragile',       icon: '🟠' },
+  progressing: { main: '#D6A658', soft: '#F5EAC9', label: 'En progression', icon: '🟡' },
+  mastered:    { main: '#607A53', soft: '#D5E2CE', label: 'Maîtrisé',      icon: '🟢' },
+  automated:   { main: '#D6A658', soft: '#F5EAC9', label: 'Automatisé',    icon: '⭐' },
 } as const satisfies Record<string, VisualToken>;
 
 // ─── Helpers de correspondance ─────────────────────────────────────────────────
@@ -209,13 +210,11 @@ export function getMasteryToken(score: number): VisualToken {
   if (score === 1) return MasteryColors.fragile;
   if (score === 2) return MasteryColors.progressing;
   if (score <= 4) return MasteryColors.mastered;
-  return MasteryColors.automated; // 5 = automatisé
+  return MasteryColors.automated;
 }
 
 /**
- * Mappe une clé Person (du type domaine : 1s, 2s, 3sm…) vers un token.
- * Le type Person ne distingue pas 2sm/2sf ; on retombe sur 2sm par défaut
- * et l'appelant peut forcer le genre s'il le connaît.
+ * Mappe une clé Person vers un token.
  */
 export function getPersonToken(
   person: string,

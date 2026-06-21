@@ -14,7 +14,6 @@ import { getMasteryToken } from '@/lib/Theme';
 export default function ProfilScreen() {
   const { stats, wordProgress, resetProgress } = useUserProgress();
 
-  // Statistiques globales dérivées des données réelles (AsyncStorage)
   const globalStats = [
     { emoji: '🔥', value: String(stats?.currentStreak ?? 0), label: 'jours' },
     { emoji: '⭐', value: String(stats?.totalXP ?? 0), label: 'XP total' },
@@ -22,7 +21,6 @@ export default function ProfilScreen() {
     { emoji: '🏆', value: String(stats?.quizzesTaken ?? 0), label: 'quiz' },
   ];
 
-  // Répartition de la maîtrise des mots, calculée depuis wordProgress réel
   const masteryBuckets = computeMasteryBuckets(wordProgress);
 
   return (
@@ -30,16 +28,16 @@ export default function ProfilScreen() {
       <ScreenHeader
         title="Profil"
         subtitle="Votre parcours en tunisien"
-        accentColor={Theme.rawColors.sand[500]}
+        accentColor="#D6A658"
       />
 
       {/* Avatar & identité */}
       <View style={styles.avatarSection}>
         <View style={styles.avatar}>
-          <Text style={styles.avatarEmoji}>👤</Text>
+          <Text style={styles.avatarEmoji}>🌿</Text>
         </View>
         <Text style={styles.displayName}>Apprenant·e</Text>
-        <Text style={styles.memberSince}>Bienvenue dans votre parcours 🌿</Text>
+        <Text style={styles.memberSince}>Bienvenue dans votre parcours ✦</Text>
       </View>
 
       {/* Statistiques globales */}
@@ -55,7 +53,7 @@ export default function ProfilScreen() {
 
       <Divider style={styles.divider} />
 
-      {/* Répartition de la maîtrise (calculée depuis les données réelles) */}
+      {/* Répartition de la maîtrise */}
       <Text style={styles.sectionTitle}>Maîtrise du vocabulaire</Text>
       <Card elevated style={styles.progressCard}>
         {masteryBuckets.map((bucket, i) => (
@@ -112,7 +110,7 @@ export default function ProfilScreen() {
               false: Theme.colors.borderMedium,
               true: Theme.colors.primary,
             }}
-            thumbColor={Theme.rawColors.ivory[50]}
+            thumbColor="#FDFCF8"
           />
         </View>
       </Card>
@@ -122,7 +120,11 @@ export default function ProfilScreen() {
       {/* À propos */}
       <Text style={styles.sectionTitle}>À propos</Text>
       <Card variant="subtle" style={styles.aboutCard}>
-        <Text style={styles.aboutTitle}>Darija تونسي</Text>
+        {/* Logo Blablalouni inline */}
+        <View style={styles.aboutLogoRow}>
+          <Text style={styles.aboutLogoBlabla}>blabla</Text>
+          <Text style={styles.aboutLogoLouni}>louni</Text>
+        </View>
         <Text style={styles.aboutBody}>
           Apprendre le tunisien dialectal — conçu pour la diaspora et les
           francophones passionnés de culture tunisienne.
@@ -143,18 +145,12 @@ export default function ProfilScreen() {
   );
 }
 
-/**
- * Répartit les mots suivis par niveau de maîtrise, à partir du wordProgress réel.
- * Utilise la charte MasteryColors via getMasteryToken (aucune couleur en dur).
- */
 function computeMasteryBuckets(
   wordProgress: Record<string, { masteryLevel: number }>
 ) {
   const entries = Object.values(wordProgress);
   const total = Math.max(1, entries.length);
-
-  // Regroupe par token de maîtrise (rouge → étoile)
-  const scores = [0, 1, 2, 3, 5]; // représentants de chaque palier
+  const scores = [0, 1, 2, 3, 5];
   return scores.map((score) => {
     const token = getMasteryToken(score);
     const count = entries.filter(
@@ -174,18 +170,22 @@ const styles = StyleSheet.create({
     width: 80,
     height: 80,
     borderRadius: Theme.radii.full,
-    backgroundColor: Theme.rawColors.sand[300],
+    backgroundColor: '#EDE0C4',
     alignItems: 'center',
     justifyContent: 'center',
+    borderWidth: 2,
+    borderColor: '#D6A658',
   },
   avatarEmoji: { fontSize: 36 },
   displayName: {
     ...TextStyles.sectionTitle,
     color: Theme.colors.textPrimary,
+    fontWeight: '800',
   },
   memberSince: {
     ...TextStyles.bodySmall,
-    color: Theme.colors.textMuted,
+    color: '#D6A658',
+    fontWeight: '500',
   },
   statsGrid: {
     flexDirection: 'row',
@@ -201,6 +201,7 @@ const styles = StyleSheet.create({
   statValue: {
     ...TextStyles.cardTitle,
     color: Theme.colors.textPrimary,
+    fontWeight: '800',
   },
   statLabel: {
     ...TextStyles.caption,
@@ -212,6 +213,7 @@ const styles = StyleSheet.create({
     ...TextStyles.sectionTitle,
     color: Theme.colors.textPrimary,
     marginBottom: Theme.spacing[3],
+    fontWeight: '700',
   },
   progressCard: { gap: Theme.spacing[1] },
   levelRow: {
@@ -224,9 +226,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: Theme.spacing[2],
   },
-  levelDot: {
-    fontSize: 12,
-  },
+  levelDot: { fontSize: 12 },
   levelLabel: {
     ...TextStyles.bodySmall,
     color: Theme.colors.textSecondary,
@@ -255,9 +255,22 @@ const styles = StyleSheet.create({
   },
   inlineDivider: { marginVertical: Theme.spacing[2] },
   aboutCard: { gap: Theme.spacing[2] },
-  aboutTitle: {
-    ...TextStyles.cardTitle,
-    color: Theme.colors.textPrimary,
+  aboutLogoRow: {
+    flexDirection: 'row',
+    alignItems: 'baseline',
+    marginBottom: Theme.spacing[1],
+  },
+  aboutLogoBlabla: {
+    fontSize: 22,
+    fontWeight: '800',
+    color: '#1F1712',
+    letterSpacing: -0.5,
+  },
+  aboutLogoLouni: {
+    fontSize: 22,
+    fontWeight: '800',
+    color: '#C76543',
+    letterSpacing: -0.5,
   },
   aboutBody: {
     ...TextStyles.body,

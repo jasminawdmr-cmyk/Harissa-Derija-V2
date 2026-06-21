@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/layout/ScreenHeader';
-import { Card } from '@/components/common/Card';
+import { PostcardCard } from '@/components/common/PostcardCard';
 import { Theme } from '@/lib/Theme';
 import { TextStyles } from '@/lib/Typography';
 import { getDiscoverBySection } from '@/data/discover';
@@ -10,29 +10,29 @@ import { recipes } from '@/data/recipes';
 import { expressions } from '@/data/expressions';
 
 /**
- * 🇹🇳 DÉCOUVRIR LA TUNISIE — pilier culturel.
- * Présente les 6+ rubriques (culture, histoire, cuisine, musique, régions,
- * expressions, diaspora, contemporain). Le contenu n'est pas encore disponible :
- * chaque carte affiche un placeholder élégant « Bientôt » pour éviter l'impression
- * de vide, tout en montrant ce qui arrive. Les contenants de données existent déjà.
+ * DÉCOUVRIR — pilier culturel Blablalouni.
+ * Chaque rubrique a sa propre couleur et ses références visuelles discrètes.
+ * Le contenu n'est pas encore disponible : placeholders « Bientôt » élégants.
  */
 export default function DecouvrirScreen() {
-  const rubriques: Rubrique[] = [
+  const rubriques: RubriqueDef[] = [
     {
       key: 'culture',
-      emoji: '🍵',
+      emoji: '☕',
       title: 'Culture',
       subtitle: 'Traditions & codes de vie',
       count: getDiscoverBySection('culture').length,
-      accent: Theme.rawColors.terracotta[400],
+      topColor: '#C76543',
+      decorEmojis: ['🫒', '🌸'],
     },
     {
       key: 'cuisine',
       emoji: '🌶️',
       title: 'Cuisine',
-      subtitle: 'Recettes & saveurs',
+      subtitle: 'Saveurs & recettes',
       count: recipes.length,
-      accent: Theme.rawColors.terracotta[400],
+      topColor: '#8B1E1E',
+      decorEmojis: ['🧄', '🫙'],
     },
     {
       key: 'histoire',
@@ -40,7 +40,8 @@ export default function DecouvrirScreen() {
       title: 'Histoire',
       subtitle: 'Repères & grandes époques',
       count: getDiscoverBySection('histoire').length,
-      accent: Theme.rawColors.terracotta[400],
+      topColor: '#3D342A',
+      decorEmojis: ['⚱️', '📜'],
     },
     {
       key: 'regions',
@@ -48,7 +49,8 @@ export default function DecouvrirScreen() {
       title: 'Régions',
       subtitle: 'Du Nord au Sud',
       count: getDiscoverBySection('regions').length,
-      accent: Theme.rawColors.terracotta[400],
+      topColor: '#1F5F8B',
+      decorEmojis: ['🌴', '🔑'],
     },
     {
       key: 'musique',
@@ -56,7 +58,8 @@ export default function DecouvrirScreen() {
       title: 'Musique',
       subtitle: 'Genres & instruments',
       count: getDiscoverBySection('musique').length,
-      accent: Theme.rawColors.terracotta[400],
+      topColor: '#7E4FB0',
+      decorEmojis: ['🥁', '🎸'],
     },
     {
       key: 'expressions',
@@ -64,7 +67,8 @@ export default function DecouvrirScreen() {
       title: 'Expressions',
       subtitle: 'Le sel de la langue',
       count: expressions.length,
-      accent: Theme.rawColors.terracotta[400],
+      topColor: '#D6A658',
+      decorEmojis: ['🌿', '✨'],
     },
     {
       key: 'diaspora',
@@ -72,15 +76,17 @@ export default function DecouvrirScreen() {
       title: 'Diaspora',
       subtitle: 'Garder le lien',
       count: getDiscoverBySection('diaspora').length,
-      accent: Theme.rawColors.terracotta[400],
+      topColor: '#607A53',
+      decorEmojis: ['🧳', '✉️'],
     },
     {
       key: 'contemporain',
       emoji: '✨',
-      title: 'Tunisie d’aujourd’hui',
+      title: "Tunisie d'aujourd'hui",
       subtitle: 'La vie moderne',
       count: getDiscoverBySection('contemporain').length,
-      accent: Theme.rawColors.terracotta[400],
+      topColor: '#1F5F8B',
+      decorEmojis: ['📱', '🌆'],
     },
   ];
 
@@ -88,71 +94,89 @@ export default function DecouvrirScreen() {
     <ScreenContainer>
       <ScreenHeader
         title="Découvrir"
-        subtitle="Entrez dans la Tunisie"
-        accentColor={Theme.colors.primary}
+        subtitle="La Tunisie, un fragment à la fois"
+        accentColor="#1F5F8B"
       />
 
-      {/* Bandeau d'accroche — donne le ton, évite la page froide */}
-      <Card variant="accent" style={styles.heroBanner}>
-        <Text style={styles.heroEmoji}>🫒</Text>
-        <Text style={styles.heroTitle}>Plus qu’une langue</Text>
-        <Text style={styles.heroText}>
-          La cuisine, les gens, les histoires et la musique d’un pays
-          méditerranéen, un fragment à la fois.
-        </Text>
-      </Card>
+      {/* Bandeau d'accroche */}
+      <View style={styles.heroBanner}>
+        <Text style={styles.heroDecor}>🌊</Text>
+        <View style={styles.heroTextBlock}>
+          <Text style={styles.heroTitle}>Plus qu'une langue</Text>
+          <Text style={styles.heroText}>
+            La cuisine, les gens, l'histoire et la musique d'un pays
+            méditerranéen — un fragment à la fois.
+          </Text>
+        </View>
+        <Text style={styles.heroDecorRight}>🌴</Text>
+      </View>
 
+      {/* Grille de cartes postales */}
       <View style={styles.grid}>
         {rubriques.map((r) => (
-          <Card key={r.key} elevated style={styles.card}>
-            <View style={[styles.iconBubble, { backgroundColor: r.accent + '22' }]}>
-              <Text style={styles.icon}>{r.emoji}</Text>
-            </View>
-            <Text style={styles.cardTitle}>{r.title}</Text>
-            <Text style={styles.cardSubtitle}>{r.subtitle}</Text>
-            <View style={[styles.statusPill, { backgroundColor: r.accent + '18' }]}>
-              <Text style={[styles.statusText, { color: r.accent }]}>
-                {r.count > 0 ? `${r.count} à explorer` : 'Bientôt'}
-              </Text>
-            </View>
-          </Card>
+          <PostcardCard
+            key={r.key}
+            emoji={r.emoji}
+            title={r.title}
+            subtitle={r.subtitle}
+            countLabel={r.count > 0 ? `${r.count} à explorer` : 'Bientôt'}
+            topColor={r.topColor}
+            decorEmojis={r.decorEmojis}
+            style={styles.card}
+          />
         ))}
       </View>
 
       <Text style={styles.footnote}>
-        De nouveaux contenus arrivent régulièrement 🌿
+        Nouveaux contenus à venir 🌿
       </Text>
     </ScreenContainer>
   );
 }
 
-interface Rubrique {
+interface RubriqueDef {
   key: string;
   emoji: string;
   title: string;
   subtitle: string;
   count: number;
-  accent: string;
+  topColor: string;
+  decorEmojis?: string[];
 }
 
 const styles = StyleSheet.create({
   heroBanner: {
-    marginBottom: Theme.spacing[4],
-    gap: Theme.spacing[1],
+    backgroundColor: '#1F1712',
+    borderRadius: Theme.radii.xl,
+    padding: Theme.spacing[5],
+    marginBottom: Theme.spacing[5],
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Theme.spacing[3],
+    overflow: 'hidden',
+    ...Theme.shadows.md,
   },
-  heroEmoji: {
+  heroDecor: {
+    fontSize: 34,
+  },
+  heroDecorRight: {
     fontSize: 30,
-    marginBottom: Theme.spacing[1],
+    opacity: 0.6,
+  },
+  heroTextBlock: {
+    flex: 1,
+    gap: Theme.spacing[1],
   },
   heroTitle: {
     ...TextStyles.cardTitle,
     fontSize: 18,
-    color: Theme.colors.textOnAccent,
+    fontWeight: '800',
+    color: '#F7F1E6',
   },
   heroText: {
     ...TextStyles.bodySmall,
-    color: Theme.colors.textOnAccent,
-    opacity: 0.92,
+    color: '#B8AC98',
+    lineHeight: 18,
   },
   grid: {
     flexDirection: 'row',
@@ -162,39 +186,6 @@ const styles = StyleSheet.create({
   card: {
     width: '47%',
     flexGrow: 1,
-    gap: Theme.spacing[1],
-    minHeight: 148,
-  },
-  iconBubble: {
-    width: 46,
-    height: 46,
-    borderRadius: 23,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: Theme.spacing[2],
-  },
-  icon: {
-    fontSize: 23,
-  },
-  cardTitle: {
-    ...TextStyles.cardTitle,
-    fontSize: 16,
-    color: Theme.colors.textPrimary,
-  },
-  cardSubtitle: {
-    ...TextStyles.bodySmall,
-    color: Theme.colors.textSecondary,
-  },
-  statusPill: {
-    alignSelf: 'flex-start',
-    borderRadius: Theme.radii.full,
-    paddingHorizontal: Theme.spacing[2],
-    paddingVertical: 3,
-    marginTop: Theme.spacing[2],
-  },
-  statusText: {
-    ...TextStyles.label,
-    fontSize: 11,
   },
   footnote: {
     ...TextStyles.bodySmall,

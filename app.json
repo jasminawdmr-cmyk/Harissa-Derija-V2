@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Darija تونسي",
-    "slug": "darija-tunisien",
+    "name": "Blablalouni",
+    "slug": "blablalouni",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -9,19 +9,19 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#F5ECD7"
+      "backgroundColor": "#F7F1E6"
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.darija.tunisien"
+      "bundleIdentifier": "com.blablalouni.app"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#F5ECD7"
+        "backgroundColor": "#F7F1E6"
       },
-      "package": "com.darija.tunisien"
+      "package": "com.blablalouni.app"
     },
     "web": {
       "bundler": "metro"
@@ -29,7 +29,7 @@
     "plugins": [
       "expo-router"
     ],
-    "scheme": "darija-tunisien",
+    "scheme": "blablalouni",
     "extra": {
       "router": {
         "origin": false
