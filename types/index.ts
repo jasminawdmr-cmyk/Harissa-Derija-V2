@@ -24,6 +24,59 @@ export interface TunisianText {
   note?: string;
 }
 
+// ─── Univers thématiques ──────────────────────────────────────────────────────
+// Architecture long terme (V3 → V4 → V5) : tout contenu est rattachable à un
+// univers. Permet de construire et d'afficher des univers complets (vocabulaire +
+// verbes + phrases + expressions + dialogues + grammaire + découvrir + écriture).
+// Le registre lisible (label, emoji, couleur) vit dans data/universes.ts.
+
+export type Universe =
+  | 'salutations'
+  | 'cafe'
+  | 'marche'
+  | 'louage'
+  | 'chez_la_tante'
+  | 'voyage'
+  | 'famille'
+  | 'maison'
+  | 'emotions'
+  | 'nourriture'
+  | 'temps_meteo'
+  | 'corps_sante'
+  | 'ville'
+  | 'transport'
+  | 'etudes'
+  | 'travail'
+  | 'sorties'
+  | 'amitie'
+  | 'mariage_fetes'
+  | 'achats'
+  | 'administration'
+  | 'medias_reseaux';
+
+/** Objectifs de contenu d'un univers, par type pédagogique. */
+export interface UniverseTargets {
+  vocabulary: number;
+  verbs: number;
+  phrases: number;
+  expressions: number;
+  dialogues: number;
+  grammar: number;
+  discover: number;
+  writingLessons: number;
+  writingExercises: number;
+}
+
+/** Définition complète d'un univers (registre data/learningUniverse.ts). */
+export interface UniverseDefinition {
+  id: Universe;
+  title: string;
+  icon: string;
+  color: string;
+  difficulty: 1 | 2 | 3 | 4 | 5;
+  target: UniverseTargets;
+}
+
 // ─── Niveaux & progression ────────────────────────────────────────────────────
 
 export type Level = 'debutant' | 'elementaire' | 'intermediaire' | 'avance';
@@ -71,6 +124,8 @@ export interface Word {
   exampleSentenceFrench?: string;
   audioFileName?: string;
   tags: string[];
+  /** Univers thématique de rattachement (architecture V3+) */
+  universe?: Universe;
   /** true si le contenu n'a pas encore été validé par un locuteur natif */
   needsValidation?: boolean;
   /** Note de validation ou commentaire linguistique */
@@ -109,6 +164,8 @@ export interface Verb {
   tags: string[];
   isIrregular: boolean;
   notes?: string;
+  /** Univers thématique de rattachement (architecture V3+) */
+  universe?: Universe;
   /** Exemple d'usage trilingue obligatoire (arabe + arabizi + français) */
   example?: {
     arabic: string;
@@ -316,6 +373,8 @@ export interface GrammarRule {
   exceptions?: string[];
   lessonIds: string[];
   prerequisiteRuleIds?: string[];
+  /** Univers thématique de rattachement (architecture V3+) */
+  universe?: Universe;
 }
 
 // ─── Dialogue ─────────────────────────────────────────────────────────────────
@@ -358,6 +417,8 @@ export interface Dialogue {
   grammarRuleIds?: string[];
   culturalNote?: string;
   estimatedMinutes: number;
+  /** Univers thématique de rattachement (architecture V3+) */
+  universe?: Universe;
 }
 
 // ─── ReviewItem ───────────────────────────────────────────────────────────────
@@ -427,6 +488,8 @@ export interface Phrase {
   usageNote?: string;
   tags: string[];
   audioFileName?: string;
+  /** Univers thématique de rattachement (architecture V3+) */
+  universe?: Universe;
   needsValidation?: boolean;
   note?: string;
 }
@@ -456,6 +519,8 @@ export interface Expression {
   typicalReply?: string;
   tags: string[];
   audioFileName?: string;
+  /** Univers thématique de rattachement (architecture V3+) */
+  universe?: Universe;
   needsValidation?: boolean;
   note?: string;
 }
@@ -494,6 +559,8 @@ export interface DiscoverContent {
   relatedExpressionIds?: string[];
   relatedRecipeId?: string;
   tags: string[];
+  /** Univers thématique de rattachement (architecture V3+) */
+  universe?: Universe;
 }
 
 // ─── Recette pédagogique ──────────────────────────────────────────────────────
@@ -561,4 +628,6 @@ export interface WritingLesson {
   }>;
   order: number;
   tags: string[];
+  /** Univers thématique de rattachement (architecture V3+) */
+  universe?: Universe;
 }

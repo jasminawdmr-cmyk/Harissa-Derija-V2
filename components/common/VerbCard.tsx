@@ -111,6 +111,16 @@ export function VerbCard({ verb, isFavorite, onToggleFavorite }: VerbCardProps) 
       {/* ── Contenu déplié ──────────────────────────────────────────────── */}
       {expanded && (
         <View style={styles.body}>
+          {/* Exemple d'usage trilingue (arabe + arabizi + français) */}
+          {verb.example ? (
+            <View style={styles.exampleBox}>
+              <Text style={styles.exampleLabel}>Exemple</Text>
+              <Text style={styles.exampleArabic}>{verb.example.arabic}</Text>
+              <Text style={styles.exampleArabizi}>{verb.example.arabizi}</Text>
+              <Text style={styles.exampleFrench}>{verb.example.french}</Text>
+            </View>
+          ) : null}
+
           {/* Onglets de temps */}
           <View style={styles.tenseTabs}>
             {TENSE_TABS.map((tab) => {
@@ -234,6 +244,34 @@ const styles = StyleSheet.create({
     paddingTop: Theme.spacing[2],
     borderTopWidth: 1,
     borderTopColor: Theme.colors.borderLight,
+  },
+  exampleBox: {
+    backgroundColor: Theme.rawColors.sand[100],
+    borderRadius: Theme.radii.md,
+    padding: Theme.spacing[3],
+    gap: 2,
+    borderLeftWidth: 3,
+    borderLeftColor: Theme.colors.primary,
+  },
+  exampleLabel: {
+    ...TextStyles.label,
+    color: Theme.colors.primary,
+    marginBottom: 2,
+  },
+  exampleArabic: {
+    ...TextStyles.body,
+    color: Theme.colors.textPrimary,
+    fontSize: 17,
+    fontWeight: '600',
+  },
+  exampleArabizi: {
+    ...TextStyles.bodySmall,
+    color: Theme.colors.textSecondary,
+    fontStyle: 'italic',
+  },
+  exampleFrench: {
+    ...TextStyles.bodySmall,
+    color: Theme.colors.textMuted,
   },
   tenseTabs: {
     flexDirection: 'row',

@@ -11,6 +11,7 @@ import { vocabulary } from '@/data/vocabulary';
 import { verbs } from '@/data/verbs';
 import { grammarRules } from '@/data/grammar';
 import { lessons } from '@/data/lessons';
+import { dialogues } from '@/data/dialogues';
 
 /**
  * APPRENDRE — hub d'apprentissage Blablalouni.
@@ -94,6 +95,24 @@ export default function ApprendreScreen() {
         ))}
       </View>
 
+      {/* Bandeau dialogues */}
+      <Card
+        variant="subtle"
+        style={styles.dialoguesBanner}
+        onPress={() => router.push('/dialogues')}
+      >
+        <Text style={styles.writingEmoji}>💬</Text>
+        <View style={styles.writingText}>
+          <Text style={styles.writingTitle}>Dialogues</Text>
+          <Text style={styles.writingSubtitle}>
+            {dialogues.length > 0
+              ? `${dialogues.length} conversation${dialogues.length > 1 ? 's' : ''} à lire`
+              : 'Bientôt disponible'}
+          </Text>
+        </View>
+        <Text style={styles.writingChevron}>›</Text>
+      </Card>
+
       {/* Bandeau écriture */}
       <Card
         variant="subtle"
@@ -140,6 +159,12 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     gap: Theme.spacing[3],
+  },
+  dialoguesBanner: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: Theme.spacing[3],
+    marginBottom: Theme.spacing[3],
   },
   writingEmoji: {
     fontSize: 28,

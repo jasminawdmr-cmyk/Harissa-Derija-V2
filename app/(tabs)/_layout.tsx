@@ -40,6 +40,7 @@ const HIDDEN_ROUTES: string[] = [
   'grammaire',
   'quiz',
   'ecriture',
+  'dialogues',
 ];
 
 export default function TabLayout() {
