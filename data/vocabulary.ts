@@ -309,6 +309,35 @@ export const vocabulary: Readonly<VocabularyItem[]> = [
   { id: 'w_maison_garaj', arabic: 'قراج', arabizi: 'Garaj', french: 'Garage', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison'], universe: 'maison' },
   { id: 'w_maison_saboun', arabic: 'صابون', arabizi: 'Saboun', french: 'Savon', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['maison', 'menage'], universe: 'maison' },
   { id: 'w_maison_menchfa', arabic: 'منشفة', arabizi: 'Menchfa', french: 'Serviette', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison'], universe: 'maison' },
+
+  // ════════════════════════════════════════════════════════════════════════════════
+  // VAGUE 2 — UNIVERS « FAMILLE » (25 mots) · universe: 'famille'
+  // ════════════════════════════════════════════════════════════════════════════════
+  { id: 'w_famille_jadd', arabic: 'جد', arabizi: 'Jadd', french: 'Grand-père', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_jadda', arabic: 'جدة', arabizi: 'Jadda', french: 'Grand-mère', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_3amma', arabic: 'عمّة', arabizi: '3amma', french: 'Tante paternelle', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_khal', arabic: 'خال', arabizi: 'Khal', french: 'Oncle maternel', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_rajel', arabic: 'راجل', arabizi: 'Rajel', french: 'Mari / homme', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_mra', arabic: 'مرا', arabizi: 'Mra', french: 'Femme / épouse', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_3ris', arabic: 'عريس', arabizi: '3ris', french: 'Marié (jeune époux)', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['famille', 'mariage'], universe: 'famille' },
+  { id: 'w_famille_3roussa', arabic: 'عروسة', arabizi: '3roussa', french: 'Mariée (jeune épouse)', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['famille', 'mariage'], universe: 'famille' },
+  { id: 'w_famille_tfol', arabic: 'طفل', arabizi: 'Tfol', french: 'Enfant', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_wled', arabic: 'ولاد', arabizi: 'Wled', french: 'Enfants', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_okht', arabic: 'أخت', arabizi: 'Okht', french: 'Sœur', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_baba', arabic: 'بابا', arabizi: 'Baba', french: 'Papa', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_mama', arabic: 'ماما', arabizi: 'Mama', french: 'Maman', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_nsib', arabic: 'نسيب', arabizi: 'Nsib', french: 'Beau-frère / belle-famille', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_jar', arabic: 'جار', arabizi: 'Jar', french: 'Voisin', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille', 'voisinage'], universe: 'famille' },
+  { id: 'w_famille_sa7eb', arabic: 'صاحب', arabizi: 'Sa7eb', french: 'Ami', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille', 'amis'], universe: 'famille' },
+  { id: 'w_famille_7afid', arabic: 'حفيد', arabizi: '7afid', french: 'Petit-fils', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_3zeb', arabic: 'عازب', arabizi: '3zeb', french: 'Célibataire', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_mtzawej', arabic: 'متزوّج', arabizi: 'Mtzawej', french: 'Marié(e)', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['famille', 'mariage'], universe: 'famille' },
+  { id: 'w_famille_7amel', arabic: 'حامل', arabizi: '7amel', french: 'Enceinte', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_mawloud', arabic: 'مولود', arabizi: 'Mawloud', french: 'Nouveau-né', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_3id_milad', arabic: 'عيد ميلاد', arabizi: '3id milad', french: 'Anniversaire', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['famille', 'fetes'], universe: 'famille' },
+  { id: 'w_famille_3ors', arabic: 'عرس', arabizi: '3ors', french: 'Mariage (la noce)', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille', 'mariage', 'fetes'], universe: 'famille' },
+  { id: 'w_famille_kbir', arabic: 'كبير', arabizi: 'Kbir', french: 'Grand / aîné', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille'], universe: 'famille' },
+  { id: 'w_famille_sghir', arabic: 'صغير', arabizi: 'Sghir', french: 'Petit / cadet', category: 'famille', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['famille'], universe: 'famille' },
 ] as const;
 
 // ─── Accès ──────────────────────────────────────────────────────────────────────

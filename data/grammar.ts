@@ -289,6 +289,50 @@ const RULE_MAISON_POSSESSION: GrammarRule = {
   prerequisiteRuleIds: [],
 };
 
+// ─── VAGUE 2 — UNIVERS « FAMILLE » (2 règles) · universe: 'famille' ───────────────
+
+/**
+ * RÈGLE — Le futur avec « besh »
+ */
+const RULE_FAMILLE_FUTUR: GrammarRule = {
+  id: "g_famille_futur",
+  title: "Le futur : besh + verbe",
+  category: "temps",
+  level: "debutant",
+  universe: "famille",
+  explanation:
+    "Pour exprimer le futur, on place باش (besh = « vais/va ») devant le verbe " +
+    "au présent. Ex : « besh netzawej » (je vais me marier).",
+  pattern: "باش (besh) + [verbe au présent]",
+  examples: [
+    { arabic: 'باش نتزوّج', arabizi: 'Besh netzawej', phonetic: '[besh netzawej]', french: 'Je vais me marier' },
+    { arabic: 'باش نزور جدّي', arabizi: 'Besh nzour jaddi', phonetic: '[besh nzour jaddi]', french: 'Je vais rendre visite à mon grand-père' },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: [],
+};
+
+/**
+ * RÈGLE — L'accord de l'adjectif (masculin / féminin)
+ */
+const RULE_FAMILLE_ADJECTIF: GrammarRule = {
+  id: "g_famille_adjectif",
+  title: "L'adjectif : kbir (m.) / kbira (f.)",
+  category: "genre",
+  level: "debutant",
+  universe: "famille",
+  explanation:
+    "L'adjectif s'accorde en genre : au féminin, on ajoute généralement « -a ». " +
+    "Ex : كبير (kbir = grand) → كبيرة (kbira = grande) ; صغير (sghir) → صغيرة (sghira).",
+  pattern: "[adjectif] + ة (-a) au féminin",
+  examples: [
+    { arabic: 'خويا كبير', arabizi: 'Khouya kbir', phonetic: '[khouya kbir]', french: 'Mon frère est grand' },
+    { arabic: 'أختي كبيرة', arabizi: 'Okhti kbira', phonetic: '[okhti kbira]', french: 'Ma sœur est grande' },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: [],
+};
+
 export const grammarRules: Readonly<GrammarRule[]> = [
   RULE_NEGATION,
   RULE_ARTICLE_DEFINI,
@@ -300,6 +344,8 @@ export const grammarRules: Readonly<GrammarRule[]> = [
   RULE_MARCHE_COMPARAISON,
   RULE_MAISON_LOCALISATION,
   RULE_MAISON_POSSESSION,
+  RULE_FAMILLE_FUTUR,
+  RULE_FAMILLE_ADJECTIF,
 ] as const;
 
 export const grammarRulesById: Readonly<Record<string, GrammarRule>> =

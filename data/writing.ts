@@ -197,6 +197,44 @@ export const writingLessons: Readonly<WritingLesson[]> = [
       { latin: 'mefteh', arabizi: 'mefte7', arabic: 'مفتاح', wordId: 'w_maison_mefte7', french: 'clé' },
     ],
   },
+
+  // ── VAGUE 2 — UNIVERS « FAMILLE » (3 exercices) · universe: 'famille' ───────────
+  {
+    id: 'wr_famille_01', system: 'arabizi', title: 'La lettre ج (j) — famille',
+    objective: 'Reconnaître le son « j » (ج) avec le vocabulaire de la famille.',
+    level: 'debutant', estimatedMinutes: 4, order: 13, universe: 'famille', tags: ['famille', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 'j', arabizi: 'j', arabic: 'ج', soundDescription: 'Son « j » comme dans « jour », noté j en arabizi.', difficulty: 1, isPriority: false, exampleWordIds: ['w_famille_jadd', 'w_famille_jar'] },
+    ],
+    bridges: [
+      { latin: 'jadd', arabizi: 'jadd', arabic: 'جد', wordId: 'w_famille_jadd', french: 'grand-père' },
+      { latin: 'jar', arabizi: 'jar', arabic: 'جار', wordId: 'w_famille_jar', french: 'voisin' },
+    ],
+  },
+  {
+    id: 'wr_famille_02', system: 'arabizi', title: 'La lettre ع (3) — famille',
+    objective: 'Reconnaître le son « 3 » (ع) avec le vocabulaire de la famille.',
+    level: 'debutant', estimatedMinutes: 4, order: 14, universe: 'famille', tags: ['famille', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: '3', arabizi: '3', arabic: 'ع', soundDescription: 'Son « ع » guttural, noté 3 en arabizi.', difficulty: 4, isPriority: true, exampleWordIds: ['w_3ayla', 'w_famille_3ors'] },
+    ],
+    bridges: [
+      { latin: '3ayla', arabizi: '3ayla', arabic: 'عايلة', wordId: 'w_3ayla', french: 'famille' },
+      { latin: '3ors', arabizi: '3ors', arabic: 'عرس', wordId: 'w_famille_3ors', french: 'mariage' },
+    ],
+  },
+  {
+    id: 'wr_famille_03', system: 'arabizi', title: 'Écrire les membres de la famille',
+    objective: 'Écrire les noms des proches : baba, mama, okht.',
+    level: 'debutant', estimatedMinutes: 4, order: 15, universe: 'famille', tags: ['famille', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 'b', arabizi: 'b', arabic: 'ب', soundDescription: 'La lettre « b » (ب), comme dans « baba » (papa).', difficulty: 1, isPriority: false, exampleWordIds: ['w_famille_baba'] },
+    ],
+    bridges: [
+      { latin: 'baba', arabizi: 'baba', arabic: 'بابا', wordId: 'w_famille_baba', french: 'papa' },
+      { latin: 'mama', arabizi: 'mama', arabic: 'ماما', wordId: 'w_famille_mama', french: 'maman' },
+    ],
+  },
 ] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────

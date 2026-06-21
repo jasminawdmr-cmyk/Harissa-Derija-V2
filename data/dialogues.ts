@@ -404,6 +404,65 @@ const DIALOGUE_MAISON_MENAGE: Dialogue = {
   ],
 };
 
+// ─── VAGUE 2 — UNIVERS « FAMILLE » (3 dialogues) · universe: 'famille' ─────────────
+
+const DIALOGUE_FAMILLE_PARLER: Dialogue = {
+  id: 'd_famille_01',
+  title: 'Parler de sa famille',
+  context: 'famille',
+  level: 'debutant',
+  universe: 'famille',
+  situationFrench: 'Deux personnes parlent de leurs familles.',
+  estimatedMinutes: 2,
+  keyWordIds: ['w_3ayla', 'w_famille_wled'],
+  grammarRuleIds: ['g_maison_possession', 'g_cafe_interrogation'],
+  culturalNote: "Demander des nouvelles de toute la famille est une marque d'affection.",
+  lines: [
+    { speaker: 'A', arabic: 'عندك ولاد؟', arabizi: '3andek wled?', french: 'Tu as des enfants ?', wordIds: ['w_famille_wled'] },
+    { speaker: 'B', arabic: 'إي، عندي زوز: ولد وبنت', arabizi: 'Ey, 3andi zouz: weld w bent', french: 'Oui, j\'en ai deux : un garçon et une fille', wordIds: ['w_ey', 'w_zouz', 'w_weld', 'w_bent'] },
+    { speaker: 'A', arabic: 'الله يخليهملك', arabizi: 'Allah ykhallihomlek', french: 'Que Dieu te les garde' },
+    { speaker: 'B', arabic: 'عيّشك', arabizi: '3aychek', french: 'Merci' },
+  ],
+};
+
+const DIALOGUE_FAMILLE_MARIAGE: Dialogue = {
+  id: 'd_famille_02',
+  title: 'Un mariage en vue',
+  context: 'celebrations',
+  level: 'debutant',
+  universe: 'famille',
+  situationFrench: 'On annonce un mariage prochain.',
+  estimatedMinutes: 2,
+  keyWordIds: ['w_famille_3ors', 'w_famille_3ris'],
+  grammarRuleIds: ['g_famille_futur'],
+  culturalNote: "« 3o9bel 3andek » (à ton tour bientôt) se dit aux célibataires lors d'un mariage.",
+  lines: [
+    { speaker: 'A', arabic: 'خويا باش يتزوّج', arabizi: 'Khouya besh yetzawej', french: 'Mon frère va se marier', wordIds: ['w_khouya'] },
+    { speaker: 'B', arabic: 'مبروك! وقتاش العرس؟', arabizi: 'Mabrouk! Wa9tech el 3ors?', french: 'Félicitations ! Quand est la noce ?', wordIds: ['w_salut_mabrouk', 'w_famille_3ors'] },
+    { speaker: 'A', arabic: 'الصيف الجاي', arabizi: 'Es sif ej jay', french: 'L\'été prochain' },
+    { speaker: 'B', arabic: 'عقبال عندك', arabizi: '3o9bel 3andek', french: 'À ton tour bientôt' },
+  ],
+};
+
+const DIALOGUE_FAMILLE_VISITE: Dialogue = {
+  id: 'd_famille_03',
+  title: 'Rendre visite aux grands-parents',
+  context: 'famille',
+  level: 'debutant',
+  universe: 'famille',
+  situationFrench: 'On organise une visite chez les grands-parents.',
+  estimatedMinutes: 2,
+  keyWordIds: ['w_famille_jadd', 'w_famille_jadda'],
+  grammarRuleIds: ['g_famille_futur'],
+  culturalNote: "Les visites aux grands-parents, surtout le week-end, sont un pilier de la vie familiale.",
+  lines: [
+    { speaker: 'A', arabic: 'باش نزورو جدّي وجدّتي', arabizi: 'Besh nzourou jaddi w jaddti', french: 'On va rendre visite à mes grands-parents', wordIds: ['w_famille_jadd', 'w_famille_jadda'] },
+    { speaker: 'B', arabic: 'وقتاش؟', arabizi: 'Wa9tech?', french: 'Quand ?' },
+    { speaker: 'A', arabic: 'غدوة بعد الفطور', arabizi: 'Ghodwa ba3d el ftour', french: 'Demain après le petit déjeuner', wordIds: ['w_ghodwa', 'w_ba3d', 'w_cafe_ftour'] },
+    { speaker: 'B', arabic: 'باهي، نتوحّشتهم', arabizi: 'Bahi, ntwa7achthom', french: 'D\'accord, ils me manquent', wordIds: ['w_bahi'] },
+  ],
+};
+
 export const dialogues: Readonly<Dialogue[]> = [
   DIALOGUE_FAMILLE_RETROUVAILLES,
   DIALOGUE_MARCHE_LEGUMES,
@@ -419,6 +478,9 @@ export const dialogues: Readonly<Dialogue[]> = [
   DIALOGUE_MAISON_ACCUEIL,
   DIALOGUE_MAISON_OBJET,
   DIALOGUE_MAISON_MENAGE,
+  DIALOGUE_FAMILLE_PARLER,
+  DIALOGUE_FAMILLE_MARIAGE,
+  DIALOGUE_FAMILLE_VISITE,
 ] as const;
 
 export const dialoguesById: Readonly<Record<string, Dialogue>> =

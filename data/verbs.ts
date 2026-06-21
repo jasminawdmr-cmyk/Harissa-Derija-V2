@@ -535,6 +535,59 @@ const PACK_MAISON: Verb[] = [
   },
 ];
 
+// ─── VAGUE 2 — UNIVERS « FAMILLE » (8 verbes) ────────────────────────────────────
+
+const PACK_FAMILLE: Verb[] = [
+  {
+    id: 'v_ntzawej', infinitiveFrench: 'je me marie', rootArabic: 'نتزوّج', rootArabizi: 'ntzawej',
+    isIrregular: false, level: 'debutant', tags: ['famille', 'mariage'], universe: 'famille', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نتزوّج', arabizi: 'ntzawej' }] },
+    example: { arabic: 'نتزوّج العام الجاي', arabizi: 'Ntzawej el 3am ej jay', french: "Je me marie l'année prochaine" },
+  },
+  {
+    id: 'v_nrabbi', infinitiveFrench: "j'élève (des enfants)", rootArabic: 'نربّي', rootArabizi: 'nrabbi',
+    isIrregular: false, level: 'debutant', tags: ['famille'], universe: 'famille', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نربّي', arabizi: 'nrabbi' }] },
+    example: { arabic: 'نربّي ولادي', arabizi: 'Nrabbi wledi', french: "J'élève mes enfants" },
+  },
+  {
+    id: 'v_nzour', infinitiveFrench: 'je rends visite', rootArabic: 'نزور', rootArabizi: 'nzour',
+    isIrregular: false, level: 'debutant', tags: ['famille'], universe: 'famille', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نزور', arabizi: 'nzour' }] },
+    example: { arabic: 'نزور جدّي', arabizi: 'Nzour jaddi', french: 'Je rends visite à mon grand-père' },
+  },
+  {
+    id: 'v_nokhtob', infinitiveFrench: 'je me fiance / je demande en mariage', rootArabic: 'نخطب', rootArabizi: 'nokhtob',
+    isIrregular: false, level: 'debutant', tags: ['famille', 'mariage'], universe: 'famille', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نخطب', arabizi: 'nokhtob' }] },
+    example: { arabic: 'نخطب بنت', arabizi: 'Nokhtob bent', french: 'Je me fiance (avec une fille)' },
+  },
+  {
+    id: 'v_n3ich', infinitiveFrench: 'je vis', rootArabic: 'نعيش', rootArabizi: 'n3ich',
+    isIrregular: false, level: 'debutant', tags: ['famille'], universe: 'famille', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نعيش', arabizi: 'n3ich' }] },
+    example: { arabic: 'نعيش مع عيلتي', arabizi: 'N3ich m3a 3ayelti', french: 'Je vis avec ma famille' },
+  },
+  {
+    id: 'v_na7trem', infinitiveFrench: 'je respecte', rootArabic: 'نحترم', rootArabizi: 'na7trem',
+    isIrregular: false, level: 'debutant', tags: ['famille'], universe: 'famille', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نحترم', arabizi: 'na7trem' }] },
+    example: { arabic: 'نحترم الكبير', arabizi: 'Na7trem el kbir', french: 'Je respecte les aînés' },
+  },
+  {
+    id: 'v_nfakker', infinitiveFrench: 'je pense / je me souviens', rootArabic: 'نفكّر', rootArabizi: 'nfakker',
+    isIrregular: false, level: 'debutant', tags: ['famille'], universe: 'famille', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نفكّر', arabizi: 'nfakker' }] },
+    example: { arabic: 'نفكّر في عيلتي', arabizi: 'Nfakker fi 3ayelti', french: 'Je pense à ma famille' },
+  },
+  {
+    id: 'v_ntwa7ach', infinitiveFrench: 'il/elle me manque (je m\'ennuie de)', rootArabic: 'نتوحّش', rootArabizi: 'ntwa7ach',
+    isIrregular: false, level: 'debutant', tags: ['famille'], universe: 'famille', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نتوحّش', arabizi: 'ntwa7ach' }] },
+    example: { arabic: 'نتوحّش بويا', arabizi: 'Ntwa7ach bouya', french: 'Mon père me manque' },
+  },
+];
+
 export const verbs: Readonly<Verb[]> = [
   ...PACK_01,
   ...PACK_02,
@@ -542,6 +595,7 @@ export const verbs: Readonly<Verb[]> = [
   ...PACK_SALUT,
   ...PACK_MARCHE,
   ...PACK_MAISON,
+  ...PACK_FAMILLE,
 ] as const;
 
 export const verbsById: Readonly<Record<string, Verb>> = Object.fromEntries(

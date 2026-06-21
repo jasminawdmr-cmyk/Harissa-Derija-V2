@@ -247,6 +247,52 @@ export const discoverContents: Readonly<DiscoverContent[]> = [
     relatedWordIds: ['w_maison_saboun', 'w_maison_menchfa'],
     tags: ['maison', 'menage'],
   },
+
+  // ── VAGUE 2 — UNIVERS « FAMILLE » (5 articles) · universe: 'famille' ────────────
+  {
+    id: 'disc_famille_centrale', section: 'culture', title: 'La famille, valeur centrale', subtitle: 'Le clan avant tout', level: 'debutant', estimatedMinutes: 3, coverEmoji: '👨‍👩‍👧‍👦', universe: 'famille',
+    blocks: [
+      { type: 'paragraphe', text: "En Tunisie, la famille élargie (3ayla) est au cœur de la vie : grands-parents, oncles, tantes et cousins forment un réseau solidaire au quotidien." },
+      { type: 'reperes', items: ['3ayla = famille', 'jadd = grand-père', 'khal = oncle maternel'] },
+    ],
+    relatedWordIds: ['w_3ayla', 'w_famille_jadd', 'w_famille_khal'],
+    tags: ['famille', 'culture'],
+  },
+  {
+    id: 'disc_famille_respect', section: 'culture', title: 'Le respect des aînés', subtitle: 'Kbir eddar', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🧓', universe: 'famille',
+    blocks: [
+      { type: 'paragraphe', text: "Le respect dû aux aînés (« kbir ») structure les relations : on les salue en premier, on les écoute, on prend soin d'eux. C'est une valeur transmise très tôt." },
+    ],
+    relatedWordIds: ['w_famille_kbir', 'w_famille_jadd'],
+    relatedExpressionIds: ['e_famille_kbir_eddar'],
+    tags: ['famille', 'valeurs'],
+  },
+  {
+    id: 'disc_famille_mariage', section: 'culture', title: 'Le mariage tunisien', subtitle: '3ris, 3roussa, 3ors', level: 'debutant', estimatedMinutes: 4, coverEmoji: '💍', universe: 'famille',
+    blocks: [
+      { type: 'paragraphe', text: "Le mariage (3ors) est une grande célébration qui peut durer plusieurs jours. Le marié (3ris) et la mariée (3roussa) sont au centre des festivités, entourés de toute la famille." },
+      { type: 'savoir', text: "On souhaite « 3o9bel 3andek » (à ton tour) aux célibataires présents." },
+    ],
+    relatedWordIds: ['w_famille_3ors', 'w_famille_3ris', 'w_famille_3roussa'],
+    relatedExpressionIds: ['e_famille_3o9bel_3andek'],
+    tags: ['famille', 'mariage', 'fetes'],
+  },
+  {
+    id: 'disc_famille_voisinage', section: 'culture', title: 'Le voisinage, seconde famille', subtitle: 'El jar 9bel ed dar', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🏘️', universe: 'famille',
+    blocks: [
+      { type: 'paragraphe', text: "Le voisin (jar) occupe une place quasi familiale. On s'entraide, on partage les plats, on veille les uns sur les autres. Un dicton dit de choisir le voisin avant la maison." },
+    ],
+    relatedWordIds: ['w_famille_jar', 'w_7ouma'],
+    tags: ['famille', 'voisinage'],
+  },
+  {
+    id: 'disc_famille_diaspora', section: 'diaspora', title: 'La famille à distance', subtitle: 'Garder le lien', level: 'debutant', estimatedMinutes: 3, coverEmoji: '📱', universe: 'famille',
+    blocks: [
+      { type: 'paragraphe', text: "Pour la diaspora, garder le lien familial passe par les appels vidéo du dimanche et les retours au pays. « Ntwa7ach » (tu me manques) revient souvent dans ces conversations." },
+    ],
+    relatedWordIds: ['w_3ayla', 'w_bled'],
+    tags: ['famille', 'diaspora'],
+  },
 ] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────
