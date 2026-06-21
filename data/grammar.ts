@@ -102,9 +102,58 @@ const RULE_ARTICLE_DEFINI: GrammarRule = {
   prerequisiteRuleIds: [],
 };
 
+// ─── VAGUE 1 — UNIVERS « AU CAFÉ » (2 règles) · universe: 'cafe' ──────────────────
+
+/**
+ * RÈGLE — Exprimer « avec / au » : بـ (b-)
+ */
+const RULE_CAFE_PREPOSITION_B: GrammarRule = {
+  id: "g_cafe_preposition_b",
+  title: "Exprimer « avec / au » : بـ (b-)",
+  category: "preposition",
+  level: "debutant",
+  universe: "cafe",
+  explanation:
+    "En tunisien, la préposition بـ (b-) se colle au nom pour dire « avec » ou " +
+    "« au ». Très utile au café pour préciser une boisson : « bel 7alib » " +
+    "(au lait), « bel na3na3 » (à la menthe). Le ال de l'article fusionne avec بـ.",
+  pattern: "[nom] + بـ + [nom]",
+  examples: [
+    { arabic: "قهوة بالحليب", arabizi: "9ahwa bel 7alib", phonetic: "[9ahwa bel 7alib]", french: "Café au lait" },
+    { arabic: "تاي بالنعناع", arabizi: "Tay bel na3na3", phonetic: "[tay bel na3na3]", french: "Thé à la menthe" },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: ["g_article_defini"],
+};
+
+/**
+ * RÈGLE — Poser une question simple (interrogatifs)
+ */
+const RULE_CAFE_INTERROGATION: GrammarRule = {
+  id: "g_cafe_interrogation",
+  title: "Poser une question simple",
+  category: "interrogation",
+  level: "debutant",
+  universe: "cafe",
+  explanation:
+    "Pour poser une question au café, on emploie un mot interrogatif : شنوة " +
+    "(chnowa = quoi), قدّاش (9addech = combien), وين (win = où). Il se place " +
+    "généralement en tête de phrase ; l'intonation suffit, sans inversion.",
+  pattern: "[interrogatif] + [verbe / nom] ?",
+  examples: [
+    { arabic: "شنوة تحب تشرب؟", arabizi: "Chnowa t7eb techreb?", phonetic: "[chnowa t7eb techreb]", french: "Qu'est-ce que tu veux boire ?" },
+    { arabic: "قدّاش الحساب؟", arabizi: "9addech el 7seb?", phonetic: "[9addech el 7seb]", french: "Ça fait combien, l'addition ?" },
+    { arabic: "وين نخلّص؟", arabizi: "Win nkhalles?", phonetic: "[win nkhalles]", french: "Où est-ce que je paie ?" },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: [],
+};
+
 export const grammarRules: Readonly<GrammarRule[]> = [
   RULE_NEGATION,
   RULE_ARTICLE_DEFINI,
+  RULE_CAFE_PREPOSITION_B,
+  RULE_CAFE_INTERROGATION,
 ] as const;
 
 export const grammarRulesById: Readonly<Record<string, GrammarRule>> =

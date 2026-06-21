@@ -1,91 +1,12 @@
 /**
  * /data/verbs.ts
- * Verbes en darija tunisien — 2 exemples de démonstration.
- * Convention d'ID : "v_<racine_arabizi>"
+ * Verbes en darija tunisien — structure définitive.
+ * Convention d'ID : "v_<arabizi>"
  * Convention : arabic = arabe · arabizi = translittération · french = traduction
+ * Arabizi officiel : kh=خ · gh=غ · ch=ش · dh=ذ · 3=ع · 7=ح · 9=ق · 2=ء
  */
 
 import type { Verb } from "../types";
-
-/**
- * VERBE 1 — Manger : كل (K-L)
- */
-const VERB_MANGER: Verb = {
-  id: "v_kl",
-  infinitiveFrench: "manger",
-  rootArabic: "ك-ل",
-  rootArabizi: "K-L",
-  isIrregular: true,
-  level: "debutant",
-  tags: ["nourriture", "quotidien", "haute-frequence"],
-  notes:
-    "Verbe très fréquent. La racine كل (kl) est biconsonnantique dans son " +
-    "usage courant tunisien, contrairement à la racine arabe standard أكل (akl).",
-  conjugations: {
-    passe: [
-      { person: "1s",  arabic: "كليت",  arabizi: "Klit",   phonetic: "[klit]"   },
-      { person: "2s",  arabic: "كليت",  arabizi: "Klit",   phonetic: "[klit]"   },
-      { person: "3sm", arabic: "كل",    arabizi: "Kel",    phonetic: "[kel]"    },
-      { person: "3sf", arabic: "كلت",   arabizi: "Klet",   phonetic: "[klet]"   },
-      { person: "1p",  arabic: "كلينا", arabizi: "Klina",  phonetic: "[klina]"  },
-      { person: "2p",  arabic: "كليتم", arabizi: "Klitou", phonetic: "[klitu]"  },
-      { person: "3p",  arabic: "كلو",   arabizi: "Klou",   phonetic: "[klu]"    },
-    ],
-    present: [
-      { person: "1s",  arabic: "ناكل",  arabizi: "Nekl",    phonetic: "[nekl]"   },
-      { person: "2s",  arabic: "تاكل",  arabizi: "Tekl",    phonetic: "[tekl]"   },
-      { person: "3sm", arabic: "ياكل",  arabizi: "Yekl",    phonetic: "[jekl]"   },
-      { person: "3sf", arabic: "تاكل",  arabizi: "Tekl",    phonetic: "[tekl]"   },
-      { person: "1p",  arabic: "ناكلو", arabizi: "Neklou",  phonetic: "[neklu]"  },
-      { person: "2p",  arabic: "تاكلو", arabizi: "Teklou",  phonetic: "[teklu]"  },
-      { person: "3p",  arabic: "ياكلو", arabizi: "Yeklou",  phonetic: "[jeklu]"  },
-    ],
-    imperatif: [
-      { person: "2s", arabic: "كل",  arabizi: "Kol",   phonetic: "[kol]"  },
-      { person: "2p", arabic: "كلو", arabizi: "Kolou", phonetic: "[kolu]" },
-    ],
-  },
-};
-
-/**
- * VERBE 2 — Parler : حكى (H-K-Y)
- */
-const VERB_PARLER: Verb = {
-  id: "v_hky",
-  infinitiveFrench: "parler",
-  rootArabic: "ح-ك-ي",
-  rootArabizi: "H-K-Y",
-  isIrregular: false,
-  level: "debutant",
-  tags: ["communication", "quotidien", "haute-frequence"],
-  notes:
-    "Verbe défectueux (racine à finale semi-vocalique). " +
-    "Très utilisé pour dire parler, raconter, discuter.",
-  conjugations: {
-    passe: [
-      { person: "1s",  arabic: "حكيت",  arabizi: "Hkit",   phonetic: "[hkit]"  },
-      { person: "2s",  arabic: "حكيت",  arabizi: "Hkit",   phonetic: "[hkit]"  },
-      { person: "3sm", arabic: "حكى",   arabizi: "Hka",    phonetic: "[hka]"   },
-      { person: "3sf", arabic: "حكات",  arabizi: "Hket",   phonetic: "[hket]"  },
-      { person: "1p",  arabic: "حكينا", arabizi: "Hkina",  phonetic: "[hkina]" },
-      { person: "2p",  arabic: "حكيتم", arabizi: "Hkitou", phonetic: "[hkitu]" },
-      { person: "3p",  arabic: "حكاو",  arabizi: "Hkaw",   phonetic: "[hkaw]"  },
-    ],
-    present: [
-      { person: "1s",  arabic: "نحكي",  arabizi: "Nahki",  phonetic: "[nahki]" },
-      { person: "2s",  arabic: "تحكي",  arabizi: "Tahki",  phonetic: "[tahki]" },
-      { person: "3sm", arabic: "يحكي",  arabizi: "Yahki",  phonetic: "[jahki]" },
-      { person: "3sf", arabic: "تحكي",  arabizi: "Tahki",  phonetic: "[tahki]" },
-      { person: "1p",  arabic: "نحكيو", arabizi: "Nahkiw", phonetic: "[nahkiw]"},
-      { person: "2p",  arabic: "تحكيو", arabizi: "Tahkiw", phonetic: "[tahkiw]"},
-      { person: "3p",  arabic: "يحكيو", arabizi: "Yahkiw", phonetic: "[jahkiw]"},
-    ],
-    imperatif: [
-      { person: "2s", arabic: "احكي",  arabizi: "Ahki",  phonetic: "[ahki]"  },
-      { person: "2p", arabic: "احكيو", arabizi: "Ahkiw", phonetic: "[ahkiw]" },
-    ],
-  },
-};
 
 // ─── PACK 01 ────────────────────────────────────────────────────────────────────
 // Verbes du quotidien sous forme de citation (1re personne du singulier, présent).
@@ -401,11 +322,64 @@ const PACK_02: Verb[] = [
   },
 ];
 
+// ─── VAGUE 1 — UNIVERS « AU CAFÉ » ───────────────────────────────────────────────
+// 8 verbes du café. Arabizi officiel (kh/gh/ch/dh/3/7/9/2). universe: 'cafe'.
+
+const PACK_CAFE: Verb[] = [
+  {
+    id: 'v_notleb', infinitiveFrench: 'je commande / je demande', rootArabic: 'نطلب', rootArabizi: 'notleb',
+    isIrregular: false, level: 'debutant', tags: ['cafe', 'commander'], universe: 'cafe', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نطلب', arabizi: 'notleb' }] },
+    example: { arabic: 'نطلب قهوة', arabizi: 'Notleb 9ahwa', french: 'Je commande un café' },
+  },
+  {
+    id: 'v_ndhou9', infinitiveFrench: 'je goûte', rootArabic: 'نذوق', rootArabizi: 'ndhou9',
+    isIrregular: false, level: 'debutant', tags: ['cafe', 'gouter'], universe: 'cafe', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نذوق', arabizi: 'ndhou9' }] },
+    example: { arabic: 'نذوق القاتو', arabizi: 'Ndhou9 el gato', french: 'Je goûte le gâteau' },
+  },
+  {
+    id: 'v_nekhtar', infinitiveFrench: 'je choisis', rootArabic: 'نختار', rootArabizi: 'nekhtar',
+    isIrregular: false, level: 'debutant', tags: ['cafe', 'preferences'], universe: 'cafe', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نختار', arabizi: 'nekhtar' }] },
+    example: { arabic: 'نختار عصير', arabizi: 'Nekhtar 3asir', french: 'Je choisis un jus' },
+  },
+  {
+    id: 'v_njib', infinitiveFrench: "j'apporte / je ramène", rootArabic: 'نجيب', rootArabizi: 'njib',
+    isIrregular: false, level: 'debutant', tags: ['cafe', 'serveur'], universe: 'cafe', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نجيب', arabizi: 'njib' }] },
+    example: { arabic: 'نجيب الحساب', arabizi: 'Njib el 7seb', french: "J'apporte l'addition" },
+  },
+  {
+    id: 'v_n3abbi', infinitiveFrench: 'je remplis', rootArabic: 'نعبّي', rootArabizi: 'n3abbi',
+    isIrregular: false, level: 'debutant', tags: ['cafe', 'serveur'], universe: 'cafe', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نعبّي', arabizi: 'n3abbi' }] },
+    example: { arabic: 'نعبّي الكاس', arabizi: 'N3abbi el kes', french: 'Je remplis le verre' },
+  },
+  {
+    id: 'v_nfaddel', infinitiveFrench: 'je préfère', rootArabic: 'نفضّل', rootArabizi: 'nfaddel',
+    isIrregular: false, level: 'debutant', tags: ['cafe', 'preferences'], universe: 'cafe', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نفضّل', arabizi: 'nfaddel' }] },
+    example: { arabic: 'نفضّل تاي', arabizi: 'Nfaddel tay', french: 'Je préfère le thé' },
+  },
+  {
+    id: 'v_na3zem', infinitiveFrench: "j'invite / j'offre", rootArabic: 'نعزم', rootArabizi: 'na3zem',
+    isIrregular: false, level: 'debutant', tags: ['cafe', 'amis', 'politesse'], universe: 'cafe', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نعزم', arabizi: 'na3zem' }] },
+    example: { arabic: 'نعزمك على قهوة', arabizi: 'Na3zmek 3la 9ahwa', french: "Je t'invite à un café" },
+  },
+  {
+    id: 'v_nestanes', infinitiveFrench: 'je me détends / je profite', rootArabic: 'نستانس', rootArabizi: 'nestanes',
+    isIrregular: false, level: 'debutant', tags: ['cafe', 'ambiance'], universe: 'cafe', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نستانس', arabizi: 'nestanes' }] },
+    example: { arabic: 'نستانس في القهوة', arabizi: 'Nestanes fel 9ahwa', french: 'Je me détends au café' },
+  },
+];
+
 export const verbs: Readonly<Verb[]> = [
-  VERB_MANGER,
-  VERB_PARLER,
   ...PACK_01,
   ...PACK_02,
+  ...PACK_CAFE,
 ] as const;
 
 export const verbsById: Readonly<Record<string, Verb>> = Object.fromEntries(

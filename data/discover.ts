@@ -25,9 +25,92 @@
 import type { DiscoverContent, DiscoverSection } from '../types';
 
 // ─── Données ──────────────────────────────────────────────────────────────────
-// (vide pour l'instant — à remplir avec du contenu validé)
 
-export const discoverContents: Readonly<DiscoverContent[]> = [] as const;
+export const discoverContents: Readonly<DiscoverContent[]> = [
+  // ── VAGUE 1 — UNIVERS « AU CAFÉ » (5 articles) · universe: 'cafe' ──────────────
+  {
+    id: 'disc_cafe_institution',
+    section: 'culture',
+    title: 'Le café, institution tunisienne',
+    subtitle: 'Bien plus qu\'une boisson',
+    level: 'debutant',
+    estimatedMinutes: 3,
+    coverEmoji: '☕',
+    universe: 'cafe',
+    blocks: [
+      { type: 'paragraphe', text: "En Tunisie, le café est un lieu de vie autant qu'une boisson. On y passe du temps, on y discute, on y refait le monde. Chaque quartier a son café où l'on retrouve les mêmes visages." },
+      { type: 'reperes', items: ['9ahwa = café', '9ahwaji = le patron du café', 'zboun = le client'] },
+    ],
+    relatedWordIds: ['w_9ahwa', 'w_cafe_9ahwaji', 'w_cafe_zboun'],
+    tags: ['cafe', 'culture'],
+  },
+  {
+    id: 'disc_cafe_9a3da',
+    section: 'culture',
+    title: "La 9a3da : l'art de s'asseoir",
+    subtitle: 'Prendre son temps',
+    level: 'debutant',
+    estimatedMinutes: 3,
+    coverEmoji: '🪑',
+    universe: 'cafe',
+    blocks: [
+      { type: 'paragraphe', text: "La « 9a3da » désigne le moment passé assis ensemble. On peut rester une heure autour d'un seul café : l'important n'est pas la boisson mais la compagnie et la conversation." },
+      { type: 'savoir', text: "Dire « 9a3da 7lowa » (une belle assise) est un compliment qui célèbre un bon moment partagé." },
+    ],
+    relatedWordIds: ['w_cafe_9a3da', 'w_cafe_maw3ed'],
+    relatedExpressionIds: ['e_cafe_9a3da_7lowa'],
+    tags: ['cafe', 'ambiance', 'amis'],
+  },
+  {
+    id: 'disc_cafe_commander',
+    section: 'culture',
+    title: 'Commander comme un Tunisien',
+    subtitle: 'Le vocabulaire du comptoir',
+    level: 'debutant',
+    estimatedMinutes: 4,
+    coverEmoji: '📋',
+    universe: 'cafe',
+    blocks: [
+      { type: 'paragraphe', text: "Au café tunisien, les noms des boissons mêlent arabe et emprunts français : « express » (serré), « direct » (allongé), « capucin » (avec un nuage de lait)." },
+      { type: 'reperes', items: ['9ahwa ka7la = café noir', '9ahwa bel 7alib = café au lait', 'express / direct / capucin'] },
+    ],
+    relatedWordIds: ['w_cafe_express', 'w_cafe_direct', 'w_cafe_capucin', 'w_cafe_9ahwa_kahla'],
+    tags: ['cafe', 'commander', 'boissons'],
+  },
+  {
+    id: 'disc_cafe_amitie',
+    section: 'culture',
+    title: "Le café et l'amitié",
+    subtitle: 'Offrir, inviter, partager',
+    level: 'debutant',
+    estimatedMinutes: 3,
+    coverEmoji: '🤝',
+    universe: 'cafe',
+    blocks: [
+      { type: 'paragraphe', text: "Offrir le café est un geste d'amitié. Dire « 9ahwa 3la 7sabi » (le café est pour moi) ou « na3zmek » (je t'invite) fait partie des rituels de générosité." },
+      { type: 'savoir', text: "Refuser poliment puis accepter est un petit jeu social courant : l'insistance fait partie de l'hospitalité." },
+    ],
+    relatedWordIds: ['w_cafe_9a3da'],
+    relatedExpressionIds: ['e_cafe_9ahwa_3la_7sabi'],
+    tags: ['cafe', 'amis', 'politesse'],
+  },
+  {
+    id: 'disc_cafe_patisseries',
+    section: 'culture',
+    title: 'Les douceurs du café',
+    subtitle: 'Ce qu\'on grignote avec',
+    level: 'debutant',
+    estimatedMinutes: 3,
+    coverEmoji: '🍰',
+    universe: 'cafe',
+    blocks: [
+      { type: 'paragraphe', text: "Le café s'accompagne souvent d'une douceur : le « ka3k » (gâteau sec en couronne), le « ka3b ghzal » (corne de gazelle aux amandes), ou un simple « gato »." },
+      { type: 'reperes', items: ['ka3k = gâteau sec', 'ka3b ghzal = corne de gazelle', 'gato = gâteau'] },
+    ],
+    relatedWordIds: ['w_cafe_ka3k', 'w_cafe_ka3b_ghzal', 'w_cafe_gato'],
+    tags: ['cafe', 'gateaux', 'nourriture'],
+  },
+] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────
 

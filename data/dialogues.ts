@@ -151,9 +151,78 @@ const DIALOGUE_MARCHE_LEGUMES: Dialogue = {
   ],
 };
 
+// ─── VAGUE 1 — UNIVERS « AU CAFÉ » (3 dialogues) · universe: 'cafe' ───────────────
+
+const DIALOGUE_CAFE_COMMANDER: Dialogue = {
+  id: 'd_cafe_01',
+  title: 'Commander un café',
+  context: 'restaurant',
+  level: 'debutant',
+  universe: 'cafe',
+  situationFrench: "Un client arrive au café et commande auprès du serveur.",
+  estimatedMinutes: 3,
+  keyWordIds: ['w_9ahwa', 'w_cafe_9ahwa_kahla', 'w_sokker'],
+  grammarRuleIds: ['g_cafe_interrogation'],
+  culturalNote:
+    "Au café tunisien, on précise souvent « ka7la » (noir) ou « bel 7alib » " +
+    "(au lait), et le niveau de sucre. Le serveur répond volontiers « bil hna " +
+    "wel chifa » (régale-toi).",
+  lines: [
+    { speaker: 'A', arabic: 'عسلامة، نحب قهوة عيشك', arabizi: 'Aaslema, n7eb 9ahwa 3aychek', french: "Bonjour, je veux un café s'il te plaît", wordIds: ['w_aaslema', 'w_9ahwa'] },
+    { speaker: 'B', arabic: 'مرحبا بيك. قهوة كحلة ولا بالحليب؟', arabizi: 'Marhba bik. 9ahwa ka7la wala bel 7alib?', french: 'Bienvenue. Café noir ou au lait ?', wordIds: ['w_cafe_9ahwa_kahla', 'w_cafe_9ahwa_7alib'] },
+    { speaker: 'A', arabic: 'كحلة، بلا سكر', arabizi: 'Ka7la, bla sokkor', french: 'Noir, sans sucre', wordIds: ['w_sokker'] },
+    { speaker: 'B', arabic: 'بالهنا والشفاء', arabizi: 'Bil hna wel chifa', french: 'Régale-toi' },
+  ],
+};
+
+const DIALOGUE_CAFE_AMIS: Dialogue = {
+  id: 'd_cafe_02',
+  title: 'Entre amis au café',
+  context: 'restaurant',
+  level: 'debutant',
+  universe: 'cafe',
+  situationFrench: 'Deux amis choisissent leurs boissons en arrivant au café.',
+  estimatedMinutes: 3,
+  keyWordIds: ['w_tay', 'w_cafe_capucin', 'w_cafe_9a3da'],
+  grammarRuleIds: ['g_cafe_preposition_b'],
+  culturalNote:
+    "La « 9a3da » (le moment passé assis ensemble) est au cœur de la vie sociale " +
+    "tunisienne : on reste souvent longtemps autour d'une seule boisson.",
+  lines: [
+    { speaker: 'A', arabic: 'شنوة تحب تشرب؟', arabizi: 'Chnowa t7eb techreb?', french: "Qu'est-ce que tu veux boire ?" },
+    { speaker: 'B', arabic: 'نفضّل تاي بالنعناع', arabizi: 'Nfaddel tay bel na3na3', french: 'Je préfère un thé à la menthe', wordIds: ['w_tay', 'w_cafe_na3na3'] },
+    { speaker: 'A', arabic: 'باهي، وأنا ناخو كابيسان', arabizi: 'Bahi, w ana nakhou capucin', french: 'Bien, et moi je prends un cappuccino', wordIds: ['w_bahi', 'w_cafe_capucin'] },
+    { speaker: 'B', arabic: 'قعدة حلوة اليوم', arabizi: '9a3da 7lowa el yum', french: 'Beau moment aujourd\'hui', wordIds: ['w_cafe_9a3da', 'w_elyoum'] },
+  ],
+};
+
+const DIALOGUE_CAFE_PAYER: Dialogue = {
+  id: 'd_cafe_03',
+  title: "Payer l'addition",
+  context: 'restaurant',
+  level: 'debutant',
+  universe: 'cafe',
+  situationFrench: "Le client demande l'addition et laisse un pourboire.",
+  estimatedMinutes: 2,
+  keyWordIds: ['w_cafe_7seb', 'w_zouz', 'w_cafe_bakhchich'],
+  grammarRuleIds: ['g_cafe_interrogation'],
+  culturalNote:
+    "Laisser « el ba9i » (la monnaie) comme pourboire est courant et apprécié " +
+    "dans les cafés tunisiens.",
+  lines: [
+    { speaker: 'A', arabic: 'قدّاش الحساب عيشك؟', arabizi: '9addech el 7seb 3aychek?', french: "Ça fait combien l'addition ?", wordIds: ['w_cafe_7seb', 'w_9addech'] },
+    { speaker: 'B', arabic: 'زوز دينار', arabizi: 'Zouz dinar', french: 'Deux dinars', wordIds: ['w_zouz'] },
+    { speaker: 'A', arabic: 'هاهو، وخلّي الباقي', arabizi: 'Hahou, w khalli el ba9i', french: 'Voilà, et garde la monnaie', wordIds: ['w_cafe_bakhchich'] },
+    { speaker: 'B', arabic: 'يعطيك الصحة، مرحبا بيك ديما', arabizi: 'Ya3tik essa77a, marhba bik dima', french: 'Merci, tu es toujours le bienvenu', wordIds: ['w_dima'] },
+  ],
+};
+
 export const dialogues: Readonly<Dialogue[]> = [
   DIALOGUE_FAMILLE_RETROUVAILLES,
   DIALOGUE_MARCHE_LEGUMES,
+  DIALOGUE_CAFE_COMMANDER,
+  DIALOGUE_CAFE_AMIS,
+  DIALOGUE_CAFE_PAYER,
 ] as const;
 
 export const dialoguesById: Readonly<Record<string, Dialogue>> =

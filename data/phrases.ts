@@ -23,9 +23,25 @@
 import type { Phrase } from '../types';
 
 // ─── Données ──────────────────────────────────────────────────────────────────
-// (vide pour l'instant — à remplir avec du contenu validé)
 
-export const phrases: Readonly<Phrase[]> = [] as const;
+export const phrases: Readonly<Phrase[]> = [
+  // ── VAGUE 1 — UNIVERS « AU CAFÉ » (15 phrases) · universe: 'cafe' ──────────────
+  { id: 'p_cafe_01', arabic: 'أعطيني قهوة عيشك', arabizi: 'A3tini 9ahwa 3aychek', french: "Donne-moi un café, s'il te plaît", category: 'restaurant', level: 'debutant', domain: 'quotidien', tags: ['cafe', 'commander', 'politesse'], universe: 'cafe', wordIds: ['w_9ahwa'] },
+  { id: 'p_cafe_02', arabic: 'شنوة تحب تشرب؟', arabizi: 'Chnowa t7eb techreb?', french: "Qu'est-ce que tu veux boire ?", category: 'restaurant', level: 'debutant', domain: 'quotidien', tags: ['cafe', 'questions', 'serveur'], universe: 'cafe', grammarRuleId: 'g_cafe_interrogation' },
+  { id: 'p_cafe_03', arabic: 'نحب قهوة بلا سكر', arabizi: 'N7eb 9ahwa bla sokkor', french: 'Je veux un café sans sucre', category: 'restaurant', level: 'debutant', domain: 'quotidien', tags: ['cafe', 'commander', 'preferences'], universe: 'cafe', wordIds: ['w_9ahwa', 'w_sokker'] },
+  { id: 'p_cafe_04', arabic: 'قهوة بالحليب عيشك', arabizi: '9ahwa bel 7alib 3aychek', french: "Un café au lait, s'il te plaît", category: 'restaurant', level: 'debutant', domain: 'quotidien', tags: ['cafe', 'commander', 'boissons'], universe: 'cafe', wordIds: ['w_cafe_9ahwa_7alib', 'w_cafe_7alib'], grammarRuleId: 'g_cafe_preposition_b' },
+  { id: 'p_cafe_05', arabic: 'جيب لي الحساب', arabizi: 'Jib li el 7seb', french: "Apporte-moi l'addition", category: 'restaurant', level: 'debutant', domain: 'quotidien', tags: ['cafe', 'payer', 'addition'], universe: 'cafe', wordIds: ['w_cafe_7seb'] },
+  { id: 'p_cafe_06', arabic: 'قدّاش الحساب؟', arabizi: '9addech el 7seb?', french: "Ça fait combien, l'addition ?", category: 'restaurant', level: 'debutant', domain: 'quotidien', tags: ['cafe', 'payer', 'questions'], universe: 'cafe', wordIds: ['w_cafe_7seb', 'w_9addech'], grammarRuleId: 'g_cafe_interrogation' },
+  { id: 'p_cafe_07', arabic: 'خلّي الباقي', arabizi: 'Khalli el ba9i', french: 'Garde la monnaie', category: 'politesse', level: 'debutant', domain: 'quotidien', tags: ['cafe', 'payer', 'pourboire'], universe: 'cafe', wordIds: ['w_cafe_bakhchich'] },
+  { id: 'p_cafe_08', arabic: 'نقعدوا هوني؟', arabizi: 'No93do houni?', french: "On s'assoit ici ?", category: 'quotidien', level: 'debutant', domain: 'quotidien', tags: ['cafe', 's_asseoir', 'questions'], universe: 'cafe', grammarRuleId: 'g_cafe_interrogation' },
+  { id: 'p_cafe_09', arabic: 'تاي بالنعناع عيشك', arabizi: 'Tay bel na3na3 3aychek', french: "Un thé à la menthe, s'il te plaît", category: 'restaurant', level: 'debutant', domain: 'quotidien', tags: ['cafe', 'commander', 'the'], universe: 'cafe', wordIds: ['w_tay', 'w_cafe_na3na3'], grammarRuleId: 'g_cafe_preposition_b' },
+  { id: 'p_cafe_10', arabic: 'فمّا طاولة فاضية؟', arabizi: 'Famma tawla fadhya?', french: 'Y a-t-il une table libre ?', category: 'restaurant', level: 'debutant', domain: 'quotidien', tags: ['cafe', 's_asseoir', 'questions'], universe: 'cafe', wordIds: ['w_tawla'], grammarRuleId: 'g_cafe_interrogation' },
+  { id: 'p_cafe_11', arabic: 'نستنّاو صاحبي', arabizi: 'Nestannaw sa7bi', french: 'On attend mon ami', category: 'quotidien', level: 'debutant', domain: 'quotidien', tags: ['cafe', 'attendre', 'amis'], universe: 'cafe' },
+  { id: 'p_cafe_12', arabic: 'قهوة حارة عيشك', arabizi: '9ahwa 7ara 3aychek', french: "Un café chaud, s'il te plaît", category: 'restaurant', level: 'debutant', domain: 'quotidien', tags: ['cafe', 'commander', 'preferences'], universe: 'cafe', wordIds: ['w_9ahwa'] },
+  { id: 'p_cafe_13', arabic: 'زيدني كاس ماء', arabizi: 'Zidni kes ma', french: "Ajoute-moi un verre d'eau", category: 'restaurant', level: 'debutant', domain: 'quotidien', tags: ['cafe', 'commander', 'eau'], universe: 'cafe', wordIds: ['w_cafe_kes', 'w_ma'] },
+  { id: 'p_cafe_14', arabic: 'وين نجّم نخلّص؟', arabizi: 'Win nnajjem nkhalles?', french: 'Où est-ce que je peux payer ?', category: 'restaurant', level: 'debutant', domain: 'quotidien', tags: ['cafe', 'payer', 'questions'], universe: 'cafe', wordIds: ['w_win'], grammarRuleId: 'g_cafe_interrogation' },
+  { id: 'p_cafe_15', arabic: 'القهوة هنا بنينة برشة', arabizi: 'El 9ahwa hne bnina barsha', french: 'Le café ici est très bon', category: 'quotidien', level: 'debutant', domain: 'quotidien', tags: ['cafe', 'ambiance', 'preferences'], universe: 'cafe', wordIds: ['w_9ahwa', 'w_barsha'] },
+] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────
 

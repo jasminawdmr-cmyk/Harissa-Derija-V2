@@ -193,6 +193,35 @@ export const vocabulary: Readonly<VocabularyItem[]> = [
   { id: 'w_bousta', arabic: 'بوسطة', arabizi: 'Bousta', french: 'Poste', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['pack02', 'lieux'] },
   { id: 'w_bank', arabic: 'بنك', arabizi: 'Bank', french: 'Banque', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'lieux'] },
   { id: 'w_blasa', arabic: 'بلاصة', arabizi: 'Blasa', french: 'Place / endroit', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['pack02', 'lieux'] },
+
+  // ════════════════════════════════════════════════════════════════════════════════
+  // VAGUE 1 — UNIVERS « AU CAFÉ » (25 mots) · universe: 'cafe'
+  // ════════════════════════════════════════════════════════════════════════════════
+  { id: 'w_cafe_express', arabic: 'إكسبراس', arabizi: 'express', french: 'Express (café serré)', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['cafe', 'boissons'], universe: 'cafe', needsValidation: true, note: 'Emprunt — vérifier la graphie arabe avec un locuteur natif.' },
+  { id: 'w_cafe_capucin', arabic: 'كابيسان', arabizi: 'capucin', french: 'Cappuccino (à la tunisienne)', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['cafe', 'boissons'], universe: 'cafe', needsValidation: true, note: 'Emprunt — vérifier la graphie arabe avec un locuteur natif.' },
+  { id: 'w_cafe_direct', arabic: 'ديراكت', arabizi: 'direct', french: 'Café allongé', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['cafe', 'boissons'], universe: 'cafe', needsValidation: true, note: 'Usage régional — vérifier avec un locuteur natif.' },
+  { id: 'w_cafe_9ahwa_kahla', arabic: 'قهوة كحلة', arabizi: '9ahwa ka7la', french: 'Café noir (sans lait)', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['cafe', 'boissons'], universe: 'cafe' },
+  { id: 'w_cafe_9ahwa_7alib', arabic: 'قهوة بالحليب', arabizi: '9ahwa bel7alib', french: 'Café au lait', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['cafe', 'boissons'], universe: 'cafe' },
+  { id: 'w_cafe_7alib', arabic: 'حليب', arabizi: '7alib', french: 'Lait', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['cafe', 'boissons'], universe: 'cafe' },
+  { id: 'w_cafe_na3na3', arabic: 'نعناع', arabizi: 'na3na3', french: 'Menthe', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['cafe', 'the'], universe: 'cafe' },
+  { id: 'w_cafe_3asir', arabic: 'عصير', arabizi: '3asir', french: 'Jus', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['cafe', 'boissons', 'jus'], universe: 'cafe' },
+  { id: 'w_cafe_limonada', arabic: 'لمونادة', arabizi: 'limonada', french: 'Limonade / soda', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['cafe', 'boissons'], universe: 'cafe', needsValidation: true, note: 'Emprunt — vérifier la graphie arabe avec un locuteur natif.' },
+  { id: 'w_cafe_kes', arabic: 'كاس', arabizi: 'kes', french: 'Verre', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['cafe', 'objets'], universe: 'cafe' },
+  { id: 'w_cafe_finjen', arabic: 'فنجان', arabizi: 'finjen', french: 'Tasse (à café)', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['cafe', 'objets'], universe: 'cafe' },
+  { id: 'w_cafe_gato', arabic: 'قاتو', arabizi: 'gato', french: 'Gâteau', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['cafe', 'gateaux'], universe: 'cafe' },
+  { id: 'w_cafe_ka3k', arabic: 'كعك', arabizi: 'ka3k', french: 'Kaâk (gâteau sec)', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['cafe', 'gateaux'], universe: 'cafe' },
+  { id: 'w_cafe_ka3b_ghzal', arabic: 'كعب غزال', arabizi: 'ka3b ghzal', french: 'Corne de gazelle (pâtisserie)', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['cafe', 'gateaux'], universe: 'cafe' },
+  { id: 'w_cafe_frikasse', arabic: 'فريكاسي', arabizi: 'frikassé', french: 'Fricassé (sandwich frit)', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['cafe', 'petit_dejeuner'], universe: 'cafe', needsValidation: true, note: 'Emprunt — vérifier la graphie arabe avec un locuteur natif.' },
+  { id: 'w_cafe_ftour', arabic: 'فطور', arabizi: 'ftour', french: 'Petit déjeuner', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['cafe', 'petit_dejeuner'], universe: 'cafe' },
+  { id: 'w_cafe_7seb', arabic: 'الحساب', arabizi: 'el 7seb', french: "L'addition", category: 'shopping', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['cafe', 'payer', 'addition'], universe: 'cafe' },
+  { id: 'w_cafe_sarf', arabic: 'صرف', arabizi: 'sarf', french: 'Monnaie', category: 'shopping', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['cafe', 'payer'], universe: 'cafe' },
+  { id: 'w_cafe_bakhchich', arabic: 'بخشيش', arabizi: 'bakhchich', french: 'Pourboire', category: 'shopping', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['cafe', 'payer'], universe: 'cafe' },
+  { id: 'w_cafe_garson', arabic: 'قارسون', arabizi: 'garson', french: 'Serveur', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['cafe', 'serveur'], universe: 'cafe' },
+  { id: 'w_cafe_9ahwaji', arabic: 'قهواجي', arabizi: '9ahwaji', french: 'Cafetier (patron du café)', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['cafe', 'serveur'], universe: 'cafe' },
+  { id: 'w_cafe_zboun', arabic: 'زبون', arabizi: 'zboun', french: 'Client', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['cafe', 'serveur'], universe: 'cafe' },
+  { id: 'w_cafe_9a3da', arabic: 'قعدة', arabizi: '9a3da', french: 'Moment passé assis ensemble (au café)', category: 'loisirs', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['cafe', 'ambiance', 'amis'], universe: 'cafe' },
+  { id: 'w_cafe_maw3ed', arabic: 'موعد', arabizi: 'maw3ed', french: 'Rendez-vous', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['cafe', 'rendez_vous'], universe: 'cafe' },
+  { id: 'w_cafe_chicha', arabic: 'شيشة', arabizi: 'chicha', french: 'Narguilé (chicha)', category: 'loisirs', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['cafe', 'ambiance'], universe: 'cafe' },
 ] as const;
 
 // ─── Accès ──────────────────────────────────────────────────────────────────────

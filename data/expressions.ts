@@ -20,9 +20,20 @@
 import type { Expression } from '../types';
 
 // ─── Données ──────────────────────────────────────────────────────────────────
-// (vide pour l'instant — à remplir avec du contenu validé)
 
-export const expressions: Readonly<Expression[]> = [] as const;
+export const expressions: Readonly<Expression[]> = [
+  // ── VAGUE 1 — UNIVERS « AU CAFÉ » (10 expressions) · universe: 'cafe' ──────────
+  { id: 'e_cafe_bil_hna_wel_chifa', arabic: 'بالهنا والشفاء', arabizi: 'Bil hna wel chifa', literalFrench: 'Avec le plaisir et la santé', french: 'Bon appétit / régale-toi', kind: 'formule', level: 'debutant', usageContext: 'Se dit en servant ou en voyant quelqu\'un boire/manger.', typicalReply: 'Ya3tik essa77a', tags: ['cafe', 'politesse'], universe: 'cafe' },
+  { id: 'e_cafe_ya3tik_essa77a', arabic: 'يعطيك الصحة', arabizi: 'Ya3tik essa77a', literalFrench: 'Que Dieu te donne la santé', french: 'Merci (chaleureux)', kind: 'formule', level: 'debutant', usageContext: 'Remerciement courant, notamment au serveur.', tags: ['cafe', 'politesse', 'serveur'], universe: 'cafe' },
+  { id: 'e_cafe_sa77a', arabic: 'صحة', arabizi: 'Sa77a', literalFrench: 'Santé', french: 'Santé ! / À la tienne !', kind: 'interjection', level: 'debutant', usageContext: 'En trinquant ou en offrant une boisson.', tags: ['cafe', 'boissons'], universe: 'cafe' },
+  { id: 'e_cafe_9ahwa_3la_7sabi', arabic: 'قهوة على حسابي', arabizi: '9ahwa 3la 7sabi', literalFrench: 'Un café à mon compte', french: "Le café, c'est pour moi (je régale)", kind: 'formule', level: 'debutant', usageContext: 'Pour offrir la consommation à un ami.', tags: ['cafe', 'amis', 'payer'], universe: 'cafe' },
+  { id: 'e_cafe_ya3aychek', arabic: 'يعيشك', arabizi: 'Ya3aychek', literalFrench: 'Que tu vives', french: "Merci / s'il te plaît", kind: 'formule', level: 'debutant', usageContext: 'Politesse passe-partout, demande ou remerciement.', tags: ['cafe', 'politesse'], universe: 'cafe' },
+  { id: 'e_cafe_9a3da_7lowa', arabic: 'قعدة حلوة', arabizi: '9a3da 7lowa', literalFrench: 'Une belle assise', french: 'Un bon moment (entre amis)', kind: 'formule', level: 'debutant', usageContext: 'Pour qualifier un agréable moment passé au café.', tags: ['cafe', 'ambiance', 'amis'], universe: 'cafe' },
+  { id: 'e_cafe_3la_rasi', arabic: 'على راسي', arabizi: '3la rasi', literalFrench: 'Sur ma tête', french: 'Avec plaisir / volontiers', kind: 'formule', level: 'debutant', usageContext: 'Réponse polie pour accepter de rendre service.', tags: ['cafe', 'politesse'], universe: 'cafe' },
+  { id: 'e_cafe_marhba_bik', arabic: 'مرحبا بيك', arabizi: 'Marhba bik', literalFrench: 'Bienvenue à toi', french: 'Bienvenue', kind: 'formule', level: 'debutant', usageContext: "Accueil d'un client ou d'un ami qui arrive.", tags: ['cafe', 'accueil'], universe: 'cafe' },
+  { id: 'e_cafe_sa77a_chrabtek', arabic: 'صحة شربتك', arabizi: 'Sa77a chrabtek', literalFrench: 'Santé à ta boisson', french: 'À ta santé (après avoir bu)', kind: 'formule', level: 'debutant', usageContext: 'Se dit à quelqu\'un qui vient de boire.', tags: ['cafe', 'boissons'], universe: 'cafe', needsValidation: true, note: 'Variante courante — confirmer la tournure avec un locuteur natif.' },
+  { id: 'e_cafe_yhanniik', arabic: 'يهنّيك', arabizi: 'Yhanniik', literalFrench: "Qu'il te rende serein", french: 'Que ça te profite', kind: 'formule', level: 'debutant', usageContext: 'Vœu adressé après une consommation.', tags: ['cafe', 'politesse'], universe: 'cafe', needsValidation: true, note: 'Graphie/usage à confirmer avec un locuteur natif.' },
+] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────
 
