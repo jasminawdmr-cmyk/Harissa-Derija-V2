@@ -72,8 +72,10 @@ const LESSON_SALUTATIONS: Lesson = {
   isUnlocked: true, // Première leçon, toujours débloquée
   // Vocabulaire de la leçon
   wordIds: [
-    'w_bonjour',
-    // 'w_bonsoir', 'w_au_revoir', 'w_comment_vas_tu', ... (à venir)
+    'w_aaslema',
+    'w_sbeh_el_khir',
+    'w_labes',
+    'w_bahi',
   ],
   // Verbes non requis pour cette leçon
   verbIds: [],
@@ -82,7 +84,7 @@ const LESSON_SALUTATIONS: Lesson = {
   culturalNote:
     'En Tunisie, ne jamais passer devant quelqu\'un sans le saluer est une règle ' +
     'sociale fondamentale. Même dans un ascenseur ou une épicerie de quartier, ' +
-    'un "Merhba" s\'impose. C\'est un signe de respect, pas d\'intrusion.',
+    'un "Aaslema" s\'impose. C\'est un signe de respect, pas d\'intrusion.',
 };
 
 /**
@@ -104,8 +106,11 @@ const LESSON_FAMILLE: Lesson = {
   estimatedMinutes: 12,
   isUnlocked: false, // Se débloque après la leçon 1
   wordIds: [
-    'w_famille',
-    // 'w_pere', 'w_mere', 'w_frere', 'w_soeur', ... (à venir)
+    'w_3ayla',
+    'w_ommi',
+    'w_bouya',
+    'w_khouya',
+    'w_okhti',
   ],
   verbIds: [],
   grammarPointIds: ['gr_negation_simple'],

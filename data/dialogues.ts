@@ -22,7 +22,7 @@ const DIALOGUE_FAMILLE_RETROUVAILLES: Dialogue = {
     'Yasmine appelle sa grand-mère depuis Paris. C\'est leur rituel du dimanche.',
   situationArabic: undefined,
   estimatedMinutes: 5,
-  keyWordIds: ['w_bonjour', 'w_famille'],
+  keyWordIds: ['w_aaslema', 'w_3ayla'],
   grammarRuleIds: ['gr_negation_simple'],
   culturalNote:
     'En Tunisie, les appels en famille commencent presque toujours par une ' +
@@ -37,7 +37,7 @@ const DIALOGUE_FAMILLE_RETROUVAILLES: Dialogue = {
       arabizi: 'Merhba yema, kifesh 7alek?',
       phonetic: '[meɾħba jeːma kɪfɛʃ ħalɛk]',
       french: 'Bonjour maman, comment tu vas ?',
-      wordIds: ['w_bonjour'],
+      wordIds: ['w_aaslema'],
       note:
         '"Yema" (يما) signifie "maman" mais s\'utilise aussi pour s\'adresser ' +
         'affectueusement à une femme plus âgée de la famille.',
@@ -58,7 +58,7 @@ const DIALOGUE_FAMILLE_RETROUVAILLES: Dialogue = {
       arabizi: 'Ena bekhir. Kifesh el-3ayla kolha?',
       phonetic: '[ɛna bɛxiːɾ kɪfɛʃ ɛl ʕaːjla kɔlha]',
       french: 'Je vais bien. Comment va toute la famille ?',
-      wordIds: ['w_famille'],
+      wordIds: ['w_3ayla'],
       note:
         '"كلها" (kolha) = "toute / en entier". ' +
         'Demander des nouvelles de "toute la famille" d\'un coup est la norme.',
@@ -89,7 +89,7 @@ const DIALOGUE_MARCHE_LEGUMES: Dialogue = {
     'Il essaie de négocier le prix des tomates.',
   situationArabic: undefined,
   estimatedMinutes: 7,
-  keyWordIds: ['w_bonjour'],
+  keyWordIds: ['w_aaslema'],
   grammarRuleIds: ['gr_negation_simple', 'gr_article_defini'],
   culturalNote:
     'Négocier au marché (السوق, es-souk) est une pratique normale et attendue ' +

@@ -61,8 +61,8 @@ export interface Word {
   arabic: string;
   /** Transcription arabizi / latin tunisien : Merhba */
   arabizi: string;
-  /** Phonétique IPA approximative : [meɾħba] */
-  phonetic: string;
+  /** Phonétique IPA approximative : [meɾħba] (optionnel — pas inventée) */
+  phonetic?: string;
   /** Traduction française */
   french: string;
   category: WordCategory;
@@ -88,7 +88,7 @@ export interface VerbConjugation {
   arabic: string;
   /** Forme conjuguée en arabizi */
   arabizi: string;
-  phonetic: string;
+  phonetic?: string;
   needsValidation?: boolean;
   // OPTIONNEL — découpage morphologique pour l'affichage visuel coloré.
   morphology?: Array<{
@@ -100,15 +100,23 @@ export interface VerbConjugation {
 export interface Verb {
   id: string;
   infinitiveFrench: string;
-  /** Racine en arabe */
+  /** Racine en arabe (ou forme de citation pour les entrées simples) */
   rootArabic: string;
-  /** Racine en arabizi */
+  /** Racine en arabizi (ou forme de citation pour les entrées simples) */
   rootArabizi: string;
   conjugations: Partial<Record<Tense, VerbConjugation[]>>;
   level: Level;
   tags: string[];
   isIrregular: boolean;
   notes?: string;
+  /** Exemple d'usage trilingue obligatoire (arabe + arabizi + français) */
+  example?: {
+    arabic: string;
+    arabizi: string;
+    french: string;
+  };
+  /** true si le contenu n'a pas encore été validé par un locuteur natif */
+  needsValidation?: boolean;
 }
 
 // ─── Leçons ───────────────────────────────────────────────────────────────────
