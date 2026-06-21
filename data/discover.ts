@@ -435,6 +435,472 @@ export const discoverContents: Readonly<DiscoverContent[]> = [
     relatedExpressionIds: ['e_hotel_wifi_7or'],
     tags: ['hotel', 'services'],
   },
+
+  // ═══════════════════════════════════════════════════════════════════════════════
+  // VAGUE 3 — ENRICHISSEMENT DÉCOUVRIR · objectif V3 : 100 articles
+  // ═══════════════════════════════════════════════════════════════════════════════
+
+  // ── CUISINE (16 articles) · section: 'cuisine' ──────────────────────────────────
+  {
+    id: 'disc_cuisine_couscous', section: 'cuisine', title: 'Le couscous tunisien', subtitle: 'Le plat du vendredi', level: 'debutant', estimatedMinutes: 4, coverEmoji: '🍲', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "Le couscous (kosksi) est le plat emblématique de la Tunisie, traditionnellement servi le vendredi et lors des grandes occasions. Contrairement au couscous marocain, la version tunisienne est souvent relevée à la harissa et accompagnée de poisson sur le littoral." },
+      { type: 'savoir', text: "À Tunis, on aime le couscous au poisson (kosksi bel 7out) ; à l'intérieur du pays, l'agneau domine." },
+    ],
+    relatedWordIds: ['w_b7ar'],
+    tags: ['cuisine', 'tradition', 'plats'],
+  },
+  {
+    id: 'disc_cuisine_harissa', section: 'cuisine', title: 'La harissa', subtitle: 'L\'âme piquante de la cuisine', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🌶️', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "La harissa est une pâte de piments rouges, ail, coriandre et carvi. Présente sur toutes les tables, elle accompagne pain, couscous et sandwichs. C'est un marqueur identitaire fort de la cuisine tunisienne." },
+      { type: 'reperes', items: ['harissa = pâte de piment', 'tabel = mélange d\'épices', 'kammoun = cumin'] },
+    ],
+    tags: ['cuisine', 'epices', 'identite'],
+  },
+  {
+    id: 'disc_cuisine_brik', section: 'cuisine', title: 'La brik à l\'œuf', subtitle: 'Le défi du premier coup de dent', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🥟', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "La brik (brik bel 3dham) est une feuille de malsouka frite renfermant un œuf coulant, du thon, des câpres et du persil. Incontournable du Ramadan, elle se mange chaude, en veillant à ne pas faire couler le jaune." },
+    ],
+    tags: ['cuisine', 'ramadan', 'entrees'],
+  },
+  {
+    id: 'disc_cuisine_lablabi', section: 'cuisine', title: 'Le lablabi', subtitle: 'Le réconfort de l\'hiver', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🍜', universe: 'cafe',
+    blocks: [
+      { type: 'paragraphe', text: "Le lablabi est une soupe de pois chiches servie sur du pain rassis, agrémentée d'huile d'olive, harissa, cumin, œuf et thon. Plat populaire et bon marché, on le déguste dans des gargotes dès le matin en hiver." },
+    ],
+    relatedWordIds: ['w_cafe_ftour'],
+    tags: ['cuisine', 'street-food', 'hiver'],
+  },
+  {
+    id: 'disc_cuisine_ojja', section: 'cuisine', title: 'L\'ojja', subtitle: 'Tomates, piment et œufs', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🍳', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "L'ojja (3ojja) est une poêlée de tomates et piments mijotés où l'on casse des œufs. On la décline avec merguez, crevettes ou kefteji. C'est un plat rapide et convivial du quotidien." },
+    ],
+    tags: ['cuisine', 'plats', 'quotidien'],
+  },
+  {
+    id: 'disc_cuisine_makroudh', section: 'cuisine', title: 'Le makroudh', subtitle: 'Semoule, dattes et miel', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🍯', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "Le makroudh est une pâtisserie de semoule fourrée à la pâte de dattes, frite puis trempée dans le miel. Spécialité de Kairouan, il accompagne le thé et figure parmi les douceurs des fêtes." },
+    ],
+    tags: ['cuisine', 'patisserie', 'kairouan'],
+  },
+  {
+    id: 'disc_cuisine_the_pignons', section: 'cuisine', title: 'Le thé aux pignons', subtitle: 'Tay bel snoubar', level: 'debutant', estimatedMinutes: 2, coverEmoji: '🍵', universe: 'cafe',
+    blocks: [
+      { type: 'paragraphe', text: "Le thé tunisien est fort, sucré et souvent servi avec des pignons de pin (snoubar) ou des amandes. Préparé longuement, il rythme les fins de repas et les après-midi entre amis." },
+    ],
+    relatedWordIds: ['w_tay'],
+    tags: ['cuisine', 'boissons', 'convivialite'],
+  },
+  {
+    id: 'disc_cuisine_huile_olive', section: 'cuisine', title: 'L\'huile d\'olive', subtitle: 'L\'or vert tunisien', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🫒', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "La Tunisie est l'un des plus grands producteurs mondiaux d'huile d'olive (zit zitoun). Base de presque tous les plats, elle se déguste aussi simplement avec du pain au petit déjeuner." },
+      { type: 'savoir', text: "Les oliveraies de Sfax et du Sahel produisent une huile réputée à l'export." },
+    ],
+    tags: ['cuisine', 'agriculture', 'economie'],
+  },
+  {
+    id: 'disc_cuisine_poisson', section: 'cuisine', title: 'Le poisson grillé', subtitle: 'Saveurs du littoral', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🐟', universe: 'plage',
+    blocks: [
+      { type: 'paragraphe', text: "Sur les côtes, le poisson frais (7out) grillé, servi avec tastira et citron, est roi. Daurade, rouget et loup se dégustent dans les ports de Bizerte, Mahdia ou Djerba." },
+    ],
+    relatedWordIds: ['w_plage_mina', 'w_b7ar'],
+    tags: ['cuisine', 'mer', 'littoral'],
+  },
+  {
+    id: 'disc_cuisine_merguez', section: 'cuisine', title: 'La merguez', subtitle: 'La saucisse épicée', level: 'debutant', estimatedMinutes: 2, coverEmoji: '🌭', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "La merguez, saucisse de bœuf ou d'agneau relevée à la harissa, se grille au barbecue ou se glisse dans un sandwich. Elle est l'âme des grillades estivales et des fêtes de famille." },
+    ],
+    tags: ['cuisine', 'grillades', 'street-food'],
+  },
+  {
+    id: 'disc_cuisine_fricasse', section: 'cuisine', title: 'La fricassé', subtitle: 'Le petit pain frit de Tunis', level: 'debutant', estimatedMinutes: 2, coverEmoji: '🥪', universe: 'cafe',
+    blocks: [
+      { type: 'paragraphe', text: "La fricassé est un petit pain frit garni de thon, œuf, olives, pommes de terre et harissa. Snack salé typiquement tunisois, on le trouve dans toutes les sandwicheries." },
+    ],
+    tags: ['cuisine', 'street-food', 'tunis'],
+  },
+  {
+    id: 'disc_cuisine_assida', section: 'cuisine', title: 'L\'assida zgougou', subtitle: 'Le dessert du Mouled', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🍮', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "L'assida zgougou est une crème à base de graines de pin d'Alep, préparée pour le Mouled (naissance du Prophète). Décorée de fruits secs, elle se partage entre voisins et famille." },
+    ],
+    tags: ['cuisine', 'fetes', 'desserts'],
+  },
+  {
+    id: 'disc_cuisine_marche_epices', section: 'cuisine', title: 'Les épices du marché', subtitle: 'Tabel, kammoun, harissa sèche', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🧂', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "Les étals d'épices colorent les souks. Le tabel (coriandre-ail), le carvi (karwiya), le cumin (kammoun) et le ras el hanout parfument la cuisine tunisienne au quotidien." },
+      { type: 'reperes', items: ['tabel = coriandre/ail', 'karwiya = carvi', 'kammoun = cumin'] },
+    ],
+    relatedWordIds: ['w_sou9'],
+    tags: ['cuisine', 'epices', 'marche'],
+  },
+  {
+    id: 'disc_cuisine_pain_tabouna', section: 'cuisine', title: 'Le pain tabouna', subtitle: 'Cuit au four en terre', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🍞', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "La tabouna est un pain rond cuit dans un four en argile traditionnel. Croustillant et parfumé, il accompagne huile d'olive et fromage, surtout dans les campagnes." },
+    ],
+    tags: ['cuisine', 'tradition', 'pain'],
+  },
+  {
+    id: 'disc_cuisine_ramadan', section: 'cuisine', title: 'La table du Ramadan', subtitle: 'Chorba, brik, et douceurs', level: 'debutant', estimatedMinutes: 4, coverEmoji: '🌙', universe: 'famille',
+    blocks: [
+      { type: 'paragraphe', text: "À la rupture du jeûne (ftour), la table tunisienne s'orne de chorba (soupe), brik, et plats mijotés, suivis de pâtisseries comme le zlabia et le mlabes. C'est un moment familial central." },
+      { type: 'savoir', text: "Le zlabia, beignet au miel, n'apparaît quasiment qu'en Ramadan." },
+    ],
+    relatedWordIds: ['w_cafe_ftour', 'w_3ayla'],
+    tags: ['cuisine', 'ramadan', 'famille'],
+  },
+  {
+    id: 'disc_cuisine_kafteji', section: 'cuisine', title: 'Le kafteji', subtitle: 'Légumes frits hachés', level: 'debutant', estimatedMinutes: 2, coverEmoji: '🍆', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "Le kafteji réunit poivrons, courgettes, pommes de terre, citrouille et œufs, frits puis hachés ensemble. Plat populaire et économique, il se mange avec du pain frais." },
+    ],
+    tags: ['cuisine', 'plats', 'quotidien'],
+  },
+
+  // ── HISTOIRE (16 articles) · section: 'histoire' ────────────────────────────────
+  {
+    id: 'disc_histoire_carthage', section: 'histoire', title: 'Carthage', subtitle: 'La cité de Didon et d\'Hannibal', level: 'elementaire', estimatedMinutes: 4, coverEmoji: '🏛️', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "Fondée par les Phéniciens au IXe siècle av. J.-C., Carthage fut une puissance maritime rivale de Rome. Détruite lors des guerres puniques, elle renaît sous les Romains. Ses ruines, près de Tunis, sont classées à l'UNESCO." },
+      { type: 'savoir', text: "Le général Hannibal, qui traversa les Alpes avec ses éléphants, était carthaginois." },
+    ],
+    tags: ['histoire', 'antiquite', 'patrimoine'],
+  },
+  {
+    id: 'disc_histoire_phenicien', section: 'histoire', title: 'L\'héritage phénicien', subtitle: 'Commerçants venus de l\'Orient', level: 'elementaire', estimatedMinutes: 3, coverEmoji: '⚓', universe: 'plage',
+    blocks: [
+      { type: 'paragraphe', text: "Les Phéniciens, navigateurs venus du Liban actuel, fondèrent des comptoirs sur les côtes tunisiennes. Ils introduisirent l'alphabet et un savoir-faire commercial qui marqua durablement la région." },
+    ],
+    relatedWordIds: ['w_b7ar', 'w_plage_mina'],
+    tags: ['histoire', 'antiquite', 'commerce'],
+  },
+  {
+    id: 'disc_histoire_rome', section: 'histoire', title: 'L\'Afrique romaine', subtitle: 'Le grenier de Rome', level: 'elementaire', estimatedMinutes: 4, coverEmoji: '🌾', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "Sous Rome, la province d'Afrique devint un grenier à blé essentiel. Villes prospères, théâtres et thermes fleurirent. L'amphithéâtre d'El Jem témoigne encore de cette splendeur." },
+      { type: 'reperes', items: ['El Jem = amphithéâtre romain', 'Dougga = cité antique', 'Bulla Regia = villas souterraines'] },
+    ],
+    tags: ['histoire', 'antiquite', 'patrimoine'],
+  },
+  {
+    id: 'disc_histoire_eljem', section: 'histoire', title: 'L\'amphithéâtre d\'El Jem', subtitle: 'Le colisée d\'Afrique', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🏟️', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "L'amphithéâtre d'El Jem, l'un des mieux conservés au monde, pouvait accueillir 35 000 spectateurs. Classé à l'UNESCO, il accueille aujourd'hui un festival de musique symphonique." },
+    ],
+    tags: ['histoire', 'patrimoine', 'unesco'],
+  },
+  {
+    id: 'disc_histoire_kairouan', section: 'histoire', title: 'Kairouan, ville sainte', subtitle: 'Première cité de l\'Islam au Maghreb', level: 'elementaire', estimatedMinutes: 4, coverEmoji: '🕌', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "Fondée en 670, Kairouan fut la première grande ville musulmane du Maghreb. Sa Grande Mosquée, l'une des plus anciennes, en fait un haut lieu spirituel et un joyau architectural classé à l'UNESCO." },
+    ],
+    tags: ['histoire', 'islam', 'patrimoine'],
+  },
+  {
+    id: 'disc_histoire_aghlabides', section: 'histoire', title: 'Les Aghlabides', subtitle: 'Bassins et savoir hydraulique', level: 'intermediaire', estimatedMinutes: 3, coverEmoji: '💧', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "La dynastie aghlabide (IXe siècle) fit de Kairouan un centre de pouvoir. Elle laissa de remarquables ouvrages hydrauliques, comme les bassins des Aghlabides, qui alimentaient la ville en eau." },
+    ],
+    tags: ['histoire', 'dynasties', 'patrimoine'],
+  },
+  {
+    id: 'disc_histoire_zitouna', section: 'histoire', title: 'La mosquée Zitouna', subtitle: 'Cœur savant de Tunis', level: 'elementaire', estimatedMinutes: 3, coverEmoji: '📜', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "La mosquée Zitouna, au cœur de la médina de Tunis, fut un grand centre d'enseignement pendant des siècles. Son université forma savants, juristes et lettrés du monde musulman." },
+    ],
+    tags: ['histoire', 'savoir', 'tunis'],
+  },
+  {
+    id: 'disc_histoire_hafsides', section: 'histoire', title: 'Les Hafsides', subtitle: 'L\'âge d\'or de Tunis', level: 'intermediaire', estimatedMinutes: 3, coverEmoji: '👑', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "Sous les Hafsides (XIIIe-XVIe siècle), Tunis devint une capitale florissante du commerce méditerranéen. La médina actuelle conserve l'empreinte de cette période faste." },
+    ],
+    tags: ['histoire', 'dynasties', 'tunis'],
+  },
+  {
+    id: 'disc_histoire_ottomans', section: 'histoire', title: 'L\'époque ottomane', subtitle: 'Beys et régence de Tunis', level: 'intermediaire', estimatedMinutes: 4, coverEmoji: '🏰', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "Intégrée à l'Empire ottoman au XVIe siècle, la Tunisie fut gouvernée par des beys largement autonomes. Cette époque façonna l'administration, l'architecture des palais et une partie du vocabulaire encore utilisé." },
+    ],
+    tags: ['histoire', 'ottomans', 'patrimoine'],
+  },
+  {
+    id: 'disc_histoire_protectorat', section: 'histoire', title: 'Le protectorat français', subtitle: '1881-1956', level: 'intermediaire', estimatedMinutes: 4, coverEmoji: '🇫🇷', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "De 1881 à 1956, la Tunisie fut un protectorat français. Cette période laissa des traces dans l'urbanisme (la ville européenne de Tunis), l'enseignement et la langue, avec de nombreux emprunts au français dans le darija." },
+    ],
+    tags: ['histoire', 'colonisation', 'langue'],
+  },
+  {
+    id: 'disc_histoire_independance', section: 'histoire', title: 'L\'indépendance de 1956', subtitle: 'Naissance de la Tunisie moderne', level: 'elementaire', estimatedMinutes: 3, coverEmoji: '🎗️', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "Le 20 mars 1956, la Tunisie obtient son indépendance. Habib Bourguiba, figure du mouvement national, devient le premier président et engage de profondes réformes, notamment l'éducation et le statut de la femme." },
+      { type: 'savoir', text: "Le 20 mars reste la fête nationale tunisienne." },
+    ],
+    tags: ['histoire', 'independance', 'nation'],
+  },
+  {
+    id: 'disc_histoire_bourguiba', section: 'histoire', title: 'Habib Bourguiba', subtitle: 'Le combattant suprême', level: 'elementaire', estimatedMinutes: 3, coverEmoji: '🎖️', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "Premier président de la Tunisie indépendante, Bourguiba modernisa le pays : Code du statut personnel (1956) émancipant la femme, généralisation de l'école, et politiques de santé publique." },
+    ],
+    tags: ['histoire', 'politique', 'reformes'],
+  },
+  {
+    id: 'disc_histoire_csp', section: 'histoire', title: 'Le Code du statut personnel', subtitle: 'Une avancée pour les droits', level: 'intermediaire', estimatedMinutes: 3, coverEmoji: '⚖️', universe: 'famille',
+    blocks: [
+      { type: 'paragraphe', text: "Promulgué en 1956, le Code du statut personnel abolit la polygamie et instaura le divorce judiciaire et le consentement au mariage. Il fait de la Tunisie un pays pionnier des droits des femmes dans la région." },
+    ],
+    relatedWordIds: ['w_famille_3ors'],
+    tags: ['histoire', 'droit', 'famille'],
+  },
+  {
+    id: 'disc_histoire_2011', section: 'histoire', title: 'La révolution de 2011', subtitle: 'Dignité et liberté', level: 'intermediaire', estimatedMinutes: 4, coverEmoji: '✊', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "En décembre 2010 - janvier 2011, un soulèvement populaire conduit au départ du président Ben Ali. La révolution tunisienne ouvre une période de transition démocratique et inspire d'autres mouvements dans la région." },
+    ],
+    tags: ['histoire', 'contemporain', 'societe'],
+  },
+  {
+    id: 'disc_histoire_medina', section: 'histoire', title: 'La médina de Tunis', subtitle: 'Mille ans d\'urbanisme', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🚪', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "La médina de Tunis, classée à l'UNESCO, est un labyrinthe de ruelles, souks, mosquées et palais (dar). Elle constitue le cœur historique de la capitale et un témoignage vivant de l'architecture arabo-musulmane." },
+    ],
+    relatedWordIds: ['w_dar', 'w_sou9'],
+    tags: ['histoire', 'patrimoine', 'tunis'],
+  },
+  {
+    id: 'disc_histoire_juifs', section: 'histoire', title: 'Le patrimoine judéo-tunisien', subtitle: 'La Ghriba de Djerba', level: 'intermediaire', estimatedMinutes: 3, coverEmoji: '🕎', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "La communauté juive de Tunisie, très ancienne, a laissé un riche patrimoine. La synagogue de la Ghriba, à Djerba, l'une des plus anciennes au monde, accueille chaque année un pèlerinage." },
+    ],
+    tags: ['histoire', 'patrimoine', 'religions'],
+  },
+
+  // ── RÉGIONS & GÉOGRAPHIE (14 articles) · section: 'regions' ─────────────────────
+  {
+    id: 'disc_regions_tunis', section: 'regions', title: 'Tunis, la capitale', subtitle: 'Entre médina et lac', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🏙️', universe: 'louage',
+    blocks: [
+      { type: 'paragraphe', text: "Tunis, capitale du pays, mêle médina historique, avenue Habib-Bourguiba à la française et quartiers modernes autour du lac. C'est le cœur politique, économique et culturel de la Tunisie." },
+    ],
+    relatedWordIds: ['w_louage_wlaya'],
+    tags: ['regions', 'villes', 'capitale'],
+  },
+  {
+    id: 'disc_regions_sidi_bou', section: 'regions', title: 'Sidi Bou Saïd', subtitle: 'Le village bleu et blanc', level: 'debutant', estimatedMinutes: 3, coverEmoji: '💙', universe: 'plage',
+    blocks: [
+      { type: 'paragraphe', text: "Perché sur une falaise au-dessus de la Méditerranée, Sidi Bou Saïd séduit par ses maisons blanches aux portes bleues, ses ruelles fleuries et ses cafés panoramiques. Un lieu emblématique des artistes." },
+    ],
+    relatedWordIds: ['w_b7ar'],
+    tags: ['regions', 'tourisme', 'patrimoine'],
+  },
+  {
+    id: 'disc_regions_carthage_quartier', section: 'regions', title: 'La banlieue nord', subtitle: 'Carthage, La Marsa, Gammarth', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🌊', universe: 'plage',
+    blocks: [
+      { type: 'paragraphe', text: "La banlieue nord de Tunis aligne plages, résidences et sites antiques. La Marsa et Gammarth sont prisées l'été pour leurs cafés en bord de mer et leur ambiance balnéaire." },
+    ],
+    relatedWordIds: ['w_plage_blaj', 'w_b7ar'],
+    tags: ['regions', 'littoral', 'tourisme'],
+  },
+  {
+    id: 'disc_regions_sahel', section: 'regions', title: 'Le Sahel', subtitle: 'Sousse, Monastir, Mahdia', level: 'debutant', estimatedMinutes: 4, coverEmoji: '🏖️', universe: 'plage',
+    blocks: [
+      { type: 'paragraphe', text: "Le Sahel, sur la côte est, regroupe Sousse, Monastir et Mahdia. Plages dorées, médinas, ribats et oliveraies en font un cœur touristique et agricole du pays." },
+      { type: 'reperes', items: ['Sousse = la perle du Sahel', 'Monastir = ribat et marina', 'Mahdia = pêche et plages'] },
+    ],
+    relatedWordIds: ['w_plage_sa7el', 'w_plage_blaj'],
+    tags: ['regions', 'littoral', 'tourisme'],
+  },
+  {
+    id: 'disc_regions_djerba', section: 'regions', title: 'Djerba', subtitle: 'L\'île des Lotophages', level: 'debutant', estimatedMinutes: 4, coverEmoji: '🏝️', universe: 'plage',
+    blocks: [
+      { type: 'paragraphe', text: "Djerba, plus grande île d'Afrique du Nord, est célèbre pour ses plages, ses maisons blanches (houch), son artisanat et sa cohabitation des cultures. La légende l'associe à l'épisode des Lotophages de l'Odyssée." },
+    ],
+    relatedWordIds: ['w_plage_jzira', 'w_b7ar'],
+    tags: ['regions', 'iles', 'tourisme'],
+  },
+  {
+    id: 'disc_regions_sfax', section: 'regions', title: 'Sfax', subtitle: 'La capitale économique', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🏭', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "Sfax, deuxième ville du pays, est un grand pôle économique : commerce, industrie, huile d'olive et pêche. Sa médina fortifiée et son esprit entrepreneurial la distinguent." },
+    ],
+    tags: ['regions', 'villes', 'economie'],
+  },
+  {
+    id: 'disc_regions_kairouan_ville', section: 'regions', title: 'Kairouan', subtitle: 'Tapis et spiritualité', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🧎', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "Ville sainte au centre du pays, Kairouan est réputée pour ses tapis noués à la main et ses douceurs (makroudh). Son patrimoine religieux et artisanal attire pèlerins et visiteurs." },
+    ],
+    tags: ['regions', 'artisanat', 'patrimoine'],
+  },
+  {
+    id: 'disc_regions_bizerte', section: 'regions', title: 'Bizerte', subtitle: 'La ville la plus au nord', level: 'debutant', estimatedMinutes: 3, coverEmoji: '⛵', universe: 'plage',
+    blocks: [
+      { type: 'paragraphe', text: "Bizerte, ville la plus septentrionale d'Afrique, possède un vieux port pittoresque et des plages réputées. Entre lac, mer et montagnes, la région offre des paysages variés." },
+    ],
+    relatedWordIds: ['w_plage_mina', 'w_b7ar'],
+    tags: ['regions', 'littoral', 'nord'],
+  },
+  {
+    id: 'disc_regions_tabarka', section: 'regions', title: 'Tabarka et le nord-ouest', subtitle: 'Forêts, corail et jazz', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🌲', universe: 'plage',
+    blocks: [
+      { type: 'paragraphe', text: "Le nord-ouest, verdoyant, contraste avec le reste du pays. Tabarka, entre forêts de chêne-liège et mer, est connue pour son corail, ses aiguilles rocheuses et son festival de jazz." },
+    ],
+    relatedWordIds: ['w_b7ar'],
+    tags: ['regions', 'nature', 'nord-ouest'],
+  },
+  {
+    id: 'disc_regions_sahara', section: 'regions', title: 'Le Sahara', subtitle: 'Douz, porte du désert', level: 'elementaire', estimatedMinutes: 4, coverEmoji: '🐪', universe: 'louage',
+    blocks: [
+      { type: 'paragraphe', text: "Au sud, le Sahara déploie dunes, oasis et palmeraies. Douz, « porte du désert », accueille un festival du Sahara. Les excursions à dos de dromadaire et les nuits sous tente y sont prisées." },
+    ],
+    tags: ['regions', 'desert', 'sud'],
+  },
+  {
+    id: 'disc_regions_tozeur', section: 'regions', title: 'Tozeur et les oasis', subtitle: 'Palmeraies et briques ocre', level: 'elementaire', estimatedMinutes: 3, coverEmoji: '🌴', universe: 'louage',
+    blocks: [
+      { type: 'paragraphe', text: "Tozeur, célèbre pour son immense palmeraie et son architecture de briques ocre, est une porte vers les oasis de montagne (Chebika, Tamerza) et les décors de cinéma du grand sud." },
+    ],
+    tags: ['regions', 'oasis', 'sud'],
+  },
+  {
+    id: 'disc_regions_matmata', section: 'regions', title: 'Matmata', subtitle: 'Les maisons troglodytes', level: 'elementaire', estimatedMinutes: 3, coverEmoji: '🕳️', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "À Matmata, les habitations troglodytes sont creusées dans la roche pour se protéger de la chaleur. Ces maisons souterraines, encore habitées, ont notamment servi de décor à des films célèbres." },
+    ],
+    relatedWordIds: ['w_dar'],
+    tags: ['regions', 'habitat', 'sud'],
+  },
+  {
+    id: 'disc_regions_cap_bon', section: 'regions', title: 'Le Cap Bon', subtitle: 'Agrumes et plages', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🍊', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "Péninsule fertile du nord-est, le Cap Bon est réputé pour ses agrumes, ses vignes, ses plages (Hammamet, Nabeul) et son artisanat de poterie et de fleur d'oranger." },
+    ],
+    tags: ['regions', 'agriculture', 'tourisme'],
+  },
+  {
+    id: 'disc_regions_geographie', section: 'regions', title: 'Géographie de la Tunisie', subtitle: 'Du nord vert au sud désertique', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🗺️', universe: 'louage',
+    blocks: [
+      { type: 'paragraphe', text: "La Tunisie s'étire sur 1 300 km de côtes, du nord montagneux et verdoyant au sud saharien, en passant par les plaines céréalières et les oliveraies du centre. Cette diversité façonne climats et modes de vie." },
+      { type: 'reperes', items: ['Nord = forêts et montagnes', 'Centre = steppes et oliviers', 'Sud = oasis et désert'] },
+    ],
+    relatedWordIds: ['w_louage_jiha', 'w_louage_wlaya'],
+    tags: ['regions', 'geographie', 'climat'],
+  },
+
+  // ── ART & PATRIMOINE (14 articles) · section: 'art' ─────────────────────────────
+  {
+    id: 'disc_art_zellige', section: 'art', title: 'Le zellige', subtitle: 'La mosaïque de faïence', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🟦', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "Le zellige est un assemblage de carreaux de faïence émaillée formant des motifs géométriques. Il orne murs, fontaines et patios des maisons traditionnelles (dar) et des palais de la médina." },
+    ],
+    relatedWordIds: ['w_dar'],
+    tags: ['art', 'artisanat', 'patrimoine'],
+  },
+  {
+    id: 'disc_art_poterie', section: 'art', title: 'La poterie de Nabeul', subtitle: 'Terre et couleurs', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🏺', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "Nabeul et Sejnane sont des hauts lieux de la poterie tunisienne. À Sejnane, la poterie modelée à la main par les femmes, aux motifs berbères, est inscrite au patrimoine immatériel de l'UNESCO." },
+    ],
+    tags: ['art', 'artisanat', 'unesco'],
+  },
+  {
+    id: 'disc_art_tapis', section: 'art', title: 'Le tapis de Kairouan', subtitle: 'Nœuds et symboles', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🧶', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "Le tapis noué de Kairouan, aux motifs géométriques et au médaillon central, est un art transmis de mère en fille. Chaque pièce, faite main, peut demander des mois de travail." },
+    ],
+    tags: ['art', 'artisanat', 'kairouan'],
+  },
+  {
+    id: 'disc_art_chechia', section: 'art', title: 'La chéchia', subtitle: 'Le bonnet rouge feutré', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🧢', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "La chéchia, bonnet de laine feutrée rouge, est un emblème de l'artisanat tunisois. Son façonnage, regroupé dans le souk des chéchias, suit un savoir-faire séculaire." },
+    ],
+    tags: ['art', 'artisanat', 'vetements'],
+  },
+  {
+    id: 'disc_art_malouf', section: 'art', title: 'Le malouf', subtitle: 'La musique arabo-andalouse', level: 'elementaire', estimatedMinutes: 4, coverEmoji: '🎻', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "Le malouf, musique arabo-andalouse héritée de l'exode de l'Andalousie, est le répertoire classique tunisien. Joué au luth, violon et percussions, il est préservé comme patrimoine national." },
+    ],
+    tags: ['art', 'musique', 'patrimoine'],
+  },
+  {
+    id: 'disc_art_mezoued', section: 'art', title: 'Le mezoued', subtitle: 'La cornemuse populaire', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🎶', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "Le mezoued est une cornemuse tunisienne et, par extension, un genre musical populaire né dans les quartiers urbains. Festif et rythmé, il anime mariages et fêtes." },
+    ],
+    relatedWordIds: ['w_famille_3ors'],
+    tags: ['art', 'musique', 'populaire'],
+  },
+  {
+    id: 'disc_art_calligraphie', section: 'art', title: 'La calligraphie arabe', subtitle: 'L\'écriture devenue art', level: 'elementaire', estimatedMinutes: 3, coverEmoji: '✒️', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "La calligraphie élève l'écriture arabe au rang d'art. Sur les mosquées, manuscrits et œuvres contemporaines, les styles (coufique, naskhi) déploient des compositions d'une grande élégance." },
+    ],
+    tags: ['art', 'ecriture', 'patrimoine'],
+  },
+  {
+    id: 'disc_art_porte_tunis', section: 'art', title: 'Les portes de Tunis', subtitle: 'Bleu et clous forgés', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🚪', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "Les portes traditionnelles, souvent bleues, cloutées et cintrées, sont une signature visuelle des médinas. Leurs motifs et heurtoirs racontent le statut et le goût de chaque maison (dar)." },
+    ],
+    relatedWordIds: ['w_dar', 'w_beb'],
+    tags: ['art', 'architecture', 'patrimoine'],
+  },
+  {
+    id: 'disc_art_cuivre', section: 'art', title: 'Le travail du cuivre', subtitle: 'Plateaux et lanternes', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🪔', universe: 'marche',
+    blocks: [
+      { type: 'paragraphe', text: "Dans les souks, les dinandiers martèlent le cuivre pour créer plateaux, théières et lanternes ciselés. Le son rythmé des marteaux fait partie de l'ambiance de la médina." },
+    ],
+    relatedWordIds: ['w_sou9'],
+    tags: ['art', 'artisanat', 'medina'],
+  },
+  {
+    id: 'disc_art_broderie', section: 'art', title: 'La broderie et le costume', subtitle: 'Habits de fête', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🧵', universe: 'famille',
+    blocks: [
+      { type: 'paragraphe', text: "Les costumes de mariage (fouta-blouza, keswa) sont rehaussés de broderies d'or et d'argent. Chaque région a ses motifs et ses parures, transmis lors des grandes célébrations familiales." },
+    ],
+    relatedWordIds: ['w_famille_3ors', 'w_plage_fouta'],
+    tags: ['art', 'costume', 'mariage'],
+  },
+  {
+    id: 'disc_art_cinema', section: 'art', title: 'Le cinéma tunisien', subtitle: 'Des décors aux festivals', level: 'elementaire', estimatedMinutes: 3, coverEmoji: '🎬', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "Le cinéma tunisien rayonne par ses auteurs et les Journées Cinématographiques de Carthage, l'un des plus anciens festivals d'Afrique. Les paysages du sud ont aussi servi de décor à de grandes productions internationales." },
+    ],
+    tags: ['art', 'cinema', 'festivals'],
+  },
+  {
+    id: 'disc_art_mosaique', section: 'art', title: 'Les mosaïques du Bardo', subtitle: 'Trésor de l\'antiquité', level: 'elementaire', estimatedMinutes: 4, coverEmoji: '🖼️', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "Le musée du Bardo, à Tunis, abrite l'une des plus riches collections de mosaïques romaines au monde. Scènes mythologiques et de vie quotidienne y sont conservées avec une finesse remarquable." },
+    ],
+    tags: ['art', 'antiquite', 'musee'],
+  },
+  {
+    id: 'disc_art_henne', section: 'art', title: 'Le henné', subtitle: 'Motifs des grandes occasions', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🤲', universe: 'famille',
+    blocks: [
+      { type: 'paragraphe', text: "Le henné orne mains et pieds lors des mariages et des fêtes. La « nuit du henné » est une étape clé des noces tunisiennes, mêlant motifs, chants et bénédictions." },
+    ],
+    relatedWordIds: ['w_famille_3ors'],
+    tags: ['art', 'rituels', 'mariage'],
+  },
+  {
+    id: 'disc_art_verre_parfum', section: 'art', title: 'Parfums et eaux florales', subtitle: 'Fleur d\'oranger et géranium', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🌸', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "La distillation des fleurs (oranger, rose, géranium) produit des eaux florales utilisées en cuisine et en parfumerie. Nabeul est réputée pour sa fleur d'oranger, symbole du printemps tunisien." },
+    ],
+    tags: ['art', 'artisanat', 'parfums'],
+  },
 ] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────

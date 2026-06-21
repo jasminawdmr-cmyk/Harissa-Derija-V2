@@ -534,6 +534,7 @@ export type DiscoverSection =
   | 'histoire'
   | 'cuisine'
   | 'musique'
+  | 'art'
   | 'regions'
   | 'expressions'
   | 'diaspora'
