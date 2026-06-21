@@ -243,6 +243,52 @@ const RULE_MARCHE_COMPARAISON: GrammarRule = {
   prerequisiteRuleIds: ['g_marche_demonstratifs'],
 };
 
+// ─── VAGUE 2 — UNIVERS « MAISON » (2 règles) · universe: 'maison' ─────────────────
+
+/**
+ * RÈGLE — Situer dans l'espace (prépositions de lieu)
+ */
+const RULE_MAISON_LOCALISATION: GrammarRule = {
+  id: "g_maison_localisation",
+  title: "Situer : fi / fou9 / ta7t / 9oddem",
+  category: "preposition",
+  level: "debutant",
+  universe: "maison",
+  explanation:
+    "Pour situer un objet dans la maison : في (fi = dans), فوق (fou9 = sur), " +
+    "تحت (ta7t = sous), قدّام (9oddem = devant), ورا (wara = derrière).",
+  pattern: "[objet] + [préposition] + [lieu]",
+  examples: [
+    { arabic: 'المفتاح فوق الطاولة', arabizi: 'El mefte7 fou9 el tawla', phonetic: '[el mefte7 fou9 el tawla]', french: 'La clé est sur la table' },
+    { arabic: 'القطّوس تحت السرير', arabizi: 'El gattous ta7t el srir', phonetic: '[el gattous ta7t el srir]', french: 'Le chat est sous le lit' },
+    { arabic: 'الجنان قدّام الدار', arabizi: 'El jnen 9oddem el dar', phonetic: '[el jnen 9oddem el dar]', french: 'Le jardin est devant la maison' },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: [],
+};
+
+/**
+ * RÈGLE — La possession : 3andi / mte3i
+ */
+const RULE_MAISON_POSSESSION: GrammarRule = {
+  id: "g_maison_possession",
+  title: "Posséder : 3andi (j'ai) / mte3i (à moi)",
+  category: "possession",
+  level: "debutant",
+  universe: "maison",
+  explanation:
+    "Pour la possession, deux outils : عندي (3andi = j'ai) exprime l'avoir, et " +
+    "متاعي (mte3i = à moi/le mien) marque l'appartenance, placé après le nom. " +
+    "Ex : « el dar mte3na » (notre maison).",
+  pattern: "عندي + [nom]  ·  [nom] + متاعـ + [suffixe]",
+  examples: [
+    { arabic: 'عندي دار', arabizi: '3andi dar', phonetic: '[3andi dar]', french: "J'ai une maison" },
+    { arabic: 'الدار متاعنا', arabizi: 'El dar mte3na', phonetic: '[el dar mte3na]', french: 'Notre maison' },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: [],
+};
+
 export const grammarRules: Readonly<GrammarRule[]> = [
   RULE_NEGATION,
   RULE_ARTICLE_DEFINI,
@@ -252,6 +298,8 @@ export const grammarRules: Readonly<GrammarRule[]> = [
   RULE_SALUT_QUESTIONS,
   RULE_MARCHE_DEMONSTRATIFS,
   RULE_MARCHE_COMPARAISON,
+  RULE_MAISON_LOCALISATION,
+  RULE_MAISON_POSSESSION,
 ] as const;
 
 export const grammarRulesById: Readonly<Record<string, GrammarRule>> =

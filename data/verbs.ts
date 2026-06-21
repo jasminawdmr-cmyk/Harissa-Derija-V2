@@ -482,12 +482,66 @@ const PACK_MARCHE: Verb[] = [
   },
 ];
 
+// ─── VAGUE 2 — UNIVERS « MAISON » (8 verbes) ─────────────────────────────────────
+
+const PACK_MAISON: Verb[] = [
+  {
+    id: 'v_nnadhaf', infinitiveFrench: 'je nettoie', rootArabic: 'ننظّف', rootArabizi: 'nnadhaf',
+    isIrregular: false, level: 'debutant', tags: ['maison', 'menage'], universe: 'maison', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'ننظّف', arabizi: 'nnadhaf' }] },
+    example: { arabic: 'ننظّف الدار', arabizi: 'Nnadhaf el dar', french: 'Je nettoie la maison' },
+  },
+  {
+    id: 'v_nrattab', infinitiveFrench: 'je range', rootArabic: 'نرتّب', rootArabizi: 'nrattab',
+    isIrregular: false, level: 'debutant', tags: ['maison', 'menage'], universe: 'maison', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نرتّب', arabizi: 'nrattab' }] },
+    example: { arabic: 'نرتّب البيت', arabizi: 'Nrattab el bit', french: 'Je range la chambre' },
+  },
+  {
+    id: 'v_noknes', infinitiveFrench: 'je balaie', rootArabic: 'نكنس', rootArabizi: 'noknes',
+    isIrregular: false, level: 'debutant', tags: ['maison', 'menage'], universe: 'maison', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نكنس', arabizi: 'noknes' }] },
+    example: { arabic: 'نكنس الأرض', arabizi: 'Noknes el ardh', french: 'Je balaie le sol' },
+  },
+  {
+    id: 'v_nor9od', infinitiveFrench: 'je dors', rootArabic: 'نرقد', rootArabizi: 'nor9od',
+    isIrregular: false, level: 'debutant', tags: ['maison'], universe: 'maison', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نرقد', arabizi: 'nor9od' }] },
+    example: { arabic: 'نرقد بكري', arabizi: 'Nor9od bekri', french: 'Je dors tôt' },
+  },
+  {
+    id: 'v_nfi9', infinitiveFrench: 'je me réveille', rootArabic: 'نفيق', rootArabizi: 'nfi9',
+    isIrregular: false, level: 'debutant', tags: ['maison'], universe: 'maison', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نفيق', arabizi: 'nfi9' }] },
+    example: { arabic: 'نفيق الصباح', arabizi: 'Nfi9 essbe7', french: 'Je me réveille le matin' },
+  },
+  {
+    id: 'v_ncha33el', infinitiveFrench: "j'allume", rootArabic: 'نشعّل', rootArabizi: 'ncha33el',
+    isIrregular: false, level: 'debutant', tags: ['maison'], universe: 'maison', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نشعّل', arabizi: 'ncha33el' }] },
+    example: { arabic: 'نشعّل الضوء', arabizi: 'Ncha33el el dhou', french: "J'allume la lumière" },
+  },
+  {
+    id: 'v_natfi', infinitiveFrench: "j'éteins", rootArabic: 'نطفي', rootArabizi: 'natfi',
+    isIrregular: false, level: 'debutant', tags: ['maison'], universe: 'maison', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نطفي', arabizi: 'natfi' }] },
+    example: { arabic: 'نطفي التلفزة', arabizi: 'Natfi el telfza', french: "J'éteins la télé" },
+  },
+  {
+    id: 'v_nsalla7', infinitiveFrench: 'je répare', rootArabic: 'نصلّح', rootArabizi: 'nsalla7',
+    isIrregular: false, level: 'debutant', tags: ['maison'], universe: 'maison', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نصلّح', arabizi: 'nsalla7' }] },
+    example: { arabic: 'نصلّح الباب', arabizi: 'Nsalla7 el beb', french: 'Je répare la porte' },
+  },
+];
+
 export const verbs: Readonly<Verb[]> = [
   ...PACK_01,
   ...PACK_02,
   ...PACK_CAFE,
   ...PACK_SALUT,
   ...PACK_MARCHE,
+  ...PACK_MAISON,
 ] as const;
 
 export const verbsById: Readonly<Record<string, Verb>> = Object.fromEntries(

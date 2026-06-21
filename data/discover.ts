@@ -202,6 +202,51 @@ export const discoverContents: Readonly<DiscoverContent[]> = [
     relatedWordIds: ['w_marche_9offa', 'w_marche_kis'],
     tags: ['marche', 'objets', 'culture'],
   },
+
+  // ── VAGUE 2 — UNIVERS « MAISON » (5 articles) · universe: 'maison' ──────────────
+  {
+    id: 'disc_maison_dar', section: 'culture', title: 'La « dar » tunisienne', subtitle: 'Autour du patio', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🏠', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "La maison traditionnelle (dar) s'organise souvent autour d'un patio central (west eddar) qui apporte fraîcheur et lumière. C'est le cœur de la vie familiale." },
+      { type: 'reperes', items: ['dar = maison', 'bit = chambre', 'ste7 = terrasse'] },
+    ],
+    relatedWordIds: ['w_dar', 'w_bit', 'w_maison_ste7'],
+    tags: ['maison', 'culture'],
+  },
+  {
+    id: 'disc_maison_hospitalite', section: 'culture', title: "L'hospitalité à la maison", subtitle: 'Baytek baytek', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🫖', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "Recevoir est un honneur. On accueille par « tfaddal » (entre), « baytek baytek » (fais comme chez toi), et on offre toujours à boire et à manger." },
+    ],
+    relatedWordIds: ['w_salut_tfaddal', 'w_dar'],
+    relatedExpressionIds: ['e_maison_baytek_baytek', 'e_maison_7ot_rou7ek'],
+    tags: ['maison', 'accueil'],
+  },
+  {
+    id: 'disc_maison_cuisine', section: 'culture', title: 'La cuisine, royaume du foyer', subtitle: 'Borma & koucha', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🍲', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "La cuisine (koujina) est centrale : on y mijote dans la « borma » (marmite), on y cuit au « koucha » (four). Les repas réunissent toute la famille." },
+      { type: 'reperes', items: ['koujina = cuisine', 'borma = marmite', 'ma9la = poêle'] },
+    ],
+    relatedWordIds: ['w_koujina', 'w_maison_borma', 'w_maison_ma9la'],
+    tags: ['maison', 'cuisine'],
+  },
+  {
+    id: 'disc_maison_objets', section: 'culture', title: 'Les objets du quotidien', subtitle: 'Zarbiya, mkhadda…', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🪑', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "Le tapis (zarbiya), les coussins (mkhadda) et les banquettes basses créent des espaces conviviaux où l'on s'assoit volontiers à plusieurs." },
+    ],
+    relatedWordIds: ['w_maison_zarbiya', 'w_maison_mkhadda', 'w_maison_srir'],
+    tags: ['maison', 'objets'],
+  },
+  {
+    id: 'disc_maison_menage', section: 'culture', title: 'Le ménage du week-end', subtitle: 'Une routine familiale', level: 'debutant', estimatedMinutes: 2, coverEmoji: '🧹', universe: 'maison',
+    blocks: [
+      { type: 'paragraphe', text: "Nettoyer (nnadhaf), balayer (noknes), ranger (nrattab) : le grand ménage hebdomadaire est souvent partagé entre les membres du foyer." },
+    ],
+    relatedWordIds: ['w_maison_saboun', 'w_maison_menchfa'],
+    tags: ['maison', 'menage'],
+  },
 ] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────

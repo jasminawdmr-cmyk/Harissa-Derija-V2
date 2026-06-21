@@ -280,6 +280,35 @@ export const vocabulary: Readonly<VocabularyItem[]> = [
   { id: 'w_marche_banan', arabic: 'بنان', arabizi: 'Banan', french: 'Bananes', category: 'nourriture', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'nourriture', 'fruits'], universe: 'marche' },
   { id: 'w_marche_tri', arabic: 'طري', arabizi: 'Tri', french: 'Frais / tendre', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'qualite'], universe: 'marche' },
   { id: 'w_marche_khaddar', arabic: 'خضّار', arabizi: 'Khaddar', french: 'Marchand de légumes', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['marche', 'commerce'], universe: 'marche' },
+
+  // ════════════════════════════════════════════════════════════════════════════════
+  // VAGUE 2 — UNIVERS « MAISON » (25 mots) · universe: 'maison'
+  // ════════════════════════════════════════════════════════════════════════════════
+  { id: 'w_maison_srir', arabic: 'سرير', arabizi: 'Srir', french: 'Lit', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['maison', 'meubles'], universe: 'maison' },
+  { id: 'w_maison_mkhadda', arabic: 'مخدة', arabizi: 'Mkhadda', french: 'Oreiller', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison', 'meubles'], universe: 'maison' },
+  { id: 'w_maison_ghta', arabic: 'غطاء', arabizi: 'Ghta', french: 'Couverture', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison'], universe: 'maison' },
+  { id: 'w_maison_zarbiya', arabic: 'زربية', arabizi: 'Zarbiya', french: 'Tapis', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison'], universe: 'maison' },
+  { id: 'w_maison_khzana', arabic: 'خزانة', arabizi: 'Khzana', french: 'Armoire', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison', 'meubles'], universe: 'maison' },
+  { id: 'w_maison_telfza', arabic: 'تلفزة', arabizi: 'Telfza', french: 'Télévision', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['maison'], universe: 'maison' },
+  { id: 'w_maison_thallaja', arabic: 'ثلاجة', arabizi: 'Thallaja', french: 'Réfrigérateur', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['maison'], universe: 'maison' },
+  { id: 'w_maison_koucha', arabic: 'كوشة', arabizi: 'Koucha', french: 'Four', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison'], universe: 'maison' },
+  { id: 'w_maison_ghassala', arabic: 'غسالة', arabizi: 'Ghassala', french: 'Machine à laver', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison'], universe: 'maison' },
+  { id: 'w_maison_tba9', arabic: 'طبق', arabizi: 'Tba9', french: 'Assiette', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['maison', 'vaisselle'], universe: 'maison' },
+  { id: 'w_maison_farchita', arabic: 'فرشيطة', arabizi: 'Farchita', french: 'Fourchette', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison', 'vaisselle'], universe: 'maison' },
+  { id: 'w_maison_mous', arabic: 'موس', arabizi: 'Mous', french: 'Couteau', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison', 'vaisselle'], universe: 'maison' },
+  { id: 'w_maison_m3al9a', arabic: 'معلقة', arabizi: 'M3al9a', french: 'Cuillère', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['maison', 'vaisselle'], universe: 'maison' },
+  { id: 'w_maison_borma', arabic: 'برمة', arabizi: 'Borma', french: 'Marmite / fait-tout', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison', 'cuisine'], universe: 'maison' },
+  { id: 'w_maison_ma9la', arabic: 'مقلاة', arabizi: 'Ma9la', french: 'Poêle', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison', 'cuisine'], universe: 'maison' },
+  { id: 'w_maison_dhou', arabic: 'ضوء', arabizi: 'Dhou', french: 'Lumière', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['maison'], universe: 'maison' },
+  { id: 'w_maison_mosba7', arabic: 'مصباح', arabizi: 'Mosba7', french: 'Lampe', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison'], universe: 'maison' },
+  { id: 'w_maison_mefte7', arabic: 'مفتاح', arabizi: 'Mefte7', french: 'Clé', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['maison'], universe: 'maison' },
+  { id: 'w_maison_7it', arabic: 'حيط', arabizi: '7it', french: 'Mur', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison'], universe: 'maison' },
+  { id: 'w_maison_droj', arabic: 'درج', arabizi: 'Droj', french: 'Escalier', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison'], universe: 'maison' },
+  { id: 'w_maison_ste7', arabic: 'سطح', arabizi: 'Ste7', french: 'Terrasse / toit', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison'], universe: 'maison' },
+  { id: 'w_maison_jnen', arabic: 'جنان', arabizi: 'Jnen', french: 'Jardin', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison'], universe: 'maison' },
+  { id: 'w_maison_garaj', arabic: 'قراج', arabizi: 'Garaj', french: 'Garage', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison'], universe: 'maison' },
+  { id: 'w_maison_saboun', arabic: 'صابون', arabizi: 'Saboun', french: 'Savon', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['maison', 'menage'], universe: 'maison' },
+  { id: 'w_maison_menchfa', arabic: 'منشفة', arabizi: 'Menchfa', french: 'Serviette', category: 'maison', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['maison'], universe: 'maison' },
 ] as const;
 
 // ─── Accès ──────────────────────────────────────────────────────────────────────

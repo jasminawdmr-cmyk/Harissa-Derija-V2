@@ -344,6 +344,66 @@ const DIALOGUE_MARCHE_GHELLA: Dialogue = {
   ],
 };
 
+// ─── VAGUE 2 — UNIVERS « MAISON » (3 dialogues) · universe: 'maison' ───────────────
+
+const DIALOGUE_MAISON_ACCUEIL: Dialogue = {
+  id: 'd_maison_01',
+  title: 'Accueillir chez soi',
+  context: 'maison',
+  level: 'debutant',
+  universe: 'maison',
+  situationFrench: 'On reçoit un invité à la maison.',
+  estimatedMinutes: 2,
+  keyWordIds: ['w_dar', 'w_salut_tfaddal'],
+  grammarRuleIds: ['g_maison_possession'],
+  culturalNote:
+    "« Baytek baytek » (fais comme chez toi) et « 7ot rou7ek » (mets-toi à l'aise) " +
+    "résument l'hospitalité tunisienne.",
+  lines: [
+    { speaker: 'A', arabic: 'مرحبا بيك، تفضّل أدخل', arabizi: 'Marhba bik, tfaddal odkhol', french: 'Bienvenue, entre je t\'en prie', wordIds: ['w_salut_tfaddal'] },
+    { speaker: 'B', arabic: 'الدار متاعكم حلوة', arabizi: 'El dar mte3kom 7lowa', french: 'Votre maison est belle', wordIds: ['w_dar'] },
+    { speaker: 'A', arabic: 'حط روحك في دارك', arabizi: '7ot rou7ek fi darek', french: 'Mets-toi à l\'aise', wordIds: ['w_dar'] },
+    { speaker: 'B', arabic: 'بارك الله فيك', arabizi: 'Barakallahou fik', french: 'Merci beaucoup', wordIds: ['w_salut_barakallahofik'] },
+  ],
+};
+
+const DIALOGUE_MAISON_OBJET: Dialogue = {
+  id: 'd_maison_02',
+  title: 'Chercher un objet',
+  context: 'maison',
+  level: 'debutant',
+  universe: 'maison',
+  situationFrench: 'On cherche les clés dans la maison.',
+  estimatedMinutes: 2,
+  keyWordIds: ['w_maison_mefte7', 'w_tawla'],
+  grammarRuleIds: ['g_maison_localisation', 'g_cafe_interrogation'],
+  culturalNote: "Les prépositions de lieu (fou9, ta7t…) sont indispensables au quotidien.",
+  lines: [
+    { speaker: 'A', arabic: 'وين المفتاح؟', arabizi: 'Win el mefte7?', french: 'Où est la clé ?', wordIds: ['w_maison_mefte7', 'w_win'] },
+    { speaker: 'B', arabic: 'فوق الطاولة في الكوجينة', arabizi: 'Fou9 el tawla fel koujina', french: 'Sur la table dans la cuisine', wordIds: ['w_tawla', 'w_koujina'] },
+    { speaker: 'A', arabic: 'ما لقيتهاش', arabizi: 'Ma l9ithech', french: 'Je ne l\'ai pas trouvée' },
+    { speaker: 'B', arabic: 'شوف تحت المخدة', arabizi: 'Chouf ta7t el mkhadda', french: 'Regarde sous l\'oreiller', wordIds: ['w_maison_mkhadda'] },
+  ],
+};
+
+const DIALOGUE_MAISON_MENAGE: Dialogue = {
+  id: 'd_maison_03',
+  title: 'Les tâches ménagères',
+  context: 'maison',
+  level: 'debutant',
+  universe: 'maison',
+  situationFrench: 'Deux personnes se répartissent le ménage.',
+  estimatedMinutes: 2,
+  keyWordIds: ['w_dar', 'w_koujina'],
+  grammarRuleIds: [],
+  culturalNote: "Le ménage du week-end est un rituel familial fréquent.",
+  lines: [
+    { speaker: 'A', arabic: 'لازم ننظّفو الدار اليوم', arabizi: 'Lezem nnadhfou el dar elyoum', french: 'Il faut nettoyer la maison aujourd\'hui', wordIds: ['w_dar', 'w_elyoum'] },
+    { speaker: 'B', arabic: 'أنا نكنس، وانتي ترتّب', arabizi: 'Ana noknes, w enti trattab', french: 'Moi je balaie, et toi tu ranges', wordIds: ['w_salut_w_enti'] },
+    { speaker: 'A', arabic: 'باهي، نبداو توّا', arabizi: 'Bahi, nebdaw tawa', french: 'D\'accord, on commence maintenant', wordIds: ['w_bahi', 'w_tawa'] },
+  ],
+};
+
 export const dialogues: Readonly<Dialogue[]> = [
   DIALOGUE_FAMILLE_RETROUVAILLES,
   DIALOGUE_MARCHE_LEGUMES,
@@ -356,6 +416,9 @@ export const dialogues: Readonly<Dialogue[]> = [
   DIALOGUE_MARCHE_NEGO,
   DIALOGUE_MARCHE_7OUT,
   DIALOGUE_MARCHE_GHELLA,
+  DIALOGUE_MAISON_ACCUEIL,
+  DIALOGUE_MAISON_OBJET,
+  DIALOGUE_MAISON_MENAGE,
 ] as const;
 
 export const dialoguesById: Readonly<Record<string, Dialogue>> =

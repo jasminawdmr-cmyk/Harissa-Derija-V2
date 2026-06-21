@@ -159,6 +159,44 @@ export const writingLessons: Readonly<WritingLesson[]> = [
       { latin: 'nos kilo', arabizi: 'nos kilo', arabic: 'نص كيلو', wordId: 'w_marche_nos_kilo', french: 'demi-kilo' },
     ],
   },
+
+  // ── VAGUE 2 — UNIVERS « MAISON » (3 exercices) · universe: 'maison' ─────────────
+  {
+    id: 'wr_maison_01', system: 'arabizi', title: 'La lettre ط (t emphatique) — maison',
+    objective: 'Reconnaître le « t » emphatique (ط) avec le vocabulaire de la maison.',
+    level: 'debutant', estimatedMinutes: 4, order: 10, universe: 'maison', tags: ['maison', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 't', arabizi: 't', arabic: 'ط', soundDescription: 'Le « t » emphatique (ط), plus appuyé que le t normal.', difficulty: 2, isPriority: false, exampleWordIds: ['w_maison_tba9'] },
+    ],
+    bridges: [
+      { latin: 'tba9', arabizi: 'tba9', arabic: 'طبق', wordId: 'w_maison_tba9', french: 'assiette' },
+      { latin: 'tawla', arabizi: 'tawla', arabic: 'طاولة', wordId: 'w_tawla', french: 'table' },
+    ],
+  },
+  {
+    id: 'wr_maison_02', system: 'arabizi', title: 'La lettre ح (7) — maison',
+    objective: 'Reconnaître le son « 7 » (ح) avec le vocabulaire de la maison.',
+    level: 'debutant', estimatedMinutes: 4, order: 11, universe: 'maison', tags: ['maison', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 'h', arabizi: '7', arabic: 'ح', soundDescription: 'Son « 7 » pharyngal soufflé (ح), noté 7 en arabizi.', difficulty: 3, isPriority: true, exampleWordIds: ['w_maison_7it'] },
+    ],
+    bridges: [
+      { latin: 'hit', arabizi: '7it', arabic: 'حيط', wordId: 'w_maison_7it', french: 'mur' },
+      { latin: 'hammem', arabizi: '7ammem', arabic: 'حمّام', wordId: 'w_7ammem', french: 'salle de bain' },
+    ],
+  },
+  {
+    id: 'wr_maison_03', system: 'arabizi', title: 'Écrire les objets de la maison',
+    objective: 'Écrire des objets courants : mefte7, srir, tba9.',
+    level: 'debutant', estimatedMinutes: 4, order: 12, universe: 'maison', tags: ['maison', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 's', arabizi: 's', arabic: 'س', soundDescription: 'La lettre « s » (س), comme dans « srir » (lit).', difficulty: 1, isPriority: false, exampleWordIds: ['w_maison_srir'] },
+    ],
+    bridges: [
+      { latin: 'srir', arabizi: 'srir', arabic: 'سرير', wordId: 'w_maison_srir', french: 'lit' },
+      { latin: 'mefteh', arabizi: 'mefte7', arabic: 'مفتاح', wordId: 'w_maison_mefte7', french: 'clé' },
+    ],
+  },
 ] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────
