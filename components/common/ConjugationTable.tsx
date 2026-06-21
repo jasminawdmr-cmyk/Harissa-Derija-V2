@@ -114,8 +114,8 @@ export function ConjugationTable({
               {/* Forme conjuguée, décomposée si possible */}
               <View style={styles.formColumn}>
                 <MorphologyBlock
-                  surface={conj.formLatin}
-                  secondary={conj.form}
+                  surface={conj.arabizi}
+                  secondary={conj.arabic}
                   segments={segments}
                   size="md"
                 />

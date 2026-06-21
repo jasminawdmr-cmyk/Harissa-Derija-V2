@@ -78,8 +78,8 @@ export function VerbCard({ verb, isFavorite, onToggleFavorite }: VerbCardProps) 
               <Badge label="Irrégulier" variant="terracotta" />
             )}
           </View>
-          <Text style={styles.rootArabic}>{verb.rootDarija}</Text>
-          <Text style={styles.rootLatin}>{verb.rootLatin}</Text>
+          <Text style={styles.rootArabic}>{verb.rootArabic}</Text>
+          <Text style={styles.rootLatin}>{verb.rootArabizi}</Text>
         </View>
 
         <View style={styles.headerRight}>

@@ -66,8 +66,8 @@ export default function LeconScreen() {
           <Badge label={formatDuration(lesson.estimatedMinutes)} variant="sand" />
         </View>
         <Text style={styles.lessonTitle}>{lesson.title}</Text>
-        {lesson.titleDarija ? (
-          <Text style={styles.lessonTitleDarija}>{lesson.titleDarija}</Text>
+        {lesson.titleArabic ? (
+          <Text style={styles.lessonTitleDarija}>{lesson.titleArabic}</Text>
         ) : null}
         <Text style={styles.lessonDescription}>{lesson.description}</Text>
 

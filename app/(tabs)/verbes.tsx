@@ -56,8 +56,8 @@ export default function VerbesScreen() {
       if (query.length > 0) {
         const haystack = [
           verb.infinitiveFrench,
-          verb.rootLatin,
-          verb.rootDarija,
+          verb.rootArabizi,
+          verb.rootArabic,
           ...verb.tags,
         ]
           .join(' ')

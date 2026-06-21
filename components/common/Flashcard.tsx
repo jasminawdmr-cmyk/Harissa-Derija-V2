@@ -52,8 +52,8 @@ export function Flashcard({ card, onAnswer }: FlashcardProps) {
   const isFrToDarija = card.cardSide === 'french_to_darija';
 
   // Face avant (question) et face arrière (réponse)
-  const frontPrimary = isFrToDarija ? word.french : word.darija;
-  const frontSecondary = isFrToDarija ? null : word.darijaLatin;
+  const frontPrimary = isFrToDarija ? word.french : word.arabic;
+  const frontSecondary = isFrToDarija ? null : word.arabizi;
   const directionLabel = isFrToDarija
     ? 'Français → Tunisien'
     : 'Tunisien → Français';
@@ -83,8 +83,8 @@ export function Flashcard({ card, onAnswer }: FlashcardProps) {
             <View style={styles.separator} />
             {isFrToDarija ? (
               <>
-                <Text style={styles.answerArabic}>{word.darija}</Text>
-                <Text style={styles.answerLatin}>{word.darijaLatin}</Text>
+                <Text style={styles.answerArabic}>{word.arabic}</Text>
+                <Text style={styles.answerLatin}>{word.arabizi}</Text>
                 <Text style={styles.answerPhonetic}>{word.phonetic}</Text>
               </>
             ) : (
@@ -92,10 +92,10 @@ export function Flashcard({ card, onAnswer }: FlashcardProps) {
             )}
 
             {/* Exemple si disponible dans les données */}
-            {word.exampleSentenceDarija && word.exampleSentenceFrench ? (
+            {word.exampleSentenceArabic && word.exampleSentenceFrench ? (
               <View style={styles.exampleBox}>
                 <Text style={styles.exampleArabic}>
-                  {word.exampleSentenceDarija}
+                  {word.exampleSentenceArabic}
                 </Text>
                 <Text style={styles.exampleFrench}>
                   {word.exampleSentenceFrench}

@@ -54,8 +54,8 @@ export default function VocabulaireScreen() {
       if (query.length > 0) {
         const haystack = [
           word.french,
-          word.darijaLatin,
-          word.darija,
+          word.arabizi,
+          word.arabic,
           ...word.tags,
         ]
           .join(' ')

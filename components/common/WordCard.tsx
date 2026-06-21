@@ -63,7 +63,7 @@ export function WordCard({
 
   const hasDetails =
     !!word.phonetic ||
-    (!!word.exampleSentenceDarija && !!word.exampleSentenceFrench) ||
+    (!!word.exampleSentenceArabic && !!word.exampleSentenceFrench) ||
     !!word.falseFreindNote ||
     (word.regionalVariants?.length ?? 0) > 0;
 
@@ -81,8 +81,8 @@ export function WordCard({
             {/* Bouton audio : désactivé tant qu'aucun audio n'existe */}
             <AudioButton audioFileName={word.audioFileName} size="sm" />
           </View>
-          <Text style={styles.arabic}>{word.darija}</Text>
-          <Text style={styles.latin}>{word.darijaLatin}</Text>
+          <Text style={styles.arabic}>{word.arabic}</Text>
+          <Text style={styles.latin}>{word.arabizi}</Text>
 
           {/* Badges : maîtrise + favori */}
           <View style={styles.badgeRow}>
@@ -118,10 +118,10 @@ export function WordCard({
             <Text style={styles.phonetic}>{word.phonetic}</Text>
           ) : null}
 
-          {word.exampleSentenceDarija && word.exampleSentenceFrench ? (
+          {word.exampleSentenceArabic && word.exampleSentenceFrench ? (
             <View style={styles.exampleBox}>
               <Text style={styles.exampleArabic}>
-                {word.exampleSentenceDarija}
+                {word.exampleSentenceArabic}
               </Text>
               <Text style={styles.exampleFrench}>
                 {word.exampleSentenceFrench}
@@ -142,7 +142,7 @@ export function WordCard({
               {word.regionalVariants.map((v, i) => (
                 <Text key={i} style={styles.variantLine}>
                   <Text style={styles.variantRegion}>{v.region}</Text> :{' '}
-                  {v.formLatin} ({v.form})
+                  {v.arabizi} ({v.arabic})
                 </Text>
               ))}
             </View>

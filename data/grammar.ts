@@ -2,14 +2,13 @@
  * /data/grammar.ts
  * Règles de grammaire du darija tunisien — 2 exemples de démonstration.
  * Convention d'ID : "gr_<slug>"
+ * Convention : arabic = arabe · arabizi = translittération · french = traduction
  */
 
 import type { GrammarRule } from "../types";
 
 /**
  * RÈGLE 1 — La négation : ما … ش
- * Structure fondamentale : entoure le verbe (avant + après).
- * Équivalent du français "ne … pas".
  */
 const RULE_NEGATION: GrammarRule = {
   id: "gr_negation_simple",
@@ -23,27 +22,26 @@ const RULE_NEGATION: GrammarRule = {
   pattern: "ما + [verbe conjugué] + ش",
   examples: [
     {
-      darija: "ما كليتش",
-      darijaLatin: "Ma klitech",
+      arabic: "ما كليتش",
+      arabizi: "Ma klitech",
       phonetic: "[ma klitech]",
       french: "Je n'ai pas mangé",
     },
     {
-      darija: "ما نحكيش",
-      darijaLatin: "Ma nahkiich",
+      arabic: "ما نحكيش",
+      arabizi: "Ma nahkiich",
       phonetic: "[ma nahkiich]",
       french: "Je ne parle pas",
     },
     {
-      darija: "ما هو كليش",
-      darijaLatin: "Ma hou kelich",
+      arabic: "ما هو كليش",
+      arabizi: "Ma hou kelich",
       phonetic: "[ma hu kelich]",
       french: "Il n'a pas mangé",
     },
     {
-      // Contre-exemple : forme incomplète sans le "sh" final
-      darija: "ما كليت",
-      darijaLatin: "Ma klit",
+      arabic: "ما كليت",
+      arabizi: "Ma klit",
       phonetic: "[ma klit]",
       french: "Forme incomplète — le 'sh' final est obligatoire",
       isCounterExample: true,
@@ -59,8 +57,6 @@ const RULE_NEGATION: GrammarRule = {
 
 /**
  * RÈGLE 2 — L'article défini : ال (el-) / ل (l-)
- * Équivalent de le / la / les en français.
- * Assimilation aux consonnes solaires.
  */
 const RULE_ARTICLE_DEFINI: GrammarRule = {
   id: "gr_article_defini",
@@ -74,29 +70,26 @@ const RULE_ARTICLE_DEFINI: GrammarRule = {
   pattern: "ال + [nom] — ou assimilation devant consonne solaire",
   examples: [
     {
-      // Consonne lunaire — pas d'assimilation
-      darija: "الكتاب",
-      darijaLatin: "El-ktab",
+      arabic: "الكتاب",
+      arabizi: "El-ktab",
       phonetic: "[el ktab]",
       french: "le livre",
     },
     {
-      // Consonne solaire — assimilation du l
-      darija: "الشمس",
-      darijaLatin: "Esh-shems",
+      arabic: "الشمس",
+      arabizi: "Esh-shems",
       phonetic: "[esh shems]",
       french: "le soleil",
     },
     {
-      darija: "العيلة",
-      darijaLatin: "El-3ayla",
+      arabic: "العيلة",
+      arabizi: "El-3ayla",
       phonetic: "[el 3ayla]",
       french: "la famille",
     },
     {
-      // Contre-exemple : oublier l'assimilation
-      darija: "el شمس",
-      darijaLatin: "El-shems (incorrect)",
+      arabic: "el شمس",
+      arabizi: "El-shems (incorrect)",
       phonetic: "[el shems]",
       french: "Prononciation incorrecte — assimilation oubliée",
       isCounterExample: true,
@@ -108,8 +101,6 @@ const RULE_ARTICLE_DEFINI: GrammarRule = {
   lessonIds: ["les_salutations_01"],
   prerequisiteRuleIds: [],
 };
-
-// ─── Export ───────────────────────────────────────────────────────────────────
 
 export const grammarRules: Readonly<GrammarRule[]> = [
   RULE_NEGATION,

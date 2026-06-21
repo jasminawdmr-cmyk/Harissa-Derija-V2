@@ -138,7 +138,7 @@ export const ALL_PATTERNS: Readonly<ConjugationPattern[]> = [
  * Applique un pattern de conjugaison à une racine donnée.
  *
  * @param root         Racine consonantique (3 lettres arabes, ex : "كتب")
- * @param rootLatin    Translittération de la racine (ex : "ktb")
+ * @param rootArabizi  Translittération arabizi de la racine (ex : "ktb")
  * @param vowel        Voyelle thématique à insérer entre C2 et C3 (ex : "e")
  * @param pattern      Pattern à appliquer
  * @returns            Tableau des formes conjuguées pour chaque personne
@@ -149,18 +149,16 @@ export const ALL_PATTERNS: Readonly<ConjugationPattern[]> = [
  */
 export function applyPattern(
   root: string,
-  rootLatin: string,
+  rootArabizi: string,
   vowel: string,
   pattern: ConjugationPattern
-): Array<{ person: Person; form: string; formLatin: string }> {
+): Array<{ person: Person; arabic: string; arabizi: string }> {
   return PRONOUN_ORDER.map((person) => {
     const { prefix, suffix, prefixLatin, suffixLatin } = pattern.affixes[person];
     return {
       person,
-      // Forme arabe : préfixe + racine + voyelle + suffixe
-      form: `${prefix}${root}${vowel}${suffix}`,
-      // Forme latine : préfixe + racine + voyelle + suffixe
-      formLatin: `${prefixLatin}${rootLatin}${vowel}${suffixLatin}`,
+      arabic: `${prefix}${root}${vowel}${suffix}`,
+      arabizi: `${prefixLatin}${rootArabizi}${vowel}${suffixLatin}`,
     };
   });
 }

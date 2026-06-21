@@ -86,12 +86,12 @@ export function GrammarRuleCard({
                   ]}
                 >
                   <View style={styles.exampleHeader}>
-                    <Text style={styles.exampleArabic}>{ex.darija}</Text>
+                    <Text style={styles.exampleArabic}>{ex.arabic}</Text>
                     {ex.isCounterExample && (
                       <Text style={styles.crossMark}>✗</Text>
                     )}
                   </View>
-                  <Text style={styles.exampleLatin}>{ex.darijaLatin}</Text>
+                  <Text style={styles.exampleLatin}>{ex.arabizi}</Text>
                   <Text style={styles.exampleFrench}>{ex.french}</Text>
                 </View>
               ))}

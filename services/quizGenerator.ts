@@ -85,8 +85,8 @@ function generateQcm(word: VocabularyItem): GeneratedQuestion | null {
   if (distractors.length === 0) return null;
 
   const options = shuffleStrings([
-    word.darijaLatin,
-    ...distractors.map((d) => d.darijaLatin),
+    word.arabizi,
+    ...distractors.map((d) => d.arabizi),
   ]);
 
   return {
@@ -94,8 +94,8 @@ function generateQcm(word: VocabularyItem): GeneratedQuestion | null {
     kind: 'qcm',
     prompt: `Comment dit-on « ${word.french} » en tunisien ?`,
     options,
-    answer: word.darijaLatin,
-    explanation: `${word.french} se dit « ${word.darijaLatin} » (${word.darija}).`,
+    answer: word.arabizi,
+    explanation: `${word.french} se dit « ${word.arabizi} » (${word.arabic}).`,
     points: 10,
   };
 }
@@ -120,11 +120,11 @@ function generateTraduction(word: VocabularyItem): GeneratedQuestion | null {
   return {
     id: `q_trad_${word.id}`,
     kind: 'traduction',
-    prompt: `Que signifie « ${word.darijaLatin} » ?`,
-    subtitle: word.darija,
+    prompt: `Que signifie « ${word.arabizi} » ?`,
+    subtitle: word.arabic,
     options,
     answer: word.french,
-    explanation: `« ${word.darijaLatin} » (${word.darija}) signifie ${word.french}.`,
+    explanation: `« ${word.arabizi} » (${word.arabic}) signifie ${word.french}.`,
     points: 10,
   };
 }
@@ -152,8 +152,8 @@ function generateConjugaison(verb: Verb): GeneratedQuestion | null {
 
   const distractors = shuffleCards(others).slice(0, 3);
   const options = shuffleStrings([
-    target.formLatin,
-    ...distractors.map((d) => d.formLatin),
+    target.arabizi,
+    ...distractors.map((d) => d.arabizi),
   ]);
 
   const pronoun = PRONOUNS[target.person as Person];
@@ -163,10 +163,10 @@ function generateConjugaison(verb: Verb): GeneratedQuestion | null {
     id: `q_conj_${verb.id}_${tense}_${target.person}`,
     kind: 'conjugaison',
     prompt: `Conjuguez « ${verb.infinitiveFrench} » au ${tenseLabel} :`,
-    subtitle: `${pronoun.abbreviation} (${pronoun.darijaLatin})`,
+    subtitle: `${pronoun.abbreviation} (${pronoun.arabizi})`,
     options,
-    answer: target.formLatin,
-    explanation: `${pronoun.abbreviation} → ${target.formLatin} (${target.form}).`,
+    answer: target.arabizi,
+    explanation: `${pronoun.abbreviation} → ${target.arabizi} (${target.arabic}).`,
     points: 15,
   };
 }
@@ -244,7 +244,7 @@ export function generateQuiz(maxQuestions = 10): GeneratedQuestion[] {
   for (const dialogue of dialogues) {
     for (const line of dialogue.lines) {
       const q = generateRemiseOrdre(
-        line.darijaLatin,
+        line.arabizi,
         line.french,
         `${dialogue.id}_${dialogue.lines.indexOf(line)}`
       );

@@ -62,7 +62,7 @@ const LESSON_SALUTATIONS: Lesson = {
   moduleId: 'mod_premiers_pas',
   order: 1,
   title: 'Les salutations',
-  titleDarija: 'التحيات',
+  titleArabic: 'التحيات',
   description:
     'Apprenez à dire bonjour, au revoir et à demander comment va quelqu\'un. ' +
     'Ce sont les mots que vous utiliserez à chaque conversation.',
@@ -95,7 +95,7 @@ const LESSON_FAMILLE: Lesson = {
   moduleId: 'mod_premiers_pas',
   order: 2,
   title: 'La famille',
-  titleDarija: 'العيلة',
+  titleArabic: 'العيلة',
   description:
     'Parlez de votre famille en tunisien. Père, mère, frères et sœurs — ' +
     'le vocabulaire pour vos appels du dimanche.',

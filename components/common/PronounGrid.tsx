@@ -31,8 +31,8 @@ export function PronounGrid() {
             <Text style={[styles.french, { color: token.main }]}>
               {token.label}
             </Text>
-            <Text style={styles.arabic}>{pronoun.darija}</Text>
-            <Text style={styles.latin}>{pronoun.darijaLatin}</Text>
+            <Text style={styles.arabic}>{pronoun.arabic}</Text>
+            <Text style={styles.latin}>{pronoun.arabizi}</Text>
           </View>
         );
       })}

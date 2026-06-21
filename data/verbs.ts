@@ -1,20 +1,20 @@
 /**
  * /data/verbs.ts
  * Verbes en darija tunisien — 2 exemples de démonstration.
- * Convention d'ID : "v_<racine_latine>"
+ * Convention d'ID : "v_<racine_arabizi>"
+ * Convention : arabic = arabe · arabizi = translittération · french = traduction
  */
 
 import type { Verb } from "../types";
 
 /**
  * VERBE 1 — Manger : كل (K-L)
- * Verbe de haute fréquence, irrégulier (racine biconsonnantique).
  */
 const VERB_MANGER: Verb = {
   id: "v_kl",
   infinitiveFrench: "manger",
-  rootDarija: "ك-ل",
-  rootLatin: "K-L",
+  rootArabic: "ك-ل",
+  rootArabizi: "K-L",
   isIrregular: true,
   level: "debutant",
   tags: ["nourriture", "quotidien", "haute-frequence"],
@@ -23,40 +23,38 @@ const VERB_MANGER: Verb = {
     "usage courant tunisien, contrairement à la racine arabe standard أكل (akl).",
   conjugations: {
     passe: [
-      { person: "1s",  form: "كليت",  formLatin: "Klit",   phonetic: "[klit]"   },
-      { person: "2s",  form: "كليت",  formLatin: "Klit",   phonetic: "[klit]"   },
-      { person: "3sm", form: "كل",    formLatin: "Kel",    phonetic: "[kel]"    },
-      { person: "3sf", form: "كلت",   formLatin: "Klet",   phonetic: "[klet]"   },
-      { person: "1p",  form: "كلينا", formLatin: "Klina",  phonetic: "[klina]"  },
-      { person: "2p",  form: "كليتم", formLatin: "Klitou", phonetic: "[klitu]"  },
-      { person: "3p",  form: "كلو",   formLatin: "Klou",   phonetic: "[klu]"    },
+      { person: "1s",  arabic: "كليت",  arabizi: "Klit",   phonetic: "[klit]"   },
+      { person: "2s",  arabic: "كليت",  arabizi: "Klit",   phonetic: "[klit]"   },
+      { person: "3sm", arabic: "كل",    arabizi: "Kel",    phonetic: "[kel]"    },
+      { person: "3sf", arabic: "كلت",   arabizi: "Klet",   phonetic: "[klet]"   },
+      { person: "1p",  arabic: "كلينا", arabizi: "Klina",  phonetic: "[klina]"  },
+      { person: "2p",  arabic: "كليتم", arabizi: "Klitou", phonetic: "[klitu]"  },
+      { person: "3p",  arabic: "كلو",   arabizi: "Klou",   phonetic: "[klu]"    },
     ],
     present: [
-      { person: "1s",  form: "ناكل",  formLatin: "Nekl",    phonetic: "[nekl]"   },
-      { person: "2s",  form: "تاكل",  formLatin: "Tekl",    phonetic: "[tekl]"   },
-      { person: "3sm", form: "ياكل",  formLatin: "Yekl",    phonetic: "[jekl]"   },
-      { person: "3sf", form: "تاكل",  formLatin: "Tekl",    phonetic: "[tekl]"   },
-      { person: "1p",  form: "ناكلو", formLatin: "Neklou",  phonetic: "[neklu]"  },
-      { person: "2p",  form: "تاكلو", formLatin: "Teklou",  phonetic: "[teklu]"  },
-      { person: "3p",  form: "ياكلو", formLatin: "Yeklou",  phonetic: "[jeklu]"  },
+      { person: "1s",  arabic: "ناكل",  arabizi: "Nekl",    phonetic: "[nekl]"   },
+      { person: "2s",  arabic: "تاكل",  arabizi: "Tekl",    phonetic: "[tekl]"   },
+      { person: "3sm", arabic: "ياكل",  arabizi: "Yekl",    phonetic: "[jekl]"   },
+      { person: "3sf", arabic: "تاكل",  arabizi: "Tekl",    phonetic: "[tekl]"   },
+      { person: "1p",  arabic: "ناكلو", arabizi: "Neklou",  phonetic: "[neklu]"  },
+      { person: "2p",  arabic: "تاكلو", arabizi: "Teklou",  phonetic: "[teklu]"  },
+      { person: "3p",  arabic: "ياكلو", arabizi: "Yeklou",  phonetic: "[jeklu]"  },
     ],
     imperatif: [
-      { person: "2s", form: "كل",  formLatin: "Kol",   phonetic: "[kol]"  },
-      { person: "2p", form: "كلو", formLatin: "Kolou", phonetic: "[kolu]" },
+      { person: "2s", arabic: "كل",  arabizi: "Kol",   phonetic: "[kol]"  },
+      { person: "2p", arabic: "كلو", arabizi: "Kolou", phonetic: "[kolu]" },
     ],
   },
 };
 
 /**
  * VERBE 2 — Parler : حكى (H-K-Y)
- * Verbe essentiel. Défectueux (racine se terminant par semi-voyelle).
- * Translittération : le son ح pharyngal est noté "h" (sourd, emphatique).
  */
 const VERB_PARLER: Verb = {
   id: "v_hky",
   infinitiveFrench: "parler",
-  rootDarija: "ح-ك-ي",
-  rootLatin: "H-K-Y",
+  rootArabic: "ح-ك-ي",
+  rootArabizi: "H-K-Y",
   isIrregular: false,
   level: "debutant",
   tags: ["communication", "quotidien", "haute-frequence"],
@@ -65,36 +63,32 @@ const VERB_PARLER: Verb = {
     "Très utilisé pour dire parler, raconter, discuter.",
   conjugations: {
     passe: [
-      { person: "1s",  form: "حكيت",  formLatin: "Hkit",   phonetic: "[hkit]"  },
-      { person: "2s",  form: "حكيت",  formLatin: "Hkit",   phonetic: "[hkit]"  },
-      { person: "3sm", form: "حكى",   formLatin: "Hka",    phonetic: "[hka]"   },
-      { person: "3sf", form: "حكات",  formLatin: "Hket",   phonetic: "[hket]"  },
-      { person: "1p",  form: "حكينا", formLatin: "Hkina",  phonetic: "[hkina]" },
-      { person: "2p",  form: "حكيتم", formLatin: "Hkitou", phonetic: "[hkitu]" },
-      { person: "3p",  form: "حكاو",  formLatin: "Hkaw",   phonetic: "[hkaw]"  },
+      { person: "1s",  arabic: "حكيت",  arabizi: "Hkit",   phonetic: "[hkit]"  },
+      { person: "2s",  arabic: "حكيت",  arabizi: "Hkit",   phonetic: "[hkit]"  },
+      { person: "3sm", arabic: "حكى",   arabizi: "Hka",    phonetic: "[hka]"   },
+      { person: "3sf", arabic: "حكات",  arabizi: "Hket",   phonetic: "[hket]"  },
+      { person: "1p",  arabic: "حكينا", arabizi: "Hkina",  phonetic: "[hkina]" },
+      { person: "2p",  arabic: "حكيتم", arabizi: "Hkitou", phonetic: "[hkitu]" },
+      { person: "3p",  arabic: "حكاو",  arabizi: "Hkaw",   phonetic: "[hkaw]"  },
     ],
     present: [
-      { person: "1s",  form: "نحكي",  formLatin: "Nahki",  phonetic: "[nahki]" },
-      { person: "2s",  form: "تحكي",  formLatin: "Tahki",  phonetic: "[tahki]" },
-      { person: "3sm", form: "يحكي",  formLatin: "Yahki",  phonetic: "[jahki]" },
-      { person: "3sf", form: "تحكي",  formLatin: "Tahki",  phonetic: "[tahki]" },
-      { person: "1p",  form: "نحكيو", formLatin: "Nahkiw", phonetic: "[nahkiw]"},
-      { person: "2p",  form: "تحكيو", formLatin: "Tahkiw", phonetic: "[tahkiw]"},
-      { person: "3p",  form: "يحكيو", formLatin: "Yahkiw", phonetic: "[jahkiw]"},
+      { person: "1s",  arabic: "نحكي",  arabizi: "Nahki",  phonetic: "[nahki]" },
+      { person: "2s",  arabic: "تحكي",  arabizi: "Tahki",  phonetic: "[tahki]" },
+      { person: "3sm", arabic: "يحكي",  arabizi: "Yahki",  phonetic: "[jahki]" },
+      { person: "3sf", arabic: "تحكي",  arabizi: "Tahki",  phonetic: "[tahki]" },
+      { person: "1p",  arabic: "نحكيو", arabizi: "Nahkiw", phonetic: "[nahkiw]"},
+      { person: "2p",  arabic: "تحكيو", arabizi: "Tahkiw", phonetic: "[tahkiw]"},
+      { person: "3p",  arabic: "يحكيو", arabizi: "Yahkiw", phonetic: "[jahkiw]"},
     ],
     imperatif: [
-      { person: "2s", form: "احكي",  formLatin: "Ahki",  phonetic: "[ahki]"  },
-      { person: "2p", form: "احكيو", formLatin: "Ahkiw", phonetic: "[ahkiw]" },
+      { person: "2s", arabic: "احكي",  arabizi: "Ahki",  phonetic: "[ahki]"  },
+      { person: "2p", arabic: "احكيو", arabizi: "Ahkiw", phonetic: "[ahkiw]" },
     ],
   },
 };
 
-// ─── Export ───────────────────────────────────────────────────────────────────
-
-/** Liste complète des verbes — à enrichir au fil des sprints */
 export const verbs: Readonly<Verb[]> = [VERB_MANGER, VERB_PARLER] as const;
 
-/** Accès rapide par ID */
 export const verbsById: Readonly<Record<string, Verb>> = Object.fromEntries(
   verbs.map((v) => [v.id, v])
 );
