@@ -3,6 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 import { ScreenContainer } from '@/components/layout/ScreenContainer';
 import { ScreenHeader } from '@/components/layout/ScreenHeader';
 import { PostcardCard } from '@/components/common/PostcardCard';
+import { FadeInView } from '@/components/common/FadeInView';
 import { Theme } from '@/lib/Theme';
 import { TextStyles } from '@/lib/Typography';
 import { getDiscoverBySection } from '@/data/discover';
@@ -11,8 +12,8 @@ import { expressions } from '@/data/expressions';
 
 /**
  * DÉCOUVRIR — pilier culturel Blablalouni.
- * Chaque rubrique a sa propre couleur et ses références visuelles discrètes.
- * Le contenu n'est pas encore disponible : placeholders « Bientôt » élégants.
+ * Chaque rubrique a SA propre couleur (jamais partagée avec une autre rubrique)
+ * et ses références visuelles discrètes. Les compteurs sont calculés dynamiquement.
  */
 export default function DecouvrirScreen() {
   const rubriques: RubriqueDef[] = [
@@ -85,7 +86,7 @@ export default function DecouvrirScreen() {
       title: 'Art & Artisanat',
       subtitle: 'Poterie, tissu & créations',
       count: getDiscoverBySection('art').length,
-      topColor: '#7E4FB0',
+      topColor: '#A0522D',
       decorEmojis: ['🪬', '🧵'],
     },
     {
@@ -94,7 +95,7 @@ export default function DecouvrirScreen() {
       title: "Tunisie d'aujourd'hui",
       subtitle: 'La vie moderne',
       count: getDiscoverBySection('contemporain').length,
-      topColor: '#1F5F8B',
+      topColor: '#2A6F97',
       decorEmojis: ['📱', '🌆'],
     },
   ];
@@ -122,17 +123,17 @@ export default function DecouvrirScreen() {
 
       {/* Grille de cartes postales */}
       <View style={styles.grid}>
-        {rubriques.map((r) => (
-          <PostcardCard
-            key={r.key}
-            emoji={r.emoji}
-            title={r.title}
-            subtitle={r.subtitle}
-            countLabel={r.count > 0 ? `${r.count} à explorer` : 'Bientôt'}
-            topColor={r.topColor}
-            decorEmojis={r.decorEmojis}
-            style={styles.card}
-          />
+        {rubriques.map((r, i) => (
+          <FadeInView key={r.key} delay={i * 50} style={styles.card}>
+            <PostcardCard
+              emoji={r.emoji}
+              title={r.title}
+              subtitle={r.subtitle}
+              countLabel={r.count > 0 ? `${r.count} à explorer` : 'Bientôt'}
+              topColor={r.topColor}
+              decorEmojis={r.decorEmojis}
+            />
+          </FadeInView>
         ))}
       </View>
 

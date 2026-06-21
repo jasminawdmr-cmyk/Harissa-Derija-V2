@@ -22,22 +22,14 @@ import {
 } from 'react-native';
 import { Theme, TextStyles } from '@/lib/Theme';
 import { IllustrationBadge } from './IllustrationBadge';
+import { UNIVERSE_REGISTRY } from '@/lib/colorRegistry';
 import type { Universe } from '@/types';
 
-/** Couleurs définitives par univers — une couleur = un univers, jamais réutilisée. */
-export const UNIVERSE_COLORS: Partial<Record<Universe, string>> = {
-  salutations:  '#C66B3D',  // Terracotta — chaleur des premiers échanges
-  cafe:         '#6B4C2A',  // Brun café — évocateur
-  marche:       '#E6B422',  // Safran — épices du souk
-  maison:       '#8AA67A',  // Vert sauge — intérieur méditerranéen
-  famille:      '#C08497',  // Vieux rose — affection
-  louage:       '#5F9AC4',  // Bleu route — déplacement
-  plage:        '#3FB8AF',  // Turquoise — mer
-  hotel:        '#9B86C4',  // Violet lavande — confort
-  emotions:     '#D7402B',  // Rouge tomate — intensité
-  nourriture:   '#C66B3D',  // Terracotta-orange — nourriture
-  temps_meteo:  '#8FC1E3',  // Bleu ciel — météo
-};
+/**
+ * Couleurs définitives par univers — une couleur = un univers, jamais réutilisée.
+ * Source unique : lib/colorRegistry.ts (aucune ne coïncide avec une notion grammaticale).
+ */
+export const UNIVERSE_COLORS: Partial<Record<Universe, string>> = UNIVERSE_REGISTRY;
 
 /** Emojis représentatifs par univers */
 export const UNIVERSE_EMOJIS: Partial<Record<Universe, string>> = {
@@ -154,7 +146,7 @@ export function UniverseIllustration({
 const styles = StyleSheet.create({
   container: {
     backgroundColor: Theme.rawColors.sand[100],
-    borderRadius: Theme.radii.xl,
+    borderRadius: Theme.radii.lg,
     overflow: 'hidden',
     borderWidth: 1,
     borderColor: Theme.colors.borderLight,

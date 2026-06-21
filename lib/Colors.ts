@@ -152,9 +152,11 @@ export const GrammarColors = {
 } as const satisfies Record<string, VisualToken>;
 
 // ─── GENRE ─────────────────────────────────────────────────────────────────────
+// Aligné sur le registre central : masculin/féminin réutilisent la couleur de la
+// notion grammaticale homonyme (cf. data/grammarVisualLegend.ts + lib/colorRegistry.ts).
 export const GenderColors = {
-  masculine: { main: '#1F5F8B', soft: '#D0E2EF', label: 'Masculin',     icon: '♂' },
-  feminine:  { main: '#C76543', soft: '#FAEEE9', label: 'Féminin',      icon: '♀' },
+  masculine: { main: '#1F3A5F', soft: '#D2DCE6', label: 'Masculin',     icon: '♂' },
+  feminine:  { main: '#C08497', soft: '#F1DEE4', label: 'Féminin',      icon: '♀' },
   neutral:   { main: '#8C8070', soft: '#F4F2EE', label: 'Neutre / mixte', icon: '◇' },
 } as const satisfies Record<string, VisualToken>;
 
@@ -171,10 +173,12 @@ export const PersonColors = {
 } as const satisfies Record<string, VisualToken>;
 
 // ─── TEMPS ─────────────────────────────────────────────────────────────────────
+// Aligné sur le registre central : présent/passé/futur réutilisent la couleur de
+// la notion grammaticale homonyme (cf. data/grammarVisualLegend.ts + colorRegistry.ts).
 export const TenseColors = {
-  present: { main: '#607A53', soft: '#D5E2CE', label: 'Présent', icon: '⏺' },
-  passe:   { main: '#D6A658', soft: '#F5EAC9', label: 'Passé',   icon: '⏪' },
-  futur:   { main: '#1F5F8B', soft: '#D0E2EF', label: 'Futur',   icon: '⏩' },
+  present: { main: '#6B7A3A', soft: '#E5E9D1', label: 'Présent', icon: '⏺' },
+  passe:   { main: '#6E1A2E', soft: '#F0D9DE', label: 'Passé',   icon: '⏪' },
+  futur:   { main: '#E6B422', soft: '#FBEFC9', label: 'Futur',   icon: '⏩' },
   imperatif:{ main: '#C76543', soft: '#FAEEE9', label: 'Impératif', icon: '❗' },
 } as const satisfies Record<string, VisualToken>;
 

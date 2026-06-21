@@ -14,10 +14,12 @@ import { lessons } from '@/data/lessons';
 import { dialogues } from '@/data/dialogues';
 import { exercises } from '@/data/exercises';
 import { UniverseIllustration } from '@/components/common/UniverseIllustration';
+import { FadeInView } from '@/components/common/FadeInView';
 
 /**
  * APPRENDRE — hub d'apprentissage Blablalouni.
- * 4 catégories + bandeau Écriture. Aucune fonctionnalité retirée.
+ * Cartes de catégories + univers thématiques + bandeaux Dialogues & Écriture.
+ * Aucune fonctionnalité retirée.
  */
 export default function ApprendreScreen() {
   const router = useRouter();
@@ -89,22 +91,22 @@ export default function ApprendreScreen() {
       />
 
       <View style={styles.grid}>
-        {sections.map((s) => (
-          <CategoryCard
-            key={s.key}
-            emoji={s.emoji}
-            title={s.title}
-            subtitle={s.subtitle}
-            countLabel={
-              s.count > 0
-                ? `${s.count} ${s.unit}${s.count > 1 ? 's' : ''}`
-                : 'Bientôt'
-            }
-            accentColor={s.accent}
-            culturalRef={s.culturalRef}
-            onPress={() => router.push(s.route)}
-            style={styles.card}
-          />
+        {sections.map((s, i) => (
+          <FadeInView key={s.key} delay={i * 60} style={styles.card}>
+            <CategoryCard
+              emoji={s.emoji}
+              title={s.title}
+              subtitle={s.subtitle}
+              countLabel={
+                s.count > 0
+                  ? `${s.count} ${s.unit}${s.count > 1 ? 's' : ''}`
+                  : 'Bientôt'
+              }
+              accentColor={s.accent}
+              culturalRef={s.culturalRef}
+              onPress={() => router.push(s.route)}
+            />
+          </FadeInView>
         ))}
       </View>
 
