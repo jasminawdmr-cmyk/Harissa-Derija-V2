@@ -273,6 +273,86 @@ export const writingLessons: Readonly<WritingLesson[]> = [
       { latin: 'safar', arabizi: 'nsefer', arabic: 'نسافر', wordId: 'w_louage_b3id', french: 'voyager / loin' },
     ],
   },
+
+  // ── VAGUE 2 — UNIVERS « À LA PLAGE » (3 exercices) · universe: 'plage' ──────────
+  {
+    id: 'wr_plage_01', system: 'arabizi', title: 'Le ch (ش) — sons de la plage',
+    objective: 'Reconnaître le son « ch » (ش) avec le vocabulaire de la plage.',
+    level: 'debutant', estimatedMinutes: 4, order: 19, universe: 'plage', tags: ['plage', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 'ch', arabizi: 'ch', arabic: 'ش', soundDescription: 'Le son « ch » (ش), comme dans « chams » (soleil) ou « chamsiya » (parasol).', difficulty: 2, isPriority: true, exampleWordIds: ['w_plage_chams', 'w_plage_chamsiya'] },
+    ],
+    bridges: [
+      { latin: 'chams', arabizi: 'chams', arabic: 'شمس', wordId: 'w_plage_chams', french: 'soleil' },
+      { latin: 'chamsiya', arabizi: 'chamsiya', arabic: 'شمسية', wordId: 'w_plage_chamsiya', french: 'parasol' },
+      { latin: 'chatt', arabizi: 'chatt', arabic: 'شط', wordId: 'w_plage_chatt', french: 'rivage' },
+    ],
+  },
+  {
+    id: 'wr_plage_02', system: 'arabizi', title: 'Le 7 (ح) — à la plage',
+    objective: 'Reconnaître le son guttural « 7 » (ح) dans le vocabulaire de la plage.',
+    level: 'debutant', estimatedMinutes: 4, order: 20, universe: 'plage', tags: ['plage', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: '7', arabizi: '7', arabic: 'ح', soundDescription: 'Le son « 7 » (ح), guttural, comme dans « 7arr » (chaleur) ou « sba7a » (natation).', difficulty: 3, isPriority: true, exampleWordIds: ['w_plage_7arr', 'w_plage_sba7a'] },
+    ],
+    bridges: [
+      { latin: '7arr', arabizi: '7arr', arabic: 'حر', wordId: 'w_plage_7arr', french: 'chaleur' },
+      { latin: 'sba7a', arabizi: 'sba7a', arabic: 'سباحة', wordId: 'w_plage_sba7a', french: 'natation' },
+    ],
+  },
+  {
+    id: 'wr_plage_03', system: 'arabizi', title: 'Écrire la mer et l\'été',
+    objective: 'Écrire les mots essentiels de l\'été : rmel, mouja, sif.',
+    level: 'debutant', estimatedMinutes: 4, order: 21, universe: 'plage', tags: ['plage', 'ecriture', 'arabizi', 'nature'],
+    glyphs: [
+      { latin: 'r', arabizi: 'r', arabic: 'ر', soundDescription: 'La lettre « r » (ر), roulée légèrement, comme dans « rmel » (sable).', difficulty: 1, isPriority: false, exampleWordIds: ['w_plage_rmel'] },
+    ],
+    bridges: [
+      { latin: 'rmel', arabizi: 'rmel', arabic: 'رمل', wordId: 'w_plage_rmel', french: 'sable' },
+      { latin: 'mouja', arabizi: 'mouja', arabic: 'موجة', wordId: 'w_plage_mouja', french: 'vague' },
+      { latin: 'sif', arabizi: 'sif', arabic: 'صيف', wordId: 'w_plage_sif', french: 'été' },
+    ],
+  },
+
+  // ── VAGUE 2 — UNIVERS « À L'HÔTEL » (3 exercices) · universe: 'hotel' ───────────
+  {
+    id: 'wr_hotel_01', system: 'arabizi', title: 'Le gh (غ) — à l\'hôtel',
+    objective: 'Reconnaître le son « gh » (غ) dans le vocabulaire de l\'hôtel.',
+    level: 'debutant', estimatedMinutes: 4, order: 22, universe: 'hotel', tags: ['hotel', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 'gh', arabizi: 'gh', arabic: 'غ', soundDescription: 'Le son « gh » (غ), comme dans « ghorfa » (chambre). Proche du « r » parisien.', difficulty: 3, isPriority: true, exampleWordIds: ['w_hotel_ghorfa'] },
+    ],
+    bridges: [
+      { latin: 'ghorfa', arabizi: 'ghorfa', arabic: 'غرفة', wordId: 'w_hotel_ghorfa', french: 'chambre' },
+      { latin: 'ghali', arabizi: 'ghali', arabic: 'غالي', wordId: 'w_hotel_ghali', french: 'cher' },
+    ],
+  },
+  {
+    id: 'wr_hotel_02', system: 'arabizi', title: 'Le f (ف) — à l\'hôtel',
+    objective: 'Reconnaître la lettre « f » (ف) dans le vocabulaire de l\'hôtel.',
+    level: 'debutant', estimatedMinutes: 4, order: 23, universe: 'hotel', tags: ['hotel', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 'f', arabizi: 'f', arabic: 'ف', soundDescription: 'La lettre « f » (ف), comme dans « fondok » (hôtel) ou « mefta7 » (clé).', difficulty: 1, isPriority: false, exampleWordIds: ['w_hotel_fondok', 'w_hotel_mefta7'] },
+    ],
+    bridges: [
+      { latin: 'fondok', arabizi: 'fondok', arabic: 'فندق', wordId: 'w_hotel_fondok', french: 'hôtel' },
+      { latin: 'mefta7', arabizi: 'mefta7', arabic: 'مفتاح', wordId: 'w_hotel_mefta7', french: 'clé' },
+      { latin: 'ftour', arabizi: 'ftour', arabic: 'فطور', wordId: 'w_cafe_ftour', french: 'petit déjeuner' },
+    ],
+  },
+  {
+    id: 'wr_hotel_03', system: 'arabizi', title: 'Écrire les mots de l\'hôtel',
+    objective: 'Écrire les mots clés de l\'hôtel : 7isab, tabiq, khidma.',
+    level: 'debutant', estimatedMinutes: 4, order: 24, universe: 'hotel', tags: ['hotel', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 'kh', arabizi: 'kh', arabic: 'خ', soundDescription: 'Le son « kh » (خ), guttural, comme dans « khidma » (service) ou « mefta7 » (clé).', difficulty: 3, isPriority: true, exampleWordIds: ['w_hotel_khidma'] },
+    ],
+    bridges: [
+      { latin: 'khidma', arabizi: 'khidma', arabic: 'خدمة', wordId: 'w_hotel_khidma', french: 'service' },
+      { latin: 'tabiq', arabizi: 'tabiq', arabic: 'طابق', wordId: 'w_hotel_tabiq', french: 'étage' },
+      { latin: '7isab', arabizi: '7isab', arabic: 'حساب', wordId: 'w_hotel_7isab', french: 'addition / compte' },
+    ],
+  },
 ] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────

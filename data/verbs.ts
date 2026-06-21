@@ -641,6 +641,111 @@ const PACK_LOUAGE: Verb[] = [
   },
 ];
 
+// ─── VAGUE 2 — UNIVERS « À LA PLAGE » (8 verbes) ─────────────────────────────────
+
+const PACK_PLAGE: Verb[] = [
+  {
+    id: 'v_n3oum', infinitiveFrench: 'je nage', rootArabic: 'نعوم', rootArabizi: 'n3oum',
+    isIrregular: false, level: 'debutant', tags: ['plage'], universe: 'plage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نعوم', arabizi: 'n3oum' }] },
+    example: { arabic: 'نعوم في البحر', arabizi: 'N3oum fel b7ar', french: 'Je nage dans la mer' },
+  },
+  {
+    id: 'v_no9foz', infinitiveFrench: 'je saute / je plonge', rootArabic: 'نقفز', rootArabizi: 'no9foz',
+    isIrregular: false, level: 'debutant', tags: ['plage'], universe: 'plage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نقفز', arabizi: 'no9foz' }] },
+    example: { arabic: 'نقفز في الماء', arabizi: 'No9foz fel ma', french: "Je saute dans l'eau" },
+  },
+  {
+    id: 'v_ntmadded', infinitiveFrench: "je m'allonge", rootArabic: 'نتمدّد', rootArabizi: 'ntmadded',
+    isIrregular: false, level: 'debutant', tags: ['plage'], universe: 'plage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نتمدّد', arabizi: 'ntmadded' }] },
+    example: { arabic: 'نتمدّد على الرمل', arabizi: 'Ntmadded 3la el rmel', french: "Je m'allonge sur le sable" },
+  },
+  {
+    id: 'v_nesta7amm', infinitiveFrench: 'je me baigne', rootArabic: 'نستحمّ', rootArabizi: 'nesta7amm',
+    isIrregular: false, level: 'debutant', tags: ['plage'], universe: 'plage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نستحمّ', arabizi: 'nesta7amm' }] },
+    example: { arabic: 'نستحمّ في البحر', arabizi: 'Nesta7amm fel b7ar', french: 'Je me baigne dans la mer' },
+  },
+  {
+    id: 'v_nbarred', infinitiveFrench: 'je me rafraîchis', rootArabic: 'نبرّد', rootArabizi: 'nbarred',
+    isIrregular: false, level: 'debutant', tags: ['plage'], universe: 'plage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نبرّد', arabizi: 'nbarred' }] },
+    example: { arabic: 'نبرّد في الظل', arabizi: 'Nbarred fel dhell', french: 'Je me rafraîchis à l\'ombre' },
+  },
+  {
+    id: 'v_ntfarrej', infinitiveFrench: 'je regarde (un spectacle)', rootArabic: 'نتفرّج', rootArabizi: 'ntfarrej',
+    isIrregular: false, level: 'debutant', tags: ['plage', 'loisirs'], universe: 'plage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نتفرّج', arabizi: 'ntfarrej' }] },
+    example: { arabic: 'نتفرّج على الموج', arabizi: 'Ntfarrej 3la el mouj', french: 'Je regarde les vagues' },
+  },
+  {
+    id: 'v_nghous', infinitiveFrench: 'je plonge (sous l\'eau)', rootArabic: 'نغوص', rootArabizi: 'nghous',
+    isIrregular: false, level: 'debutant', tags: ['plage'], universe: 'plage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نغوص', arabizi: 'nghous' }] },
+    example: { arabic: 'نغوص تحت الماء', arabizi: 'Nghous ta7t el ma', french: "Je plonge sous l'eau" },
+  },
+  {
+    id: 'v_nebni', infinitiveFrench: 'je construis', rootArabic: 'نبني', rootArabizi: 'nebni',
+    isIrregular: false, level: 'debutant', tags: ['plage', 'jeux'], universe: 'plage', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نبني', arabizi: 'nebni' }] },
+    example: { arabic: 'نبني قصر رمل', arabizi: 'Nebni 9sar rmel', french: 'Je construis un château de sable' },
+  },
+];
+
+// ─── VAGUE 2 — UNIVERS « À L'HÔTEL » (8 verbes) · universe: 'hotel' ───────────────
+const PACK_HOTEL: Verb[] = [
+  {
+    id: 'v_n7jej', infinitiveFrench: 'je réserve', rootArabic: 'نحجز', rootArabizi: 'n7jez',
+    isIrregular: false, level: 'debutant', tags: ['hotel', 'voyage'], universe: 'hotel', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نحجز', arabizi: 'n7jez' }] },
+    example: { arabic: 'نحجز غرفة في الفندق', arabizi: 'N7jez ghorfa fel fondok', french: 'Je réserve une chambre à l\'hôtel' },
+  },
+  {
+    id: 'v_nwa99af', infinitiveFrench: 'je m\'enregistre / je fais le check-in', rootArabic: 'نوقّف', rootArabizi: 'nwa99ef',
+    isIrregular: false, level: 'debutant', tags: ['hotel'], universe: 'hotel', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نوقّف', arabizi: 'nwa99ef' }] },
+    example: { arabic: 'نوقّف في الاستقبال', arabizi: 'Nwa99ef fel isti9bal', french: 'Je m\'enregistre à la réception' },
+  },
+  {
+    id: 'v_nokhroj', infinitiveFrench: 'je pars / je sors', rootArabic: 'نخرج', rootArabizi: 'nokhroj',
+    isIrregular: false, level: 'debutant', tags: ['hotel', 'voyage'], universe: 'hotel', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نخرج', arabizi: 'nokhroj' }] },
+    example: { arabic: 'نخرج من الفندق الساعة اثنعش', arabizi: 'Nokhroj mel fondok esa3a ethna3ch', french: 'Je quitte l\'hôtel à midi' },
+  },
+  {
+    id: 'v_ntell3', infinitiveFrench: 'je monte', rootArabic: 'نطلع', rootArabizi: 'ntell3',
+    isIrregular: false, level: 'debutant', tags: ['hotel'], universe: 'hotel', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نطلع', arabizi: 'ntell3' }] },
+    example: { arabic: 'نطلع للطابق الثالث', arabizi: 'Ntell3 let tabiq ettaleth', french: 'Je monte au troisième étage' },
+  },
+  {
+    id: 'v_nhbet', infinitiveFrench: 'je descends', rootArabic: 'نهبط', rootArabizi: 'nhbet',
+    isIrregular: false, level: 'debutant', tags: ['hotel'], universe: 'hotel', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نهبط', arabizi: 'nhbet' }] },
+    example: { arabic: 'نهبط للاستقبال', arabizi: 'Nhbet lel isti9bal', french: 'Je descends à la réception' },
+  },
+  {
+    id: 'v_nfta7_bab', infinitiveFrench: 'j\'ouvre (la porte)', rootArabic: 'نفتح', rootArabizi: 'nfta7',
+    isIrregular: false, level: 'debutant', tags: ['hotel', 'maison'], universe: 'hotel', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نفتح', arabizi: 'nfta7' }] },
+    example: { arabic: 'نفتح الباب بالمفتاح', arabizi: 'Nfta7 el bab bel mefta7', french: 'J\'ouvre la porte avec la clé' },
+  },
+  {
+    id: 'v_nsaker', infinitiveFrench: 'je ferme', rootArabic: 'نسكّر', rootArabizi: 'nsaker',
+    isIrregular: false, level: 'debutant', tags: ['hotel', 'maison'], universe: 'hotel', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نسكّر', arabizi: 'nsaker' }] },
+    example: { arabic: 'نسكّر الباب كيف نخرج', arabizi: 'Nsaker el bab kif nokhroj', french: 'Je ferme la porte quand je sors' },
+  },
+  {
+    id: 'v_nkhelles', infinitiveFrench: 'je paye / je règle', rootArabic: 'نخلّص', rootArabizi: 'nkhelles',
+    isIrregular: false, level: 'debutant', tags: ['hotel', 'argent'], universe: 'hotel', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نخلّص', arabizi: 'nkhelles' }] },
+    example: { arabic: 'نخلّص الحساب في الاستقبال', arabizi: 'Nkhelles el 7isab fel isti9bal', french: 'Je règle l\'addition à la réception' },
+  },
+];
+
 export const verbs: Readonly<Verb[]> = [
   ...PACK_01,
   ...PACK_02,
@@ -650,6 +755,8 @@ export const verbs: Readonly<Verb[]> = [
   ...PACK_MAISON,
   ...PACK_FAMILLE,
   ...PACK_LOUAGE,
+  ...PACK_PLAGE,
+  ...PACK_HOTEL,
 ] as const;
 
 export const verbsById: Readonly<Record<string, Verb>> = Object.fromEntries(

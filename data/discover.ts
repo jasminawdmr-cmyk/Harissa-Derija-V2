@@ -339,6 +339,102 @@ export const discoverContents: Readonly<DiscoverContent[]> = [
     relatedExpressionIds: ['e_louage_tri9_essalama'],
     tags: ['louage', 'direction'],
   },
+
+  // ── VAGUE 2 — UNIVERS « À LA PLAGE » (5 articles) · universe: 'plage' ───────────
+  {
+    id: 'disc_plage_ete_tunisien', section: 'culture', title: 'L\'été à la tunisienne', subtitle: 'Sif, blaj, 3otla', level: 'debutant', estimatedMinutes: 3, coverEmoji: '☀️', universe: 'plage',
+    blocks: [
+      { type: 'paragraphe', text: "L'été tunisien (sif) se passe largement sur le littoral. Les familles s'installent tôt sur la plage (blaj) avec fouta, chamsiya et provisions." },
+      { type: 'reperes', items: ['sif = été', 'blaj = plage', '3otla = vacances', 'chatt = rivage'] },
+    ],
+    relatedWordIds: ['w_plage_sif', 'w_plage_blaj', 'w_plage_3otla', 'w_plage_chatt'],
+    relatedExpressionIds: ['e_plage_el3otla_wlat'],
+    tags: ['plage', 'culture', 'saisons'],
+  },
+  {
+    id: 'disc_plage_fouta', section: 'culture', title: 'La fouta, tissu emblématique', subtitle: 'Art de vivre tunisien', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🧣', universe: 'plage',
+    blocks: [
+      { type: 'paragraphe', text: "La fouta est un tissu rayé en coton léger, utilisée comme serviette de plage, paréo ou nappe. Chaque région a ses couleurs distinctives." },
+      { type: 'savoir', text: "La fouta de Nabeul et de Monastir sont les plus réputées. Elle s'offre comme cadeau aux visiteurs." },
+    ],
+    relatedWordIds: ['w_plage_fouta', 'w_plage_rmel'],
+    tags: ['plage', 'culture', 'artisanat'],
+  },
+  {
+    id: 'disc_plage_mer', section: 'regions', title: 'La mer Méditerranée en Tunisie', subtitle: 'El b7ar', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🌊', universe: 'plage',
+    blocks: [
+      { type: 'paragraphe', text: "La Tunisie a plus de 1 300 km de côtes. Hammamet, Djerba, Tabarka, Mahdia... autant de destinations balnéaires appréciées pour leur mer (b7ar) claire." },
+      { type: 'reperes', items: ['b7ar = mer', 'sa7el = côte', 'jzira = île', 'mina = port'] },
+    ],
+    relatedWordIds: ['w_b7ar', 'w_plage_sa7el', 'w_plage_jzira', 'w_plage_mina'],
+    tags: ['plage', 'regions', 'mer'],
+  },
+  {
+    id: 'disc_plage_securite', section: 'contemporain', title: 'Sécurité à la plage', subtitle: '3awwama et signaux', level: 'debutant', estimatedMinutes: 2, coverEmoji: '🚩', universe: 'plage',
+    blocks: [
+      { type: 'paragraphe', text: "Les plages tunisiennes organisées arborent des drapeaux de couleur. Bouée (3awwama), drapeau rouge (interdiction de nager), drapeau vert (baignade autorisée)." },
+      { type: 'reperes', items: ['3awwama = bouée', 'mouj = vague', 'ghous = plongée'] },
+    ],
+    relatedWordIds: ['w_plage_3awwama', 'w_plage_mouja', 'w_plage_ghous'],
+    tags: ['plage', 'securite'],
+  },
+  {
+    id: 'disc_plage_nourriture', section: 'contemporain', title: 'Manger à la plage', subtitle: 'Sandwich, jelati, kazouza', level: 'debutant', estimatedMinutes: 2, coverEmoji: '🍦', universe: 'plage',
+    blocks: [
+      { type: 'paragraphe', text: "Sur les plages tunisiennes, des vendeurs ambulants proposent glaces (jelati), sodas (kazouza), sandwichs et maïs grillé. Un snack populaire : le sandwich thon-harissa." },
+    ],
+    relatedWordIds: ['w_plage_jelati', 'w_plage_kazouza', 'w_plage_sandwich'],
+    relatedExpressionIds: ['e_plage_jelati_barsha'],
+    tags: ['plage', 'nourriture'],
+  },
+
+  // ── VAGUE 2 — UNIVERS « À L'HÔTEL » (5 articles) · universe: 'hotel' ────────────
+  {
+    id: 'disc_hotel_fondok', section: 'contemporain', title: 'L\'hôtellerie tunisienne', subtitle: 'Du fondok au resort', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🏨', universe: 'hotel',
+    blocks: [
+      { type: 'paragraphe', text: "La Tunisie dispose d'une offre hôtelière variée : des petits fondoks (hôtels traditionnels) aux grands resorts balnéaires. Le tourisme représente une part importante de l'économie." },
+      { type: 'reperes', items: ['fondok = hôtel', 'ghorfa = chambre', 'isti9bal = réception', 'tabiq = étage'] },
+    ],
+    relatedWordIds: ['w_hotel_fondok', 'w_hotel_ghorfa', 'w_hotel_tabiq'],
+    tags: ['hotel', 'tourisme'],
+  },
+  {
+    id: 'disc_hotel_riad', section: 'culture', title: 'Le riad et la médina', subtitle: 'Architecture traditionnelle', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🌿', universe: 'hotel',
+    blocks: [
+      { type: 'paragraphe', text: "Dans les médinas (vieilles villes), des maisons traditionnelles ont été transformées en maisons d'hôtes (riad). Ces petits havens offrent une expérience authentique avec cour intérieure et zellige." },
+      { type: 'savoir', text: "À Tunis, Sfax ou Sousse, les riads en médina coûtent souvent moins cher que les hôtels de bord de mer." },
+    ],
+    relatedWordIds: ['w_hotel_fondok', 'w_hotel_ghorfa'],
+    tags: ['hotel', 'culture', 'architecture'],
+  },
+  {
+    id: 'disc_hotel_ftour', section: 'culture', title: 'Le petit déjeuner à l\'hôtel', subtitle: 'Ftour — tradition et modernité', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🥐', universe: 'hotel',
+    blocks: [
+      { type: 'paragraphe', text: "Le petit déjeuner (ftour) tunisien à l'hôtel mêle tradition (pain, huile d'olive, thon, œuf) et modernité (viennoiseries, jus frais). « El ftour machmoul » signifie qu'il est inclus dans le prix." },
+    ],
+    relatedWordIds: ['w_cafe_ftour', 'w_hotel_fondok'],
+    relatedExpressionIds: ['e_hotel_ftour_mchmel'],
+    tags: ['hotel', 'nourriture', 'culture'],
+  },
+  {
+    id: 'disc_hotel_pourboire', section: 'contemporain', title: 'Le pourboire à l\'hôtel', subtitle: 'Baksheesh — usage et codes', level: 'debutant', estimatedMinutes: 2, coverEmoji: '💰', universe: 'hotel',
+    blocks: [
+      { type: 'paragraphe', text: "En Tunisie, le pourboire (bakchich ou tip) est courant pour les bagagistes, femmes de chambre et serveurs d'hôtel. Ce n'est pas obligatoire, mais très apprécié." },
+      { type: 'savoir', text: "Un pourboire de 2 à 5 dinars pour un service est bien reçu. On dit simplement « tqabbal » (accepte)." },
+    ],
+    relatedWordIds: ['w_hotel_khidma', 'w_hotel_7isab'],
+    tags: ['hotel', 'argent', 'codes'],
+  },
+  {
+    id: 'disc_hotel_confort', section: 'contemporain', title: 'Les services à l\'hôtel', subtitle: 'Wifi, clim, piscine', level: 'debutant', estimatedMinutes: 2, coverEmoji: '🏊', universe: 'hotel',
+    blocks: [
+      { type: 'paragraphe', text: "Les hôtels tunisiens proposent généralement wifi (3andkom wifi?), climatisation (klim) et piscine. On demande à la réception (isti9bal) pour toute information." },
+      { type: 'reperes', items: ['wifi = wifi', 'klim = climatisation', 'mossaad = ascenseur', 'garaj = parking'] },
+    ],
+    relatedWordIds: ['w_hotel_wifi', 'w_hotel_klim', 'w_hotel_mossaad'],
+    relatedExpressionIds: ['e_hotel_wifi_7or'],
+    tags: ['hotel', 'services'],
+  },
 ] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────

@@ -379,6 +379,101 @@ const RULE_LOUAGE_IMPERATIF: GrammarRule = {
   prerequisiteRuleIds: [],
 };
 
+// ─── VAGUE 2 — UNIVERS « À LA PLAGE » (2 règles) · universe: 'plage' ──────────────
+
+/**
+ * RÈGLE — L'obligation : لازم (lazem)
+ */
+const RULE_PLAGE_OBLIGATION: GrammarRule = {
+  id: "g_plage_obligation",
+  title: "L'obligation : لازم (lazem = il faut)",
+  category: "autre",
+  level: "debutant",
+  universe: "plage",
+  explanation:
+    "Pour exprimer une obligation ou une nécessité, on utilise لازم (lazem = il faut) " +
+    "suivi du verbe au présent sans conjugaison particulière. " +
+    "Ex : « lazem njib » (il faut que j'apporte), « lazem nemchiw » (il faut qu'on y aille).",
+  pattern: "لازم (lazem) + [verbe au présent]",
+  examples: [
+    { arabic: 'لازم نجيب الشمسية', arabizi: 'Lazem njib el chamsiya', phonetic: '[lazem njib el chamsiya]', french: 'Il faut apporter le parasol' },
+    { arabic: 'لازم نعوموا', arabizi: 'Lazem n3ouwmou', phonetic: '[lazem n3oumou]', french: 'Il faut qu\'on nage' },
+    { arabic: 'لازم تشرب ماء', arabizi: 'Lazem techreb ma', phonetic: '[lazem techreb ma]', french: 'Il faut boire de l\'eau' },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: [],
+};
+
+/**
+ * RÈGLE — Les conjonctions : و (w = et) / ولا (wala = ou)
+ */
+const RULE_PLAGE_CONJONCTIONS: GrammarRule = {
+  id: "g_plage_conjonctions",
+  title: "Connecteurs : و (w = et) / ولا (wala = ou)",
+  category: "autre",
+  level: "debutant",
+  universe: "plage",
+  explanation:
+    "En darija, و (w) signifie « et » et se colle directement au mot suivant. " +
+    "ولا (wala) signifie « ou » dans une question alternative. " +
+    "Attention : wala peut aussi signifier « ni » dans une phrase négative.",
+  pattern: "[mot] + و (w) + [mot] · [option 1] + ولا (wala) + [option 2] ?",
+  examples: [
+    { arabic: 'أنا وصاحبي على الشط', arabizi: 'Ena w sa7bi 3al chatt', phonetic: '[ena w sa7bi 3al chatt]', french: 'Mon ami et moi sommes sur la plage' },
+    { arabic: 'تحب كازوزة ولا ماء؟', arabizi: 'T7eb kazouza wala ma?', phonetic: '[t7eb kazouza wala ma]', french: 'Tu veux un soda ou de l\'eau ?' },
+    { arabic: 'روحي وجيبي الفوطة', arabizi: 'Rou7i w jibi el fouta', phonetic: '[rou7i w jibi el fouta]', french: 'Va et ramène la fouta' },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: [],
+};
+
+// ─── VAGUE 2 — UNIVERS « À L'HÔTEL » (2 règles) · universe: 'hotel' ───────────────
+
+/**
+ * RÈGLE — Localiser : في (fi = dans/à), فوق (fo9 = sur/en haut), تحت (ta7t = sous/en bas)
+ */
+const RULE_HOTEL_LOCALISATION: GrammarRule = {
+  id: "g_hotel_localisation",
+  title: "Localiser : في / فوق / تحت",
+  category: "preposition",
+  level: "debutant",
+  universe: "hotel",
+  explanation:
+    "Pour indiquer où se trouve quelque chose : في (fi = dans / à), فوق (fo9 = en haut / au-dessus), " +
+    "تحت (ta7t = en bas / dessous), بين (bin = entre). " +
+    "Ces prépositions se placent directement devant le nom.",
+  pattern: "في / فوق / تحت + [lieu]",
+  examples: [
+    { arabic: 'الغرفة في الطابق الثالث', arabizi: 'El ghorfa fi et tabiq ettaleth', phonetic: '[el ghorfa fi et tabiq ettaleth]', french: 'La chambre est au troisième étage' },
+    { arabic: 'المصعد فوق', arabizi: 'El mossaad fo9', phonetic: '[el mossaad fo9]', french: 'L\'ascenseur est en haut' },
+    { arabic: 'الكراج تحت', arabizi: 'El garaj ta7t', phonetic: '[el garaj ta7t]', french: 'Le parking est en bas' },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: [],
+};
+
+/**
+ * RÈGLE — Demander s'il y a : عندكم...؟ (3andkom = avez-vous...?)
+ */
+const RULE_HOTEL_QUESTION: GrammarRule = {
+  id: "g_hotel_question",
+  title: "Demander s'il y a : عندكم...؟",
+  category: "interrogation",
+  level: "debutant",
+  universe: "hotel",
+  explanation:
+    "Pour demander si un hôtel dispose de quelque chose, on utilise عندكم (3andkom = avez-vous, " +
+    "litt. « chez vous il y a »). C'est la forme de politesse au pluriel de عندك (3andek).",
+  pattern: "عندكم (3andkom) + [chose] + ؟",
+  examples: [
+    { arabic: 'عندكم واي فاي؟', arabizi: '3andkom wifi?', phonetic: '[3andkom wifi]', french: 'Avez-vous le wifi ?' },
+    { arabic: 'عندكم غرفة فاضية؟', arabizi: '3andkom ghorfa fadhya?', phonetic: '[3andkom ghorfa fadhya]', french: 'Avez-vous une chambre libre ?' },
+    { arabic: 'عندكم مصعد؟', arabizi: '3andkom mossaad?', phonetic: '[3andkom mossaad]', french: 'Avez-vous un ascenseur ?' },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: ['g_cafe_interrogation'],
+};
+
 export const grammarRules: Readonly<GrammarRule[]> = [
   RULE_NEGATION,
   RULE_ARTICLE_DEFINI,
@@ -394,6 +489,10 @@ export const grammarRules: Readonly<GrammarRule[]> = [
   RULE_FAMILLE_ADJECTIF,
   RULE_LOUAGE_DIRECTION,
   RULE_LOUAGE_IMPERATIF,
+  RULE_PLAGE_OBLIGATION,
+  RULE_PLAGE_CONJONCTIONS,
+  RULE_HOTEL_LOCALISATION,
+  RULE_HOTEL_QUESTION,
 ] as const;
 
 export const grammarRulesById: Readonly<Record<string, GrammarRule>> =

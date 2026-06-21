@@ -523,6 +523,131 @@ const DIALOGUE_FAMILLE_VISITE: Dialogue = {
   ],
 };
 
+// ─── VAGUE 2 — UNIVERS « À LA PLAGE » (3 dialogues) · universe: 'plage' ─────────────
+
+const DIALOGUE_PLAGE_ARRIVEE: Dialogue = {
+  id: 'd_plage_01',
+  title: 'Arriver à la plage',
+  context: 'rue',
+  level: 'debutant',
+  universe: 'plage',
+  situationFrench: 'Des amis arrivent à la plage et cherchent une place.',
+  estimatedMinutes: 2,
+  keyWordIds: ['w_plage_chatt', 'w_plage_chamsiya', 'w_plage_rmel'],
+  grammarRuleIds: ['g_plage_obligation', 'g_plage_conjonctions'],
+  culturalNote: "On plante d'abord le parasol (chamsiya) pour marquer sa place sur la plage.",
+  lines: [
+    { speaker: 'A', arabic: 'وصلنا! البحر زين', arabizi: 'Wsalna! El b7ar zin', french: 'On est arrivés ! La mer est belle', wordIds: ['w_plage_chatt'] },
+    { speaker: 'B', arabic: 'إي، لازم نلقوا مكان', arabizi: 'Ey, lazem nla9ou mken', french: 'Oui, il faut qu\'on trouve une place', wordIds: ['w_plage_rmel'] },
+    { speaker: 'A', arabic: 'هاك ظل، نحطوا الشمسية؟', arabizi: 'Haka dhell, n7ottou el chamsiya?', french: 'Voilà de l\'ombre, on pose le parasol ?', wordIds: ['w_plage_dhell', 'w_plage_chamsiya'] },
+    { speaker: 'B', arabic: 'باهي، وخلّي الفوطة على الرمل', arabizi: 'Bahi, w khalli el fouta 3al rmel', french: 'D\'accord, et pose la fouta sur le sable', wordIds: ['w_plage_fouta', 'w_plage_rmel'] },
+  ],
+};
+
+const DIALOGUE_PLAGE_BAIGNADE: Dialogue = {
+  id: 'd_plage_02',
+  title: 'Se baigner ensemble',
+  context: 'rue',
+  level: 'debutant',
+  universe: 'plage',
+  situationFrench: 'Deux amis décident d\'aller nager.',
+  estimatedMinutes: 2,
+  keyWordIds: ['w_plage_mouja', 'w_plage_sba7a'],
+  grammarRuleIds: ['g_plage_conjonctions'],
+  culturalNote: "La baignade entre amis est un moment festif. On avertit souvent des vagues (mouj) avant d'entrer.",
+  lines: [
+    { speaker: 'A', arabic: 'تحب تعوم معايا؟', arabizi: 'T7eb t3oum m3aya?', french: 'Tu veux nager avec moi ?', wordIds: ['w_plage_sba7a'] },
+    { speaker: 'B', arabic: 'إي! بس الموج عالي شوية', arabizi: 'Ey! Bes el mouj 3ali chwaya', french: 'Oui ! Mais les vagues sont un peu hautes', wordIds: ['w_plage_mouja'] },
+    { speaker: 'A', arabic: 'ما علاباليش، نعوموا chwaya chwaya', arabizi: 'Ma 3laballiche, n3oumou chwaya chwaya', french: 'Pas de souci, on nage doucement' },
+    { speaker: 'B', arabic: 'الماء بارد برشة!', arabizi: 'El ma bared barsha!', french: 'L\'eau est très froide !' },
+    { speaker: 'A', arabic: 'هذا يبرّدك!', arabizi: 'Hedha ybarredek!', french: 'Ça te rafraîchit !' },
+  ],
+};
+
+const DIALOGUE_PLAGE_GLACES: Dialogue = {
+  id: 'd_plage_03',
+  title: 'Acheter une glace',
+  context: 'restaurant',
+  level: 'debutant',
+  universe: 'plage',
+  situationFrench: 'Un enfant demande une glace au marchand de la plage.',
+  estimatedMinutes: 2,
+  keyWordIds: ['w_plage_jelati', 'w_plage_kazouza'],
+  grammarRuleIds: ['g_plage_obligation', 'g_plage_conjonctions'],
+  culturalNote: "Les marchands de glaces (jelati) et de sodas (kazouza) sont incontournables sur les plages tunisiennes en été.",
+  lines: [
+    { speaker: 'A', arabic: 'تحب جلاتي ولا كازوزة؟', arabizi: 'T7eb jelati wala kazouza?', french: 'Tu veux une glace ou un soda ?', wordIds: ['w_plage_jelati', 'w_plage_kazouza'] },
+    { speaker: 'B', arabic: 'جلاتي عيشك', arabizi: 'Jelati 3aychek', french: 'Une glace s\'il te plaît', wordIds: ['w_plage_jelati'] },
+    { speaker: 'A', arabic: 'أي نوع؟ فريز ولا شوكولاتة؟', arabizi: 'Ey nou3? Fraise wala chocolata?', french: 'Quelle saveur ? Fraise ou chocolat ?' },
+    { speaker: 'B', arabic: 'فريز من فضلك', arabizi: 'Fraise men fadhlek', french: 'Fraise s\'il te plaît' },
+    { speaker: 'A', arabic: 'تفضّل، ثلاثة ألاف', arabizi: 'Tfadhdhal, thleth tarf', french: 'Voilà, trois mille (dinars)' },
+  ],
+};
+
+// ─── VAGUE 2 — UNIVERS « À L'HÔTEL » (3 dialogues) · universe: 'hotel' ──────────────
+
+const DIALOGUE_HOTEL_CHECKIN: Dialogue = {
+  id: 'd_hotel_01',
+  title: 'Arriver à l\'hôtel (check-in)',
+  context: 'rue',
+  level: 'debutant',
+  universe: 'hotel',
+  situationFrench: 'Un client arrive à la réception pour s\'enregistrer.',
+  estimatedMinutes: 3,
+  keyWordIds: ['w_hotel_fondok', 'w_hotel_ghorfa', 'w_hotel_7ajz'],
+  grammarRuleIds: ['g_hotel_question', 'g_cafe_interrogation'],
+  culturalNote: "La réception (isti9bal) est ouverte 24h/24 dans la plupart des hôtels tunisiens.",
+  lines: [
+    { speaker: 'A', arabic: 'صباح الخير، عندي حجز', arabizi: 'Sba7 el khir, 3andi 7ajz', french: 'Bonjour, j\'ai une réservation', wordIds: ['w_hotel_7ajz'] },
+    { speaker: 'B', arabic: 'مرحبا بيك، بشنو اسمك؟', arabizi: 'Mar7ba bik, bchnow ismek?', french: 'Bienvenue, votre nom s\'il vous plaît ?' },
+    { speaker: 'A', arabic: 'اسمي كريم بن علي', arabizi: 'Ismi Karim ben Ali', french: 'Je m\'appelle Karim Ben Ali' },
+    { speaker: 'B', arabic: 'باهي، غرفتك في الطابق الثاني، هاك المفتاح', arabizi: 'Bahi, ghorftek fi et tabiq ettheni, haka el mefta7', french: 'D\'accord, votre chambre est au deuxième étage, voici la clé', wordIds: ['w_hotel_ghorfa', 'w_hotel_tabiq', 'w_hotel_mefta7'] },
+    { speaker: 'A', arabic: 'شكراً، عندكم واي فاي؟', arabizi: 'Chokran, 3andkom wifi?', french: 'Merci, avez-vous le wifi ?', wordIds: ['w_hotel_wifi'] },
+    { speaker: 'B', arabic: 'إي، مجاني', arabizi: 'Ey, majjeni', french: 'Oui, c\'est gratuit' },
+  ],
+};
+
+const DIALOGUE_HOTEL_SERVICE: Dialogue = {
+  id: 'd_hotel_02',
+  title: 'Demander des serviettes',
+  context: 'maison',
+  level: 'debutant',
+  universe: 'hotel',
+  situationFrench: 'Un client appelle la réception pour demander des serviettes supplémentaires.',
+  estimatedMinutes: 2,
+  keyWordIds: ['w_hotel_manchfa', 'w_hotel_ghorfa'],
+  grammarRuleIds: ['g_hotel_question'],
+  culturalNote: "Il est courant d'appeler la réception depuis la chambre pour tout besoin.",
+  lines: [
+    { speaker: 'A', arabic: 'آلو، الاستقبال؟', arabizi: 'Alou, el isti9bal?', french: 'Allô, c\'est la réception ?' },
+    { speaker: 'B', arabic: 'إي، مرحبا، كيفاش نخدمك؟', arabizi: 'Ey, mar7ba, kifech nkhedmek?', french: 'Oui, bonjour, comment puis-je vous aider ?' },
+    { speaker: 'A', arabic: 'نحتاج منشفتين إضافيتين من فضلك', arabizi: 'N7taj manchftin idhafiytin men fadhlek', french: 'J\'ai besoin de deux serviettes supplémentaires s\'il vous plaît', wordIds: ['w_hotel_manchfa'] },
+    { speaker: 'B', arabic: 'حاضر، نبعثهملك على طول', arabizi: '7adher, nba3thomlek 3al toul', french: 'Bien sûr, je vous les envoie tout de suite' },
+    { speaker: 'A', arabic: 'يعطيك الصحة', arabizi: 'Ya3tik essa77a', french: 'Merci beaucoup' },
+  ],
+};
+
+const DIALOGUE_HOTEL_CHECKOUT: Dialogue = {
+  id: 'd_hotel_03',
+  title: 'Quitter l\'hôtel (check-out)',
+  context: 'rue',
+  level: 'debutant',
+  universe: 'hotel',
+  situationFrench: 'Un client rend la clé et règle sa note avant de partir.',
+  estimatedMinutes: 2,
+  keyWordIds: ['w_hotel_mefta7', 'w_hotel_7isab'],
+  grammarRuleIds: ['g_hotel_localisation'],
+  culturalNote: "Le check-out se fait généralement avant midi. On présente la facture (7isab) à la caisse.",
+  lines: [
+    { speaker: 'A', arabic: 'نحب نخرج اليوم، هاك المفتاح', arabizi: 'N7eb nokhroj elyoum, haka el mefta7', french: 'Je veux partir aujourd\'hui, voici la clé', wordIds: ['w_hotel_mefta7'] },
+    { speaker: 'B', arabic: 'تمام، نجيبلك الحساب', arabizi: 'Tamam, njiblek el 7isab', french: 'Très bien, je vous apporte l\'addition', wordIds: ['w_hotel_7isab'] },
+    { speaker: 'A', arabic: 'قدّاش الجملة؟', arabizi: '9addech el jomla?', french: 'Quel est le total ?' },
+    { speaker: 'B', arabic: 'مية وعشرين دينار', arabizi: 'Miya w 3ichrin dinar', french: 'Cent vingt dinars' },
+    { speaker: 'A', arabic: 'هاك، شكراً على الخدمة', arabizi: 'Haka, chokran 3al khidma', french: 'Voilà, merci pour le service', wordIds: ['w_hotel_khidma'] },
+    { speaker: 'B', arabic: 'مرحبا بيك مرة أخرى', arabizi: 'Mar7ba bik marra okhra', french: 'À bientôt !' },
+  ],
+};
+
 export const dialogues: Readonly<Dialogue[]> = [
   DIALOGUE_FAMILLE_RETROUVAILLES,
   DIALOGUE_MARCHE_LEGUMES,
@@ -544,6 +669,12 @@ export const dialogues: Readonly<Dialogue[]> = [
   DIALOGUE_LOUAGE_DEPART,
   DIALOGUE_LOUAGE_ROUTE,
   DIALOGUE_LOUAGE_ARRIVEE,
+  DIALOGUE_PLAGE_ARRIVEE,
+  DIALOGUE_PLAGE_BAIGNADE,
+  DIALOGUE_PLAGE_GLACES,
+  DIALOGUE_HOTEL_CHECKIN,
+  DIALOGUE_HOTEL_SERVICE,
+  DIALOGUE_HOTEL_CHECKOUT,
 ] as const;
 
 export const dialoguesById: Readonly<Record<string, Dialogue>> =
