@@ -376,10 +376,64 @@ const PACK_CAFE: Verb[] = [
   },
 ];
 
+// ─── VAGUE 2 — UNIVERS « SALUTATIONS » (8 verbes) ────────────────────────────────
+
+const PACK_SALUT: Verb[] = [
+  {
+    id: 'v_nsellem', infinitiveFrench: 'je salue', rootArabic: 'نسلّم', rootArabizi: 'nsellem',
+    isIrregular: false, level: 'debutant', tags: ['salutations'], universe: 'salutations', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نسلّم', arabizi: 'nsellem' }] },
+    example: { arabic: 'نسلّم على صاحبي', arabizi: 'Nsellem 3la sa7bi', french: 'Je salue mon ami' },
+  },
+  {
+    id: 'v_nra77eb', infinitiveFrench: "j'accueille / je souhaite la bienvenue", rootArabic: 'نرحّب', rootArabizi: 'nra77eb',
+    isIrregular: false, level: 'debutant', tags: ['salutations', 'accueil'], universe: 'salutations', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نرحّب', arabizi: 'nra77eb' }] },
+    example: { arabic: 'نرحّب بيك', arabizi: 'Nra77eb bik', french: 'Je te souhaite la bienvenue' },
+  },
+  {
+    id: 'v_nochkor', infinitiveFrench: 'je remercie', rootArabic: 'نشكر', rootArabizi: 'nochkor',
+    isIrregular: false, level: 'debutant', tags: ['salutations', 'politesse'], universe: 'salutations', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نشكر', arabizi: 'nochkor' }] },
+    example: { arabic: 'نشكرك برشة', arabizi: 'Nochkrek barsha', french: 'Je te remercie beaucoup' },
+  },
+  {
+    id: 'v_nesm7', infinitiveFrench: "je pardonne / j'excuse", rootArabic: 'نسمح', rootArabizi: 'nesm7',
+    isIrregular: false, level: 'debutant', tags: ['salutations', 'politesse'], universe: 'salutations', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نسمح', arabizi: 'nesm7' }] },
+    example: { arabic: 'نسمحلك', arabizi: 'Nesm7lek', french: 'Je te pardonne' },
+  },
+  {
+    id: 'v_njaweb', infinitiveFrench: 'je réponds', rootArabic: 'نجاوب', rootArabizi: 'njaweb',
+    isIrregular: false, level: 'debutant', tags: ['salutations', 'communication'], universe: 'salutations', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نجاوب', arabizi: 'njaweb' }] },
+    example: { arabic: 'نجاوب على السؤال', arabizi: 'Njaweb 3la so2el', french: 'Je réponds à la question' },
+  },
+  {
+    id: 'v_n3arref', infinitiveFrench: 'je présente', rootArabic: 'نعرّف', rootArabizi: 'n3arref',
+    isIrregular: false, level: 'debutant', tags: ['salutations', 'presentation'], universe: 'salutations', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نعرّف', arabizi: 'n3arref' }] },
+    example: { arabic: 'نعرّفك بصاحبي', arabizi: 'N3arrfek b sa7bi', french: 'Je te présente mon ami' },
+  },
+  {
+    id: 'v_nsa9si', infinitiveFrench: 'je demande des nouvelles', rootArabic: 'نسقسي', rootArabizi: 'nsa9si',
+    isIrregular: false, level: 'debutant', tags: ['salutations', 'questions'], universe: 'salutations', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نسقسي', arabizi: 'nsa9si' }] },
+    example: { arabic: 'نسقسي عليك', arabizi: 'Nsa9si 3lik', french: 'Je demande de tes nouvelles' },
+  },
+  {
+    id: 'v_ntmanna', infinitiveFrench: 'je souhaite', rootArabic: 'نتمنّى', rootArabizi: 'ntmanna',
+    isIrregular: false, level: 'debutant', tags: ['salutations'], universe: 'salutations', needsValidation: false,
+    conjugations: { present: [{ person: '1s', arabic: 'نتمنّى', arabizi: 'ntmanna' }] },
+    example: { arabic: 'نتمنّالك الصحة', arabizi: 'Ntmannalek essa77a', french: 'Je te souhaite la santé' },
+  },
+];
+
 export const verbs: Readonly<Verb[]> = [
   ...PACK_01,
   ...PACK_02,
   ...PACK_CAFE,
+  ...PACK_SALUT,
 ] as const;
 
 export const verbsById: Readonly<Record<string, Verb>> = Object.fromEntries(

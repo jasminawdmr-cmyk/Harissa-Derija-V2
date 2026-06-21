@@ -83,6 +83,44 @@ export const writingLessons: Readonly<WritingLesson[]> = [
       { latin: 'na3na3', arabizi: 'na3na3', arabic: 'نعناع', wordId: 'w_cafe_na3na3', french: 'menthe' },
     ],
   },
+
+  // ── VAGUE 2 — UNIVERS « SALUTATIONS » (3 exercices) · universe: 'salutations' ───
+  {
+    id: 'wr_salut_01', system: 'arabizi', title: 'La lettre ش (ch) — salutations',
+    objective: 'Reconnaître et écrire le son « ch » (ش) avec les formules de politesse.',
+    level: 'debutant', estimatedMinutes: 4, order: 4, universe: 'salutations', tags: ['salutations', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 'ch', arabizi: 'ch', arabic: 'ش', soundDescription: 'Son « ch » comme dans « chat », noté ch en arabizi.', difficulty: 1, isPriority: true, exampleWordIds: ['w_salut_chokran', 'w_salut_chna7welek'] },
+    ],
+    bridges: [
+      { latin: 'chokran', arabizi: 'chokran', arabic: 'شكرا', wordId: 'w_salut_chokran', french: 'merci' },
+      { latin: 'chnowa', arabizi: 'chnowa', arabic: 'شنوة', french: 'quoi' },
+    ],
+  },
+  {
+    id: 'wr_salut_02', system: 'arabizi', title: 'La lettre خ (kh) — salutations',
+    objective: 'Reconnaître et écrire le son « kh » (خ) dans les salutations.',
+    level: 'debutant', estimatedMinutes: 4, order: 5, universe: 'salutations', tags: ['salutations', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 'kh', arabizi: 'kh', arabic: 'خ', soundDescription: 'Son « kh » raclé (comme la jota espagnole), noté kh en arabizi.', difficulty: 3, isPriority: true, exampleWordIds: ['w_salut_msa_lkhir'] },
+    ],
+    bridges: [
+      { latin: 'khir', arabizi: 'khir', arabic: 'خير', wordId: 'w_salut_msa_lkhir', french: 'le bien / bon' },
+      { latin: 'akhbar', arabizi: 'akhbar', arabic: 'أخبار', french: 'nouvelles' },
+    ],
+  },
+  {
+    id: 'wr_salut_03', system: 'arabizi', title: 'Écrire son prénom : le possessif -i',
+    objective: 'Écrire « esmi » (mon nom) et « esmek » (ton nom) avec le suffixe possessif.',
+    level: 'debutant', estimatedMinutes: 4, order: 6, universe: 'salutations', tags: ['salutations', 'ecriture', 'arabizi'],
+    glyphs: [
+      { latin: 'i', arabizi: 'i', arabic: 'ي', soundDescription: 'La voyelle « i » (ي) sert de suffixe possessif « mon ».', difficulty: 1, isPriority: false, exampleWordIds: ['w_salut_chokran'] },
+    ],
+    bridges: [
+      { latin: 'esmi', arabizi: 'esmi', arabic: 'اسمي', french: 'mon nom' },
+      { latin: 'esmek', arabizi: 'esmek', arabic: 'اسمك', french: 'ton nom' },
+    ],
+  },
 ] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────

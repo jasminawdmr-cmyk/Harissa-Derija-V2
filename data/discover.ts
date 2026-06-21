@@ -110,6 +110,52 @@ export const discoverContents: Readonly<DiscoverContent[]> = [
     relatedWordIds: ['w_cafe_ka3k', 'w_cafe_ka3b_ghzal', 'w_cafe_gato'],
     tags: ['cafe', 'gateaux', 'nourriture'],
   },
+
+  // ── VAGUE 2 — UNIVERS « SALUTATIONS » (5 articles) · universe: 'salutations' ────
+  {
+    id: 'disc_salut_codes', section: 'culture', title: 'Les codes de la salutation tunisienne', subtitle: 'Saluer, un art social', level: 'debutant', estimatedMinutes: 3, coverEmoji: '👋', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "En Tunisie, on ne croise jamais quelqu'un sans le saluer. La salutation s'accompagne souvent d'une série de questions sur la santé, la famille et le travail." },
+      { type: 'reperes', items: ['Aaslema = salut', 'Sbe7 el khir = bonjour', 'Msa el khir = bonsoir'] },
+    ],
+    relatedWordIds: ['w_aaslema', 'w_salut_msa_lkhir', 'w_salut_kifech_7alek'],
+    tags: ['salutations', 'culture'],
+  },
+  {
+    id: 'disc_salut_sante', section: 'culture', title: 'La santé au cœur des salutations', subtitle: 'On se souhaite la « sa77a »', level: 'debutant', estimatedMinutes: 3, coverEmoji: '💪', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "Beaucoup de formules tournent autour de la santé : « sa77a » (santé), « ya3tik essa77a » (merci), « slemtek » (porte-toi bien). Souhaiter la santé, c'est souhaiter le meilleur." },
+      { type: 'savoir', text: "« El7amdoulah » (Dieu merci) ponctue presque toute réponse à « comment vas-tu ? »." },
+    ],
+    relatedWordIds: ['w_salut_el7amdoulah', 'w_salut_slemtek', 'w_salut_sa7it'],
+    tags: ['salutations', 'sante'],
+  },
+  {
+    id: 'disc_salut_religion', section: 'culture', title: 'Dieu dans le langage courant', subtitle: 'Inchallah & co.', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🤲', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "Des expressions comme « inchallah » (si Dieu le veut), « barakallahou fik » (merci) ou « rabbi m3ak » (au revoir) sont employées par tous, croyants ou non : elles font partie du tissu de la langue." },
+    ],
+    relatedWordIds: ['w_salut_inchallah', 'w_salut_barakallahofik', 'w_salut_rabbi_m3ak'],
+    tags: ['salutations', 'culture'],
+  },
+  {
+    id: 'disc_salut_presentation', section: 'culture', title: 'Se présenter en Tunisie', subtitle: 'Nom, origine, convivialité', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🙋', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "Pour se présenter : « esmi… » (je m'appelle…), « ena men… » (je viens de…). On répond à une présentation par « ahlan bik » (enchanté)." },
+      { type: 'reperes', items: ['Chnowa esmek ? = comment t\'appelles-tu ?', 'Min win enti ? = d\'où viens-tu ?'] },
+    ],
+    relatedWordIds: ['w_salut_ahla', 'w_salut_w_enti', 'w_win'],
+    tags: ['salutations', 'presentation'],
+  },
+  {
+    id: 'disc_salut_politesse', section: 'culture', title: 'La politesse au quotidien', subtitle: 'Merci, pardon, je t\'en prie', level: 'debutant', estimatedMinutes: 3, coverEmoji: '🙏', universe: 'salutations',
+    blocks: [
+      { type: 'paragraphe', text: "Les mots de politesse rythment les échanges : « chokran » (merci), « sam7ni » (pardon), « tfaddal » (je t'en prie). La générosité verbale est très valorisée." },
+    ],
+    relatedWordIds: ['w_salut_chokran', 'w_salut_sam7ni', 'w_salut_tfaddal', 'w_salut_min_fadhlek'],
+    relatedExpressionIds: ['e_salut_rabbi_ykhalik'],
+    tags: ['salutations', 'politesse'],
+  },
 ] as const;
 
 // ─── Accès ────────────────────────────────────────────────────────────────────

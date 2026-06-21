@@ -37,6 +37,8 @@ export type Universe =
   | 'louage'
   | 'chez_la_tante'
   | 'voyage'
+  | 'plage'
+  | 'hotel'
   | 'famille'
   | 'maison'
   | 'emotions'

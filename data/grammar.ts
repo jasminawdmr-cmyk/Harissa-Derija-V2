@@ -149,11 +149,60 @@ const RULE_CAFE_INTERROGATION: GrammarRule = {
   prerequisiteRuleIds: [],
 };
 
+// ─── VAGUE 2 — UNIVERS « SALUTATIONS » (2 règles) · universe: 'salutations' ───────
+
+/**
+ * RÈGLE — Le suffixe possessif (mon / ton)
+ */
+const RULE_SALUT_POSSESSIF: GrammarRule = {
+  id: "g_salut_possessif",
+  title: "Le possessif : -i (mon) / -ek (ton)",
+  category: "possession",
+  level: "debutant",
+  universe: "salutations",
+  explanation:
+    "En tunisien, on attache un suffixe au nom pour la possession : -i = « mon/ma », " +
+    "-ek = « ton/ta ». Très utile pour se présenter : « esm-i » (mon nom), " +
+    "« esm-ek » (ton nom).",
+  pattern: "[nom] + ـي (-i) / ـك (-ek)",
+  examples: [
+    { arabic: 'اسمي', arabizi: 'Esmi', phonetic: '[esmi]', french: 'Mon nom / je m\'appelle' },
+    { arabic: 'اسمك', arabizi: 'Esmek', phonetic: '[esmek]', french: 'Ton nom / tu t\'appelles' },
+    { arabic: 'صاحبي', arabizi: 'Sa7bi', phonetic: '[sa7bi]', french: 'Mon ami' },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: [],
+};
+
+/**
+ * RÈGLE — Les questions pour faire connaissance
+ */
+const RULE_SALUT_QUESTIONS: GrammarRule = {
+  id: "g_salut_questions",
+  title: "Faire connaissance : chnowa / min win / kifech",
+  category: "interrogation",
+  level: "debutant",
+  universe: "salutations",
+  explanation:
+    "Pour faire connaissance, on emploie : شنوة (chnowa = quoi/quel), من وين " +
+    "(min win = d'où), كيفاش (kifech = comment). Le mot interrogatif ouvre la phrase.",
+  pattern: "[interrogatif] + [nom / verbe] ?",
+  examples: [
+    { arabic: 'شنوة اسمك؟', arabizi: 'Chnowa esmek?', phonetic: '[chnowa esmek]', french: 'Comment t\'appelles-tu ?' },
+    { arabic: 'من وين إنتي؟', arabizi: 'Min win enti?', phonetic: '[min win enti]', french: "D'où viens-tu ?" },
+    { arabic: 'كيفاش حالك؟', arabizi: 'Kifech 7alek?', phonetic: '[kifech 7alek]', french: 'Comment vas-tu ?' },
+  ],
+  lessonIds: [],
+  prerequisiteRuleIds: [],
+};
+
 export const grammarRules: Readonly<GrammarRule[]> = [
   RULE_NEGATION,
   RULE_ARTICLE_DEFINI,
   RULE_CAFE_PREPOSITION_B,
   RULE_CAFE_INTERROGATION,
+  RULE_SALUT_POSSESSIF,
+  RULE_SALUT_QUESTIONS,
 ] as const;
 
 export const grammarRulesById: Readonly<Record<string, GrammarRule>> =

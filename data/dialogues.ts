@@ -217,12 +217,77 @@ const DIALOGUE_CAFE_PAYER: Dialogue = {
   ],
 };
 
+// ─── VAGUE 2 — UNIVERS « SALUTATIONS » (3 dialogues) · universe: 'salutations' ─────
+
+const DIALOGUE_SALUT_RENCONTRE: Dialogue = {
+  id: 'd_salut_01',
+  title: 'Première rencontre',
+  context: 'rue',
+  level: 'debutant',
+  universe: 'salutations',
+  situationFrench: 'Deux personnes se présentent pour la première fois.',
+  estimatedMinutes: 2,
+  keyWordIds: ['w_aaslema', 'w_salut_ahla'],
+  grammarRuleIds: ['g_salut_questions', 'g_salut_possessif'],
+  culturalNote:
+    "Se présenter commence presque toujours par « Aaslema » suivi du prénom. " +
+    "« Ahlan bik » répond à une présentation et marque la convivialité.",
+  lines: [
+    { speaker: 'A', arabic: 'عسلامة، شنوة اسمك؟', arabizi: 'Aaslema, chnowa esmek?', french: "Salut, comment t'appelles-tu ?", wordIds: ['w_aaslema'] },
+    { speaker: 'B', arabic: 'اسمي ليلى، وإنتي؟', arabizi: 'Esmi Leila, w enti?', french: "Je m'appelle Leila, et toi ?", wordIds: ['w_salut_w_enti'] },
+    { speaker: 'A', arabic: 'أنا كريم، أهلا بيك', arabizi: 'Ena Karim, ahlan bik', french: 'Je suis Karim, enchanté', wordIds: ['w_salut_ahla'] },
+    { speaker: 'B', arabic: 'أهلا بيك', arabizi: 'Ahlan bik', french: 'Enchantée' },
+  ],
+};
+
+const DIALOGUE_SALUT_RETROUVAILLES: Dialogue = {
+  id: 'd_salut_02',
+  title: 'Se retrouver entre amis',
+  context: 'rue',
+  level: 'debutant',
+  universe: 'salutations',
+  situationFrench: 'Deux amis se retrouvent après une absence.',
+  estimatedMinutes: 2,
+  keyWordIds: ['w_salut_yahla', 'w_salut_kifech_7alek'],
+  grammarRuleIds: ['g_salut_questions'],
+  culturalNote:
+    "« Twa7echtek » (tu m'as manqué) est une formule très courante et chaleureuse " +
+    "entre proches lors des retrouvailles.",
+  lines: [
+    { speaker: 'A', arabic: 'يا هلا! توحّشتك', arabizi: 'Yahla! Twa7echtek', french: "Salut ! Tu m'as manqué", wordIds: ['w_salut_yahla'] },
+    { speaker: 'B', arabic: 'وأنا زادة، كيفاش حالك؟', arabizi: 'W ana zeda, kifech 7alek?', french: 'Moi aussi, comment vas-tu ?', wordIds: ['w_salut_kifech_7alek'] },
+    { speaker: 'A', arabic: 'لاباس الحمد لله', arabizi: 'Labes el7amdoulah', french: 'Ça va, Dieu merci', wordIds: ['w_labes', 'w_salut_el7amdoulah'] },
+  ],
+};
+
+const DIALOGUE_SALUT_ADIEU: Dialogue = {
+  id: 'd_salut_03',
+  title: 'Prendre congé',
+  context: 'rue',
+  level: 'debutant',
+  universe: 'salutations',
+  situationFrench: "Deux personnes se disent au revoir.",
+  estimatedMinutes: 2,
+  keyWordIds: ['w_salut_bislama', 'w_salut_nchoufouk'],
+  grammarRuleIds: [],
+  culturalNote:
+    "On clôt souvent par « Inchallah » (si Dieu le veut) en évoquant un prochain rendez-vous.",
+  lines: [
+    { speaker: 'A', arabic: 'يزّي توّا، نمشي', arabizi: 'Yezzi tawa, nemchi', french: "Bon, j'y vais maintenant", wordIds: ['w_tawa'] },
+    { speaker: 'B', arabic: 'بالسلامة، رد بالك', arabizi: 'Bislama, rodd balek', french: 'Au revoir, fais attention', wordIds: ['w_salut_bislama'] },
+    { speaker: 'A', arabic: 'نشوفوك غدوة إن شاء الله', arabizi: 'Nchoufouk ghodwa inchallah', french: 'À demain, si Dieu le veut', wordIds: ['w_salut_nchoufouk', 'w_ghodwa', 'w_salut_inchallah'] },
+  ],
+};
+
 export const dialogues: Readonly<Dialogue[]> = [
   DIALOGUE_FAMILLE_RETROUVAILLES,
   DIALOGUE_MARCHE_LEGUMES,
   DIALOGUE_CAFE_COMMANDER,
   DIALOGUE_CAFE_AMIS,
   DIALOGUE_CAFE_PAYER,
+  DIALOGUE_SALUT_RENCONTRE,
+  DIALOGUE_SALUT_RETROUVAILLES,
+  DIALOGUE_SALUT_ADIEU,
 ] as const;
 
 export const dialoguesById: Readonly<Record<string, Dialogue>> =

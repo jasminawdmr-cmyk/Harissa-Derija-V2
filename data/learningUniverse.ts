@@ -61,12 +61,14 @@ function t(
  *   découvrir 5×20=100 · leçons écriture (1×15)=15 · exercices écriture (3×10+2×10)=50
  */
 export const LEARNING_UNIVERSES: Readonly<UniverseDefinition[]> = [
-  { id: 'salutations',   title: 'Salutations',       icon: '👋', color: '#E0A458', difficulty: 1, target: t(12, 4, 7, 5, 1, 1, 2, 0, 1) },
+  { id: 'salutations',   title: 'Salutations',       icon: '👋', color: '#BCA8E8', difficulty: 1, target: t(12, 4, 7, 5, 1, 1, 2, 0, 1) },
   { id: 'cafe',          title: 'Café',              icon: '☕', color: '#C76543', difficulty: 1, target: t(13, 4, 8, 5, 2, 1, 3, 1, 2) },
-  { id: 'marche',        title: 'Marché',            icon: '🛒', color: '#8B1E1E', difficulty: 1, target: t(25, 8, 15, 10, 3, 2, 5, 1, 3) },
-  { id: 'louage',        title: 'Louage',            icon: '🚐', color: '#15806A', difficulty: 2, target: t(12, 3, 7, 5, 1, 1, 2, 0, 1) },
-  { id: 'famille',       title: 'Famille',           icon: '👨‍👩‍👧', color: '#607A53', difficulty: 1, target: t(25, 8, 15, 10, 3, 2, 5, 1, 3) },
-  { id: 'maison',        title: 'Maison',            icon: '🏠', color: '#1F5F8B', difficulty: 1, target: t(25, 8, 15, 10, 3, 2, 5, 1, 3) },
+  { id: 'marche',        title: 'Marché',            icon: '🛒', color: '#7A8F53', difficulty: 1, target: t(25, 8, 15, 10, 3, 2, 5, 1, 3) },
+  { id: 'louage',        title: 'Louage',            icon: '🚐', color: '#D4A03A', difficulty: 2, target: t(12, 3, 7, 5, 1, 1, 2, 0, 1) },
+  { id: 'plage',         title: 'À la plage',        icon: '🏖️', color: '#59B6C6', difficulty: 2, target: t(25, 8, 15, 10, 3, 2, 5, 1, 3) },
+  { id: 'hotel',         title: "À l'hôtel",         icon: '🏨', color: '#D4B996', difficulty: 2, target: t(25, 8, 15, 10, 3, 2, 5, 1, 3) },
+  { id: 'famille',       title: 'Famille',           icon: '👨‍👩‍👧', color: '#C65D7B', difficulty: 1, target: t(25, 8, 15, 10, 3, 2, 5, 1, 3) },
+  { id: 'maison',        title: 'Maison',            icon: '🏠', color: '#2E5D8A', difficulty: 1, target: t(25, 8, 15, 10, 3, 2, 5, 1, 3) },
   { id: 'chez_la_tante', title: 'Chez la tante',     icon: '🫖', color: '#D6A658', difficulty: 2, target: t(25, 8, 15, 10, 3, 2, 5, 1, 3) },
   { id: 'voyage',        title: 'Voyage',            icon: '✈️', color: '#1F8B7A', difficulty: 2, target: t(25, 8, 15, 10, 3, 2, 5, 1, 3) },
   { id: 'emotions',      title: 'Émotions',          icon: '😊', color: '#B5546E', difficulty: 2, target: t(25, 8, 15, 10, 3, 2, 5, 1, 3) },

@@ -222,6 +222,35 @@ export const vocabulary: Readonly<VocabularyItem[]> = [
   { id: 'w_cafe_9a3da', arabic: 'قعدة', arabizi: '9a3da', french: 'Moment passé assis ensemble (au café)', category: 'loisirs', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['cafe', 'ambiance', 'amis'], universe: 'cafe' },
   { id: 'w_cafe_maw3ed', arabic: 'موعد', arabizi: 'maw3ed', french: 'Rendez-vous', category: 'autres', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['cafe', 'rendez_vous'], universe: 'cafe' },
   { id: 'w_cafe_chicha', arabic: 'شيشة', arabizi: 'chicha', french: 'Narguilé (chicha)', category: 'loisirs', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['cafe', 'ambiance'], universe: 'cafe' },
+
+  // ════════════════════════════════════════════════════════════════════════════════
+  // VAGUE 2 — UNIVERS « SALUTATIONS » (25 mots) · universe: 'salutations'
+  // ════════════════════════════════════════════════════════════════════════════════
+  { id: 'w_salut_msa_lkhir', arabic: 'مسا الخير', arabizi: 'Msa el khir', french: 'Bonsoir', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['salutations'], universe: 'salutations' },
+  { id: 'w_salut_sba7_ennour', arabic: 'صباح النور', arabizi: 'Sba7 ennour', french: 'Bonjour (réponse à « Sbe7 el khir »)', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['salutations'], universe: 'salutations' },
+  { id: 'w_salut_bislama', arabic: 'بالسلامة', arabizi: 'Bislama', french: 'Au revoir', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['salutations'], universe: 'salutations' },
+  { id: 'w_salut_chokran', arabic: 'شكرا', arabizi: 'Chokran', french: 'Merci', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['salutations', 'politesse'], universe: 'salutations' },
+  { id: 'w_salut_barakallahofik', arabic: 'بارك الله فيك', arabizi: 'Barakallahou fik', french: 'Merci beaucoup (litt. que Dieu te bénisse)', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['salutations', 'politesse'], universe: 'salutations' },
+  { id: 'w_salut_sam7ni', arabic: 'سامحني', arabizi: 'Sam7ni', french: 'Excuse-moi / pardon', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['salutations', 'politesse'], universe: 'salutations' },
+  { id: 'w_salut_min_fadhlek', arabic: 'من فضلك', arabizi: 'Min fadhlek', french: "S'il te plaît", category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['salutations', 'politesse'], universe: 'salutations' },
+  { id: 'w_salut_tfaddal', arabic: 'تفضّل', arabizi: 'Tfaddal', french: "Je t'en prie / vas-y / entre", category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['salutations', 'politesse'], universe: 'salutations' },
+  { id: 'w_salut_ahla', arabic: 'أهلا', arabizi: 'Ahla', french: 'Salut / bienvenue', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['salutations'], universe: 'salutations' },
+  { id: 'w_salut_yahla', arabic: 'يا هلا', arabizi: 'Yahla', french: 'Salut ! (chaleureux)', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['salutations'], universe: 'salutations' },
+  { id: 'w_salut_kifech_7alek', arabic: 'كيفاش حالك', arabizi: 'Kifech 7alek', french: 'Comment vas-tu ?', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['salutations', 'questions'], universe: 'salutations' },
+  { id: 'w_salut_chna7welek', arabic: 'شنحوالك', arabizi: 'Chna7welek', french: 'Comment vas-tu ? (familier)', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['salutations', 'questions'], universe: 'salutations' },
+  { id: 'w_salut_w_enti', arabic: 'وإنتي', arabizi: 'W enti?', french: 'Et toi ?', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['salutations', 'questions'], universe: 'salutations' },
+  { id: 'w_salut_el7amdoulah', arabic: 'الحمد لله', arabizi: 'El7amdoulah', french: 'Dieu merci (ça va)', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['salutations'], universe: 'salutations' },
+  { id: 'w_salut_inchallah', arabic: 'إن شاء الله', arabizi: 'Inchallah', french: 'Si Dieu le veut', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['salutations'], universe: 'salutations' },
+  { id: 'w_salut_3al_slema', arabic: 'على السلامة', arabizi: '3al slema', french: 'Bon retour / bienvenue', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['salutations'], universe: 'salutations' },
+  { id: 'w_salut_rabbi_m3ak', arabic: 'ربي معاك', arabizi: 'Rabbi m3ak', french: 'Que Dieu soit avec toi (au revoir)', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['salutations'], universe: 'salutations' },
+  { id: 'w_salut_nchoufouk', arabic: 'نشوفوك', arabizi: 'Nchoufouk', french: 'À bientôt (litt. on te voit)', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['salutations'], universe: 'salutations' },
+  { id: 'w_salut_mabrouk', arabic: 'مبروك', arabizi: 'Mabrouk', french: 'Félicitations', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 1, tags: ['salutations'], universe: 'salutations' },
+  { id: 'w_salut_3aydek_mabrouk', arabic: 'عيدك مبروك', arabizi: '3aydek mabrouk', french: 'Bonne fête (Aïd)', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['salutations', 'fetes'], universe: 'salutations' },
+  { id: 'w_salut_sa7it', arabic: 'صحيت', arabizi: 'Sa7it', french: 'Merci / bravo (litt. sois en bonne santé)', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['salutations', 'politesse'], universe: 'salutations' },
+  { id: 'w_salut_thalla', arabic: 'تهلّى في روحك', arabizi: 'Thalla fi ro7ek', french: 'Prends soin de toi', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['salutations'], universe: 'salutations' },
+  { id: 'w_salut_nharek_zin', arabic: 'نهارك زين', arabizi: 'Nharek zin', french: 'Bonne journée', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['salutations'], universe: 'salutations' },
+  { id: 'w_salut_lila_sa3ida', arabic: 'ليلة سعيدة', arabizi: 'Lila sa3ida', french: 'Bonne nuit', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['salutations'], universe: 'salutations' },
+  { id: 'w_salut_slemtek', arabic: 'سلامتك', arabizi: 'Slemtek', french: 'Porte-toi bien / remets-toi (à un malade)', category: 'salutations', level: 'debutant', domain: 'quotidien', frequencyRank: 2, tags: ['salutations'], universe: 'salutations' },
 ] as const;
 
 // ─── Accès ──────────────────────────────────────────────────────────────────────
